@@ -1,0 +1,6315 @@
+[
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Encuentro",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Encuentro",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Encuentro",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Encuentro",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "Máscaras de Medianoche",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "Máscaras de Medianoche",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "Máscaras de Medianoche",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "Máscaras de Medianoche",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Devorador de las Profundidades",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Devorador de las Profundidades",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Devorador de las Profundidades",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Noche de la Fanática",
+    "scenario": "El Devorador de las Profundidades",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Actividad Extracurricular",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Actividad Extracurricular",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Actividad Extracurricular",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Actividad Extracurricular",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "La Casa Siempre Gana",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "La Casa Siempre Gana",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "La Casa Siempre Gana",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "La Casa Siempre Gana",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Museo Miskatonic",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Museo Miskatonic",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Museo Miskatonic",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Museo Miskatonic",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Essex County Express",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Essex County Express",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Essex County Express",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "El Essex County Express",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Sangre en el Altar",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Sangre en el Altar",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Sangre en el Altar",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Sangre en el Altar",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Invisibles y Sin Dimensión",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Invisibles y Sin Dimensión",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Invisibles y Sin Dimensión",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Invisibles y Sin Dimensión",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Donde Aguarda la Perdición",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Donde Aguarda la Perdición",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Donde Aguarda la Perdición",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Donde Aguarda la Perdición",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Perdidos en el Tiempo y en el Espacio",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Perdidos en el Tiempo y en el Espacio",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Perdidos en el Tiempo y en el Espacio",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Legado de Dunwich",
+    "scenario": "Perdidos en el Tiempo y en el Espacio",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-7": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Se Cierra el Telón",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Se Cierra el Telón",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Se Cierra el Telón",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Se Cierra el Telón",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Último Rey",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Último Rey",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Último Rey",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Último Rey",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Ecos del Pasado",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Ecos del Pasado",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Ecos del Pasado",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Ecos del Pasado",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Juramento Inconfesable",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Juramento Inconfesable",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Juramento Inconfesable",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Juramento Inconfesable",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Fantasma de la Verdad",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Fantasma de la Verdad",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Fantasma de la Verdad",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "El Fantasma de la Verdad",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "La Máscara Pálida",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "La Máscara Pálida",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "La Máscara Pálida",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "La Máscara Pálida",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Surgen Estrellas Negras",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Surgen Estrellas Negras",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Surgen Estrellas Negras",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Surgen Estrellas Negras",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Penumbrosa Carcosa",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 3,
+      "-3": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Penumbrosa Carcosa",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Penumbrosa Carcosa",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Camino a Carcosa",
+    "scenario": "Penumbrosa Carcosa",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 2,
+      "-6": 1,
+      "-7": 1,
+      "-8": 1,
+      "skull": 3,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Naturaleza Salvaje",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Naturaleza Salvaje",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Naturaleza Salvaje",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Naturaleza Salvaje",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Perdición de Etzli",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Perdición de Etzli",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Perdición de Etzli",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Perdición de Etzli",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Hilos del Destino",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Hilos del Destino",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Hilos del Destino",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Hilos del Destino",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Límite del Otro Lado",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Límite del Otro Lado",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Límite del Otro Lado",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Límite del Otro Lado",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 1)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 1)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 1)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 1)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 2)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 2)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 2)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "El Corazón de los Ancianos (parte 2)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Ciudad de los Archivos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Ciudad de los Archivos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Ciudad de los Archivos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "La Ciudad de los Archivos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Las Profundidades de Yoth",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Las Profundidades de Yoth",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Las Profundidades de Yoth",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Las Profundidades de Yoth",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Eones Destrozados",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Eones Destrozados",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 3,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Eones Destrozados",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 1,
+      "-2": 1,
+      "-3": 2,
+      "-4": 1,
+      "-6": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Era Olvidada",
+    "scenario": "Eones Destrozados",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Hora Bruja",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Hora Bruja",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Hora Bruja",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Hora Bruja",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "A Las Puertas de la Muerte",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "A Las Puertas de la Muerte",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "A Las Puertas de la Muerte",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "A Las Puertas de la Muerte",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "El Nombre Secreto",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "El Nombre Secreto",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "El Nombre Secreto",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "El Nombre Secreto",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Paga del Pecado",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Paga del Pecado",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Paga del Pecado",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "La Paga del Pecado",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Por el Bien Común",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Por el Bien Común",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Por el Bien Común",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Por el Bien Común",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Unión y Desilusión",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Unión y Desilusión",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Unión y Desilusión",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Unión y Desilusión",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "En las Garras del Caos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "En las Garras del Caos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "En las Garras del Caos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "En las Garras del Caos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Ante el Trono Negro",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 1,
+      "-3": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Ante el Trono Negro",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Ante el Trono Negro",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-5": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "El Círculo Roto",
+    "scenario": "Ante el Trono Negro",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Más Allá de las Puertas del Sueño",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Más Allá de las Puertas del Sueño",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Más Allá de las Puertas del Sueño",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Más Allá de las Puertas del Sueño",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Pesadilla Consciente",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Pesadilla Consciente",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Pesadilla Consciente",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Pesadilla Consciente",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "La Búsqueda de Kadath",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "La Búsqueda de Kadath",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "La Búsqueda de Kadath",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "La Búsqueda de Kadath",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Mil Formas de Horror",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Mil Formas de Horror",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Mil Formas de Horror",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Mil Formas de Horror",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "El Lado Oscuro de la Luna",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "El Lado Oscuro de la Luna",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "El Lado Oscuro de la Luna",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "El Lado Oscuro de la Luna",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Punto sin Retorno",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Punto sin Retorno",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Punto sin Retorno",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Punto sin Retorno",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Donde Moran los Dioses",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Donde Moran los Dioses",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Donde Moran los Dioses",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Donde Moran los Dioses",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 3,
+      "cultist": 1,
+      "tablet": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Tejedora del Cosmos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Tejedora del Cosmos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Tejedora del Cosmos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Devoradores de Sueños",
+    "scenario": "Tejedora del Cosmos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "El Pozo de la Desesperación",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "El Pozo de la Desesperación",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "El Pozo de la Desesperación",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "El Pozo de la Desesperación",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Desaparición de Elina Harper",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Desaparición de Elina Harper",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Desaparición de Elina Harper",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Desaparición de Elina Harper",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hasta el Cuello",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hasta el Cuello",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hasta el Cuello",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hasta el Cuello",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Arrecife del Diablo",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Arrecife del Diablo",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Arrecife del Diablo",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Arrecife del Diablo",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Horror a Toda Máquina",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Horror a Toda Máquina",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Horror a Toda Máquina",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Horror a Toda Máquina",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Una Luz en la Niebla",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Una Luz en la Niebla",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Una Luz en la Niebla",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Una Luz en la Niebla",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Guarida de Dagón",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Guarida de Dagón",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Guarida de Dagón",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "La Guarida de Dagón",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hacia el Remolino",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hacia el Remolino",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hacia el Remolino",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Conspiración de Innsmouth",
+    "scenario": "Hacia el Remolino",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 2,
+      "tablet": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 1)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 1)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 1)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 1)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 2)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 2)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 2)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 2)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 3)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 3)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 3)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hielo y Muerte (parte 3)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Espejismo Letal",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Espejismo Letal",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Espejismo Letal",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Espejismo Letal",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hacia los Picos Prohibidos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hacia los Picos Prohibidos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hacia los Picos Prohibidos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "Hacia los Picos Prohibidos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "La Ciudad de los Antiguos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "La Ciudad de los Antiguos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "La Ciudad de los Antiguos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "La Ciudad de los Antiguos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 1)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 1)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 1)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 1)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 2)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 3,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 2)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 2)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 2,
+      "-1": 2,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Los Confines de la Tierra",
+    "scenario": "El Corazón de la Locura (parte 2)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 1,
+      "-2": 2,
+      "-3": 1,
+      "-4": 2,
+      "-5": 1,
+      "-7": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Acertijos y Lluvia",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Acertijos y Lluvia",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Acertijos y Lluvia",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Acertijos y Lluvia",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Calor Muerto",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Calor Muerto",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Calor Muerto",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Calor Muerto",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras Sanguinas",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras Sanguinas",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras Sanguinas",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras Sanguinas",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Tratos en la Oscuridad",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Tratos en la Oscuridad",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Tratos en la Oscuridad",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Tratos en la Oscuridad",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Bailar Como Locos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Bailar Como Locos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Bailar Como Locos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Bailar Como Locos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sobre Hielo Peligroso",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sobre Hielo Peligroso",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sobre Hielo Peligroso",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sobre Hielo Peligroso",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Perros de Guerra",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Perros de Guerra",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Perros de Guerra",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Perros de Guerra",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras de Sufrimiento",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras de Sufrimiento",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras de Sufrimiento",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sombras de Sufrimiento",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sin Rastro",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sin Rastro",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sin Rastro",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "Sin Rastro",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "El Congreso de las Llaves",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "El Congreso de las Llaves",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "El Congreso de las Llaves",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "Las Llaves Escarlata",
+    "scenario": "El Congreso de las Llaves",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "Escrito en la Roca",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "Escrito en la Roca",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "Escrito en la Roca",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "Escrito en la Roca",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Casa Cicuta",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Casa Cicuta",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Casa Cicuta",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Casa Cicuta",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Páramo Silencioso",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Páramo Silencioso",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Páramo Silencioso",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Páramo Silencioso",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hermana Perdida",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hermana Perdida",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hermana Perdida",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hermana Perdida",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Cosa de las Profundidades",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Cosa de las Profundidades",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Cosa de las Profundidades",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Cosa de las Profundidades",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hondonada Retorcida",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hondonada Retorcida",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hondonada Retorcida",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Hondonada Retorcida",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Noche Más Larga",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Noche Más Larga",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Noche Más Larga",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "La Noche Más Larga",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Destino del Valle",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Destino del Valle",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Destino del Valle",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-5": 2,
+      "-7": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Fiesta del Valle de la Cicuta",
+    "scenario": "El Destino del Valle",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 2,
+      "-6": 2,
+      "-8": 1,
+      "skull": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Un Último Trabajo",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Un Último Trabajo",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Un Último Trabajo",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Un Último Trabajo",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Muralla Occidental",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Muralla Occidental",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Muralla Occidental",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Muralla Occidental",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "cultist": 1,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Barrio Sumergido",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Barrio Sumergido",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Barrio Sumergido",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Barrio Sumergido",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Apiario",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Apiario",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Apiario",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "El Apiario",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Gran Cámara",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Gran Cámara",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Gran Cámara",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Gran Cámara",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Corte de los Antiguos",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Corte de los Antiguos",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Corte de los Antiguos",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Corte de los Antiguos",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Cañones de Obsidiana",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Cañones de Obsidiana",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Cañones de Obsidiana",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Cañones de Obsidiana",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 1,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Sepulcro del Durmiente",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Sepulcro del Durmiente",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Sepulcro del Durmiente",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "Sepulcro del Durmiente",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 1,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 1)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 1)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 1)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 1)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 2)",
+    "difficulty": "Fácil",
+    "tokenCounts": {
+      "+1": 2,
+      "0": 3,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 2)",
+    "difficulty": "Normal",
+    "tokenCounts": {
+      "+1": 1,
+      "0": 2,
+      "-1": 3,
+      "-2": 2,
+      "-3": 1,
+      "-4": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 2)",
+    "difficulty": "Difícil",
+    "tokenCounts": {
+      "0": 3,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 1,
+      "-5": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  },
+  {
+    "campaign": "La Ciudad Sumergida",
+    "scenario": "La Perdición de Arkham (parte 2)",
+    "difficulty": "Experto",
+    "tokenCounts": {
+      "0": 1,
+      "-1": 2,
+      "-2": 2,
+      "-3": 2,
+      "-4": 2,
+      "-5": 1,
+      "-6": 1,
+      "-8": 1,
+      "skull": 2,
+      "tablet": 2,
+      "cultist": 2,
+      "elder_thing": 2,
+      "tentacle": 1,
+      "elder_star": 1
+    }
+  }
+]
