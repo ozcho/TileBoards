@@ -15,7 +15,7 @@ export default function Login() {
   return (
     <div className="login-page">
       <div className="login-card">
-        <h1>🎯 Countineitor</h1>
+        <h1>🎯 TileBoards</h1>
         <p>Boards interactivos en tiempo real</p>
       </div>
 
