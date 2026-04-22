@@ -109,6 +109,11 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
               ✏️ Editar
             </button>
           )}
+          {isOwnerOrAdmin && (
+            boardLocked
+              ? <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>🔓 Desbloquear</button>
+              : <button className="btn btn-sm btn-danger" onClick={() => socket.emit('board-lock', { boardId })}>🔒 Bloquear</button>
+          )}
           <div className="connection-status">
             <span className={`status-dot ${connected ? 'connected' : 'disconnected'}`}></span>
             {connected ? 'Conectado' : 'Desconectado'}
@@ -118,11 +123,6 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       {boardLocked && (
         <div className="board-locked-banner">
           <span>🔒 Tiles bloqueados — la cuenta atrás ha terminado</span>
-          {isOwnerOrAdmin && (
-            <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>
-              Desbloquear
-            </button>
-          )}
         </div>
       )}
       <div className="tiles-grid">

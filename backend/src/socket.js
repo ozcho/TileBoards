@@ -479,6 +479,24 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('board-locked', { tileId });
     });
 
+    // Board lock manual (owner/admin only)
+    socket.on('board-lock', ({ boardId }) => {
+      const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(boardId);
+      if (!board) return;
+
+      const session = socket.request.session;
+      const userId = session?.passport?.user;
+      if (!userId) return;
+
+      const dbUser = db.prepare('SELECT * FROM users WHERE id = ?').get(userId);
+      if (!dbUser || (!dbUser.is_admin && board.owner_id !== dbUser.id)) return;
+
+      if (boardLockState.get(boardId)?.locked) return;
+
+      boardLockState.set(boardId, { locked: true, tileId: null });
+      io.to(boardId).emit('board-locked', { tileId: null });
+    });
+
     // Board unlock (owner/admin only)
     socket.on('board-unlock', ({ boardId }) => {
       const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(boardId);
