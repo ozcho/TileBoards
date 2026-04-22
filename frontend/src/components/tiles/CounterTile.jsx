@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function CounterTile({ tile, socket, isOwnerOrAdmin, user, guestName }) {
+export default function CounterTile({ tile, socket, isOwnerOrAdmin, user, guestName, boardLocked }) {
   const value = tile.state?.value || 0;
   const historyVisibility = tile.config?.historyVisibility || 'none';
   const canSeeHistory = historyVisibility === 'all' || (historyVisibility === 'owner_admin' && isOwnerOrAdmin);
@@ -47,10 +47,10 @@ export default function CounterTile({ tile, socket, isOwnerOrAdmin, user, guestN
         <span className="counter-value">{value}</span>
       </div>
       <div className="counter-buttons">
-        <button onClick={() => handleChange(-5)} className="btn btn-counter btn-minus-big">-5</button>
-        <button onClick={() => handleChange(-1)} className="btn btn-counter btn-minus">-1</button>
-        <button onClick={() => handleChange(1)} className="btn btn-counter btn-plus">+1</button>
-        <button onClick={() => handleChange(5)} className="btn btn-counter btn-plus-big">+5</button>
+        <button onClick={() => handleChange(-5)} className="btn btn-counter btn-minus-big" disabled={boardLocked}>-5</button>
+        <button onClick={() => handleChange(-1)} className="btn btn-counter btn-minus" disabled={boardLocked}>-1</button>
+        <button onClick={() => handleChange(1)} className="btn btn-counter btn-plus" disabled={boardLocked}>+1</button>
+        <button onClick={() => handleChange(5)} className="btn btn-counter btn-plus-big" disabled={boardLocked}>+5</button>
       </div>
 
       {canSeeHistory && (

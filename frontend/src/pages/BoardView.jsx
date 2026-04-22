@@ -12,6 +12,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   const [tiles, setTiles] = useState(initialBoard.tiles || []);
   const [boardName, setBoardName] = useState(initialBoard.name);
   const [connected, setConnected] = useState(false);
+  const [boardLocked, setBoardLocked] = useState(false);
   const navigate = useNavigate();
   const boardId = initialBoard.id;
 
@@ -22,9 +23,10 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     const onConnect = () => setConnected(true);
     const onDisconnect = () => setConnected(false);
 
-    const onBoardState = ({ tiles: newTiles, name }) => {
+    const onBoardState = ({ tiles: newTiles, name, locked }) => {
       setTiles(newTiles);
       if (name) setBoardName(name);
+      setBoardLocked(locked || false);
     };
 
     const onTileUpdated = ({ tileId, state, config }) => {
@@ -50,6 +52,9 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       if (name) setBoardName(name);
     };
 
+    const onBoardLocked = () => setBoardLocked(true);
+    const onBoardUnlocked = () => setBoardLocked(false);
+
     const onBoardDeleted = () => {
       alert('Este board ha sido eliminado.');
       navigate('/');
@@ -61,6 +66,8 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     socket.on('tile-updated', onTileUpdated);
     socket.on('tile-config-updated', onTileConfigUpdated);
     socket.on('board-updated', onBoardUpdated);
+    socket.on('board-locked', onBoardLocked);
+    socket.on('board-unlocked', onBoardUnlocked);
     socket.on('board-deleted', onBoardDeleted);
 
     return () => {
@@ -70,6 +77,8 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       socket.off('tile-updated', onTileUpdated);
       socket.off('tile-config-updated', onTileConfigUpdated);
       socket.off('board-updated', onBoardUpdated);
+      socket.off('board-locked', onBoardLocked);
+      socket.off('board-unlocked', onBoardUnlocked);
       socket.off('board-deleted', onBoardDeleted);
       socket.disconnect();
     };
@@ -78,7 +87,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   const isOwnerOrAdmin = user && (user.is_admin || user.id === initialBoard.owner_id);
 
   const renderTile = useCallback((tile) => {
-    const props = { key: tile.id, tile, socket, isOwnerOrAdmin, user, guestName };
+    const props = { key: tile.id, tile, socket, isOwnerOrAdmin, user, guestName, boardLocked };
     switch (tile.type) {
       case 'countdown': return <CountdownTile {...props} />;
       case 'clock': return <ClockTile {...props} />;
@@ -88,7 +97,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       case 'arkham_bag': return <ArkhamBagTile {...props} />;
       default: return null;
     }
-  }, [isOwnerOrAdmin, user, guestName]);
+  }, [isOwnerOrAdmin, user, guestName, boardLocked]);
 
   return (
     <div className="board-view">
@@ -106,6 +115,16 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
           </div>
         </div>
       </div>
+      {boardLocked && (
+        <div className="board-locked-banner">
+          <span>🔒 Tiles bloqueados — la cuenta atrás ha terminado</span>
+          {isOwnerOrAdmin && (
+            <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>
+              Desbloquear
+            </button>
+          )}
+        </div>
+      )}
       <div className="tiles-grid">
         {tiles.map(tile => renderTile(tile))}
       </div>

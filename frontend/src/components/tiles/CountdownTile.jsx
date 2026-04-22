@@ -1,9 +1,10 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
   const configH = tile.config?.hours || 0;
   const configM = tile.config?.minutes || 0;
   const configS = tile.config?.seconds || 0;
+  const lockOnZero = tile.config?.lockOnZero || false;
   const totalConfigSeconds = configH * 3600 + configM * 60 + configS;
 
   // State from server: startedAt (ISO timestamp) or null
@@ -13,11 +14,13 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
 
   const [remaining, setRemaining] = useState(totalConfigSeconds);
   const [finished, setFinished] = useState(false);
+  const finishedEmittedRef = useRef(false);
 
   useEffect(() => {
     if (!startedAt) {
       setRemaining(totalConfigSeconds);
       setFinished(false);
+      finishedEmittedRef.current = false;
       return;
     }
 
@@ -43,6 +46,14 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
   }, [startedAt, paused, pausedRemaining, totalConfigSeconds]);
+
+  // Emit countdown-finished once when it reaches 0 with lockOnZero enabled
+  useEffect(() => {
+    if (finished && lockOnZero && socket && !finishedEmittedRef.current) {
+      finishedEmittedRef.current = true;
+      socket.emit('countdown-finished', { tileId: tile.id });
+    }
+  }, [finished, lockOnZero, socket, tile.id]);
 
   const hours = Math.floor(remaining / 3600);
   const minutes = Math.floor((remaining % 3600) / 60);

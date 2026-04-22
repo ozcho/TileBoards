@@ -39,7 +39,7 @@ function tokenClass(token) {
   return TOKEN_DISPLAY[token]?.className || '';
 }
 
-export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guestName, embedded }) {
+export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guestName, embedded, boardLocked }) {
   const state = tile.state || {};
   const bag = state.bag || [];
   const drawn = state.drawn || [];
@@ -149,7 +149,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const content = (
     <>
       {/* Drawn tokens display */}
-      <div className="chaosbag-drawn-area" onClick={bag.length > 0 ? handleDrawFresh : undefined} style={{ cursor: bag.length > 0 ? 'pointer' : 'default' }}>
+      <div className="chaosbag-drawn-area" onClick={bag.length > 0 && !boardLocked ? handleDrawFresh : undefined} style={{ cursor: bag.length > 0 && !boardLocked ? 'pointer' : 'default' }}>
         {drawn.length === 0 ? (
           <div className="chaosbag-empty-draw">Saca una ficha de la bolsa</div>
         ) : (
@@ -165,15 +165,15 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
       {/* Draw controls */}
       <div className="chaosbag-controls">
-        <button onClick={handleDrawFresh} className="btn btn-primary" disabled={bag.length === 0}>
+        <button onClick={handleDrawFresh} className="btn btn-primary" disabled={bag.length === 0 || boardLocked}>
           🎲 Sacar ficha
         </button>
         {drawn.length > 0 && (
           <>
-            <button onClick={handleDrawAnother} className="btn btn-secondary" disabled={bag.length === 0} title="Sacar otra ficha sin devolver">
+            <button onClick={handleDrawAnother} className="btn btn-secondary" disabled={bag.length === 0 || boardLocked} title="Sacar otra ficha sin devolver">
               + Otra
             </button>
-            <button onClick={handleReturn} className="btn btn-warning">
+            <button onClick={handleReturn} className="btn btn-warning" disabled={boardLocked}>
               ↩ Devolver ({drawn.length})
             </button>
           </>
@@ -194,15 +194,15 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
           <span className={`chaosbag-token chaosbag-token-sm token-bless`}><TokenIcon token="bless" size={16} /></span>
           <span className="chaosbag-bc-label">Bendito</span>
           <span className="chaosbag-bc-count">{blessInBag}/{BLESS_CURSE_MAX}</span>
-          <button onClick={handleAddBless} className="btn btn-xs btn-success" disabled={blessAvailable <= 0}>+ Añadir</button>
-          <button onClick={handleRemoveBless} className="btn btn-xs btn-danger" disabled={!bagSummary['bless']}>− Quitar</button>
+          <button onClick={handleAddBless} className="btn btn-xs btn-success" disabled={blessAvailable <= 0 || boardLocked}>+ Añadir</button>
+          <button onClick={handleRemoveBless} className="btn btn-xs btn-danger" disabled={!bagSummary['bless'] || boardLocked}>− Quitar</button>
         </div>
         <div className="chaosbag-bc-row">
           <span className={`chaosbag-token chaosbag-token-sm token-curse`}><TokenIcon token="curse" size={16} /></span>
           <span className="chaosbag-bc-label">Maldito</span>
           <span className="chaosbag-bc-count">{curseInBag}/{BLESS_CURSE_MAX}</span>
-          <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0}>+ Añadir</button>
-          <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse']}>− Quitar</button>
+          <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0 || boardLocked}>+ Añadir</button>
+          <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse'] || boardLocked}>− Quitar</button>
         </div>
       </div>
 
@@ -239,7 +239,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                   <option key={t} value={t}>{TOKEN_DISPLAY[t]?.label || t} ({t})</option>
                 ))}
               </select>
-              <button onClick={handleAddToken} className="btn btn-xs btn-success">+ Añadir</button>
+              <button onClick={handleAddToken} className="btn btn-xs btn-success" disabled={boardLocked}>+ Añadir</button>
             </div>
 
             <div className="chaosbag-manage-remove">
@@ -249,7 +249,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                   <button
                     key={i}
                     className={`chaosbag-token chaosbag-token-manage chaosbag-token-removable ${tokenClass(token)}`}
-                    onClick={() => handleRemoveToken(i)}
+                    onClick={() => !boardLocked && handleRemoveToken(i)}
+                    disabled={boardLocked}
                     title="Quitar permanentemente"
                   >
                     {tokenLabel(token, 28)}
@@ -265,7 +266,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                   <button
                     key={i}
                     className={`chaosbag-token chaosbag-token-manage ${tokenClass(token)}`}
-                    onClick={() => handleLock(i)}
+                    onClick={() => !boardLocked && handleLock(i)}
+                    disabled={boardLocked}
                     title="Sellar temporalmente"
                   >
                     {tokenLabel(token, 28)}
@@ -276,7 +278,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
             {isOwnerOrAdmin && (
               <div className="chaosbag-manage-reset">
-                <button onClick={handleReset} className="btn btn-sm btn-danger">
+                <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
                   🔄 Resetear a configuración inicial
                 </button>
               </div>
@@ -301,7 +303,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                 <button
                   key={i}
                   className={`chaosbag-token chaosbag-token-manage chaosbag-token-locked ${tokenClass(token)}`}
-                  onClick={() => handleUnlock(i)}
+                  onClick={() => !boardLocked && handleUnlock(i)}
+                  disabled={boardLocked}
                   title="Devolver a la bolsa"
                 >
                   {tokenLabel(token, 28)}

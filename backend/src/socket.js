@@ -3,6 +3,9 @@ const bcrypt = require('bcrypt');
 const { v4: uuidv4 } = require('uuid');
 
 function setupSocket(io, sessionMiddleware) {
+  // In-memory lock state: boardId -> { locked: bool, tileId: string|null }
+  const boardLockState = new Map();
+
   // Share session with Socket.IO
   io.use((socket, next) => {
     sessionMiddleware(socket.request, {}, next);
@@ -53,7 +56,8 @@ function setupSocket(io, sessionMiddleware) {
       socket.emit('board-state', {
         boardId,
         name: board.name,
-        tiles: tiles.map(parseTile)
+        tiles: tiles.map(parseTile),
+        locked: boardLockState.get(boardId)?.locked || false
       });
     });
 
@@ -167,6 +171,13 @@ function setupSocket(io, sessionMiddleware) {
       db.prepare('UPDATE tiles SET state = ? WHERE id = ?')
         .run(JSON.stringify(state), tileId);
       io.to(tile.board_id).emit('tile-updated', { tileId, state });
+
+      // Unlock the board if it was locked by this tile
+      const lockState = boardLockState.get(tile.board_id);
+      if (lockState?.locked && lockState?.tileId === tileId) {
+        boardLockState.set(tile.board_id, { locked: false, tileId: null });
+        io.to(tile.board_id).emit('board-unlocked');
+      }
     });
 
     // Message board - add message
@@ -441,6 +452,47 @@ function setupSocket(io, sessionMiddleware) {
       }
 
       io.to(tile.board_id).emit('tile-updated', { tileId, state });
+    });
+
+    // Countdown finished - lock the board if lockOnZero is configured
+    socket.on('countdown-finished', ({ tileId }) => {
+      const tile = db.prepare(
+        'SELECT * FROM tiles WHERE id = ? AND type = ?'
+      ).get(tileId, 'countdown');
+      if (!tile) return;
+
+      const config = JSON.parse(tile.config || '{}');
+      if (!config.lockOnZero) return;
+
+      // Validate the countdown has actually reached 0
+      const state = JSON.parse(tile.state || '{}');
+      if (!state.startedAt || state.paused) return;
+
+      const totalSeconds = (config.hours || 0) * 3600 + (config.minutes || 0) * 60 + (config.seconds || 0);
+      const elapsed = Math.floor((Date.now() - new Date(state.startedAt).getTime()) / 1000);
+      if (elapsed < totalSeconds) return;
+
+      // Only lock once
+      if (boardLockState.get(tile.board_id)?.locked) return;
+
+      boardLockState.set(tile.board_id, { locked: true, tileId });
+      io.to(tile.board_id).emit('board-locked', { tileId });
+    });
+
+    // Board unlock (owner/admin only)
+    socket.on('board-unlock', ({ boardId }) => {
+      const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(boardId);
+      if (!board) return;
+
+      const session = socket.request.session;
+      const userId = session?.passport?.user;
+      if (!userId) return;
+
+      const dbUser = db.prepare('SELECT * FROM users WHERE id = ?').get(userId);
+      if (!dbUser || (!dbUser.is_admin && board.owner_id !== dbUser.id)) return;
+
+      boardLockState.set(boardId, { locked: false, tileId: null });
+      io.to(boardId).emit('board-unlocked');
     });
 
     socket.on('disconnect', () => {

@@ -347,6 +347,14 @@ export default function BoardEditor() {
                           <span>s</span>
                         </div>
                       </div>
+                      <label className="checkbox-label" style={{ marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input
+                          type="checkbox"
+                          checked={tile.config.lockOnZero || false}
+                          onChange={e => updateTile(index, { config: { ...tile.config, lockOnZero: e.target.checked } })}
+                        />
+                        Bloquear todos los tiles al llegar a 0
+                      </label>
                     </div>
                   )}
 

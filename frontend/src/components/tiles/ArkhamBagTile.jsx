@@ -1,6 +1,6 @@
 import ChaosBagTile from './ChaosBagTile';
 
-export default function ArkhamBagTile({ tile, socket, isOwnerOrAdmin, user, guestName }) {
+export default function ArkhamBagTile({ tile, socket, isOwnerOrAdmin, user, guestName, boardLocked }) {
   const config = tile.config || {};
   const presetLabel = config.campaign && config.scenario && config.difficulty
     ? `${config.campaign} — ${config.scenario} (${config.difficulty})`
@@ -18,6 +18,7 @@ export default function ArkhamBagTile({ tile, socket, isOwnerOrAdmin, user, gues
         isOwnerOrAdmin={isOwnerOrAdmin}
         user={user}
         guestName={guestName}
+        boardLocked={boardLocked}
         embedded
       />
     </div>

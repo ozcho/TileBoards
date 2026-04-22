@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, guestName }) {
+export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, guestName, boardLocked }) {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState('');
   const visibility = tile.config?.visibility || 'all';
@@ -63,7 +63,7 @@ export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, g
     <div className="tile tile-messageboard">
       <h3 className="tile-label">{tile.label || 'Mensajes'}</h3>
 
-      {canWrite ? (
+      {canWrite && !boardLocked ? (
         <form onSubmit={handleSubmit} className="message-form">
           <input
             type="text"
@@ -75,6 +75,8 @@ export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, g
           />
           <button type="submit" className="btn btn-primary btn-sm">Enviar</button>
         </form>
+      ) : canWrite && boardLocked ? (
+        <p className="message-restricted">Tablón bloqueado</p>
       ) : (
         <p className="message-restricted">Solo el dueño y admins pueden escribir mensajes</p>
       )}
