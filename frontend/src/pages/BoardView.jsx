@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { socket } from '../socket';
 import CountdownTile from '../components/tiles/CountdownTile';
@@ -15,6 +15,48 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   const [boardLocked, setBoardLocked] = useState(false);
   const navigate = useNavigate();
   const boardId = initialBoard.id;
+  const wakeLockRef = useRef(null);
+  const [wakeLockActive, setWakeLockActive] = useState(false);
+  const wakeLockSupported = 'wakeLock' in navigator;
+
+  const toggleWakeLock = async () => {
+    if (wakeLockRef.current) {
+      await wakeLockRef.current.release();
+      wakeLockRef.current = null;
+      setWakeLockActive(false);
+    } else {
+      try {
+        wakeLockRef.current = await navigator.wakeLock.request('screen');
+        setWakeLockActive(true);
+        wakeLockRef.current.addEventListener('release', () => {
+          wakeLockRef.current = null;
+          setWakeLockActive(false);
+        });
+      } catch {
+        setWakeLockActive(false);
+      }
+    }
+  };
+
+  // Re-adquirir al volver el foco si estaba activo
+  useEffect(() => {
+    const onVisibility = async () => {
+      if (document.visibilityState === 'visible' && wakeLockActive && !wakeLockRef.current) {
+        try {
+          wakeLockRef.current = await navigator.wakeLock.request('screen');
+          wakeLockRef.current.addEventListener('release', () => {
+            wakeLockRef.current = null;
+            setWakeLockActive(false);
+          });
+        } catch { /* ignorar */ }
+      }
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility);
+      wakeLockRef.current?.release();
+    };
+  }, [wakeLockActive]);
 
   useEffect(() => {
     socket.connect();
@@ -131,6 +173,15 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
             boardLocked
               ? <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>🔓 Desbloquear</button>
               : <button className="btn btn-sm btn-danger" onClick={() => socket.emit('board-lock', { boardId })}>🔒 Bloquear</button>
+          )}
+          {wakeLockSupported && (
+            <button
+              className={`btn btn-sm ${wakeLockActive ? 'btn-warning' : 'btn-ghost'}`}
+              onClick={toggleWakeLock}
+              title={wakeLockActive ? 'Desactivar bloqueo de pantalla' : 'Mantener pantalla encendida'}
+            >
+              {wakeLockActive ? '🔆 Pantalla activa' : '🔅 Pantalla'}
+            </button>
           )}
           <div className="connection-status">
             <span className={`status-dot ${connected ? 'connected' : 'disconnected'}`}></span>
