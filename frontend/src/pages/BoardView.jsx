@@ -20,8 +20,24 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     socket.connect();
     socket.emit('join-board', { boardId });
 
-    const onConnect = () => setConnected(true);
+    const onConnect = () => {
+      setConnected(true);
+      // Re-join siempre al (re)conectar — cubre reconexiones automáticas y vuelta de foco
+      socket.emit('join-board', { boardId });
+    };
     const onDisconnect = () => setConnected(false);
+
+    // Reconexión al volver el foco en móvil (Page Visibility API)
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        if (!socket.connected) {
+          socket.connect();
+        } else {
+          // Ya conectado pero puede que el estado esté desincronizado — pedir board-state
+          socket.emit('join-board', { boardId });
+        }
+      }
+    };
 
     const onBoardState = ({ tiles: newTiles, name, locked }) => {
       setTiles(newTiles);
@@ -69,6 +85,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     socket.on('board-locked', onBoardLocked);
     socket.on('board-unlocked', onBoardUnlocked);
     socket.on('board-deleted', onBoardDeleted);
+    document.addEventListener('visibilitychange', onVisibilityChange);
 
     return () => {
       socket.off('connect', onConnect);
@@ -80,6 +97,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       socket.off('board-locked', onBoardLocked);
       socket.off('board-unlocked', onBoardUnlocked);
       socket.off('board-deleted', onBoardDeleted);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
       socket.disconnect();
     };
   }, [boardId, navigate]);
