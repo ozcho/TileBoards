@@ -216,7 +216,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                   key={isNewest ? `newest-${newestDrawKey}` : i}
                   className={`chaosbag-token ${isNewest ? 'chaosbag-token-large chaosbag-token-newest' : 'chaosbag-token-large chaosbag-token-previous'} ${tokenClass(token)}`}
                 >
-                  {tokenLabel(token, isNewest ? 56 : 30)}
+                  {tokenLabel(token, isNewest ? 70 : 30)}
                 </span>
               );
             })}
