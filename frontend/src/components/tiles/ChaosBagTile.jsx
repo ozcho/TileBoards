@@ -189,9 +189,19 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
       {/* === CAJA PROTAGONISTA: tamaño fijo === */}
       <div
         className="chaosbag-drawn-area"
-        onClick={drawn.length > 0 && !boardLocked ? handleReturn : undefined}
-        style={{ cursor: drawn.length > 0 && !boardLocked ? 'pointer' : 'default' }}
-        title={drawn.length > 0 && !boardLocked ? 'Devolver fichas a la bolsa' : undefined}
+        onClick={
+          boardLocked ? undefined :
+          drawn.length > 0 ? handleReturn :
+          bag.length > 0 ? handleDrawFresh :
+          undefined
+        }
+        style={{ cursor: (!boardLocked && (drawn.length > 0 || bag.length > 0)) ? 'pointer' : 'default' }}
+        title={
+          boardLocked ? undefined :
+          drawn.length > 0 ? 'Devolver fichas a la bolsa' :
+          bag.length > 0 ? 'Sacar ficha' :
+          undefined
+        }
       >
         {drawn.length === 0 ? (
           <div className="chaosbag-empty-draw">
