@@ -78,6 +78,9 @@ db.exec(`
     scenario TEXT NOT NULL,
     difficulty TEXT NOT NULL,
     token_counts TEXT NOT NULL,
+    campaign_log TEXT,
+    victory_requirements TEXT,
+    scenario_value INTEGER,
     UNIQUE(campaign, scenario, difficulty)
   );
 `);
@@ -116,18 +119,25 @@ try {
   // Already migrated
 }
 
-// Seed chaosbag_presets from JSON file
+// Migration: add new preset columns if missing
+try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN campaign_log TEXT'); } catch (e) {}
+try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN victory_requirements TEXT'); } catch (e) {}
+try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN scenario_value INTEGER'); } catch (e) {}
+
+// Seed chaosbag_presets from JSON file (always re-seeds reference data)
 try {
   const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'presets-seed.json'), 'utf8'));
   const count = db.prepare('SELECT COUNT(*) as c FROM chaosbag_presets').get().c;
-  if (count !== seedData.length) {
+  const needsReseed = count !== seedData.length ||
+    db.prepare("SELECT COUNT(*) as c FROM chaosbag_presets WHERE victory_requirements IS NULL").get().c > 0;
+  if (needsReseed) {
     db.exec('DELETE FROM chaosbag_presets');
     const insert = db.prepare(
-      'INSERT OR IGNORE INTO chaosbag_presets (campaign, scenario, difficulty, token_counts) VALUES (?, ?, ?, ?)'
+      'INSERT OR IGNORE INTO chaosbag_presets (campaign, scenario, difficulty, token_counts, campaign_log, victory_requirements, scenario_value) VALUES (?, ?, ?, ?, ?, ?, ?)'
     );
     const seed = db.transaction((presets) => {
       for (const p of presets) {
-        insert.run(p.campaign, p.scenario, p.difficulty, JSON.stringify(p.tokenCounts));
+        insert.run(p.campaign, p.scenario, p.difficulty, JSON.stringify(p.tokenCounts), p.campaignLog || null, p.victoryRequirements || null, p.scenarioValue || null);
       }
     });
     seed(seedData);

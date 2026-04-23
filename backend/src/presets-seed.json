@@ -13,7 +13,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -31,7 +34,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -49,7 +55,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -69,7 +78,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -85,7 +97,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lita se vio obligada a encontrar a otros para que la ayudaran en su causa. Tu Casa sigue en pie. El Sacerdote Gul Sigue Vivo.",
+    "victoryRequirements": "R1 o R2 y anotar al menos 5 sectarios en «Sectarios que interrogamos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -103,7 +118,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lita se vio obligada a encontrar a otros para que la ayudaran en su causa. Tu Casa sigue en pie. El Sacerdote Gul Sigue Vivo.",
+    "victoryRequirements": "R1 o R2 y anotar al menos 5 sectarios en «Sectarios que interrogamos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -121,7 +139,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lita se vio obligada a encontrar a otros para que la ayudaran en su causa. Tu Casa sigue en pie. El Sacerdote Gul Sigue Vivo.",
+    "victoryRequirements": "R1 o R2 y anotar al menos 5 sectarios en «Sectarios que interrogamos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -141,7 +162,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lita se vio obligada a encontrar a otros para que la ayudaran en su causa. Tu Casa sigue en pie. El Sacerdote Gul Sigue Vivo.",
+    "victoryRequirements": "R1 o R2 y anotar al menos 5 sectarios en «Sectarios que interrogamos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -157,7 +181,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige, al azar, 2 sectarios de los 6 posibles para añadirlos a «Sectarios que escaparon».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -175,7 +202,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige, al azar, 2 sectarios de los 6 posibles para añadirlos a «Sectarios que escaparon».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -193,7 +223,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige, al azar, 2 sectarios de los 6 posibles para añadirlos a «Sectarios que escaparon».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Noche de la Fanática",
@@ -213,7 +246,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige, al azar, 2 sectarios de los 6 posibles para añadirlos a «Sectarios que escaparon».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -228,7 +264,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -245,7 +284,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -262,7 +304,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -281,7 +326,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -296,7 +344,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -313,7 +364,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -330,7 +384,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -349,7 +406,10 @@
       "cultist": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que este es el primer escenario de la campaña.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -365,7 +425,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El Dr. Henry Armitage ha sido secuestrado.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -384,7 +447,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El Dr. Henry Armitage ha sido secuestrado.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -403,7 +469,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El Dr. Henry Armitage ha sido secuestrado.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -424,7 +493,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El Dr. Henry Armitage ha sido secuestrado.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -440,7 +512,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -459,7 +534,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -478,7 +556,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -499,7 +580,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -515,7 +599,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Al crear los «sacrificios potenciales», usa: Dr. Henry Armitage, Dr. Francis Morgan, Profesor Warren Rice, Zebulon Whateley y Earl Sawyer. Los investigadores no quedaron retrasados de camino a Dunwich. La banda de O'Bannion no tiene cuentas que saldar.",
+    "victoryRequirements": "R1, R2 o R3 y no anotar más de 3 «sacrificios a Yog-Sothoth»",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -534,7 +621,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Al crear los «sacrificios potenciales», usa: Dr. Henry Armitage, Dr. Francis Morgan, Profesor Warren Rice, Zebulon Whateley y Earl Sawyer. Los investigadores no quedaron retrasados de camino a Dunwich. La banda de O'Bannion no tiene cuentas que saldar.",
+    "victoryRequirements": "R1, R2 o R3 y no anotar más de 3 «sacrificios a Yog-Sothoth»",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -553,7 +643,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Al crear los «sacrificios potenciales», usa: Dr. Henry Armitage, Dr. Francis Morgan, Profesor Warren Rice, Zebulon Whateley y Earl Sawyer. Los investigadores no quedaron retrasados de camino a Dunwich. La banda de O'Bannion no tiene cuentas que saldar.",
+    "victoryRequirements": "R1, R2 o R3 y no anotar más de 3 «sacrificios a Yog-Sothoth»",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -574,7 +667,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Al crear los «sacrificios potenciales», usa: Dr. Henry Armitage, Dr. Francis Morgan, Profesor Warren Rice, Zebulon Whateley y Earl Sawyer. Los investigadores no quedaron retrasados de camino a Dunwich. La banda de O'Bannion no tiene cuentas que saldar.",
+    "victoryRequirements": "R1, R2 o R3 y no anotar más de 3 «sacrificios a Yog-Sothoth»",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -590,7 +686,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "3 personajes fueron sacrificados a Yog-Sothoth. No incluyas el Polvo de Ibn-Ghazi en ningún mazo. No cojas ninguna Debilidad adicional. El Dr. Henry Armitage ha sido sacrificado a Yog-Sothoth.",
+    "victoryRequirements": "R1 o R2 y no escapa más de una Progenie",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -609,7 +708,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "3 personajes fueron sacrificados a Yog-Sothoth. No incluyas el Polvo de Ibn-Ghazi en ningún mazo. No cojas ninguna Debilidad adicional. El Dr. Henry Armitage ha sido sacrificado a Yog-Sothoth.",
+    "victoryRequirements": "R1 o R2 y no escapa más de una Progenie",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -628,7 +730,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "3 personajes fueron sacrificados a Yog-Sothoth. No incluyas el Polvo de Ibn-Ghazi en ningún mazo. No cojas ninguna Debilidad adicional. El Dr. Henry Armitage ha sido sacrificado a Yog-Sothoth.",
+    "victoryRequirements": "R1 o R2 y no escapa más de una Progenie",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -649,7 +754,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "3 personajes fueron sacrificados a Yog-Sothoth. No incluyas el Polvo de Ibn-Ghazi en ningún mazo. No cojas ninguna Debilidad adicional. El Dr. Henry Armitage ha sido sacrificado a Yog-Sothoth.",
+    "victoryRequirements": "R1 o R2 y no escapa más de una Progenie",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -665,7 +773,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -684,7 +795,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -703,7 +817,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -724,7 +841,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -741,7 +861,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "No leas el epílogo de la campaña incluso aunque ganes el escenario. Considera que todos los eventos previos del registro de campaña han tenido lugar.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -761,7 +884,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "No leas el epílogo de la campaña incluso aunque ganes el escenario. Considera que todos los eventos previos del registro de campaña han tenido lugar.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -781,7 +907,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "No leas el epílogo de la campaña incluso aunque ganes el escenario. Considera que todos los eventos previos del registro de campaña han tenido lugar.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Legado de Dunwich",
@@ -803,7 +932,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "No leas el epílogo de la campaña incluso aunque ganes el escenario. Considera que todos los eventos previos del registro de campaña han tenido lugar.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -817,7 +949,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -833,7 +968,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -849,7 +987,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -867,7 +1008,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -881,7 +1025,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -897,7 +1044,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -913,7 +1063,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -931,7 +1084,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -945,7 +1101,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -961,7 +1120,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -977,7 +1139,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -995,7 +1160,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1009,7 +1177,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "victoryRequirements": "R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1025,7 +1196,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "victoryRequirements": "R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1041,7 +1215,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "victoryRequirements": "R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1059,7 +1236,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "victoryRequirements": "R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1073,7 +1253,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "victoryRequirements": "R1 y R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1089,7 +1272,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "victoryRequirements": "R1 y R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1105,7 +1291,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "victoryRequirements": "R1 y R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1123,7 +1312,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "victoryRequirements": "R1 y R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1137,7 +1329,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1153,7 +1348,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1169,7 +1367,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1187,7 +1388,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1201,7 +1405,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1217,7 +1424,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1233,7 +1443,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1251,7 +1464,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1266,7 +1482,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1283,7 +1502,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1300,7 +1522,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Camino a Carcosa",
@@ -1319,7 +1544,10 @@
       "skull": 3,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Era Olvidada",
@@ -1335,7 +1563,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Si el grupo lo tiene, elegid qué investigador cuenta con él.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Era Olvidada",
@@ -1352,7 +1583,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Si el grupo lo tiene, elegid qué investigador cuenta con él.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Era Olvidada",
@@ -1370,7 +1604,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Si el grupo lo tiene, elegid qué investigador cuenta con él.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Era Olvidada",
@@ -1388,7 +1625,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Si el grupo lo tiene, elegid qué investigador cuenta con él.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Era Olvidada",
@@ -1405,7 +1645,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores se vieron obligados a esperar suministros adicionales.",
+    "victoryRequirements": "R1, ningún investigador puede quedar derrotado",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Era Olvidada",
@@ -1423,7 +1666,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores se vieron obligados a esperar suministros adicionales.",
+    "victoryRequirements": "R1, ningún investigador puede quedar derrotado",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Era Olvidada",
@@ -1442,7 +1688,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores se vieron obligados a esperar suministros adicionales.",
+    "victoryRequirements": "R1, ningún investigador puede quedar derrotado",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Era Olvidada",
@@ -1461,7 +1710,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores se vieron obligados a esperar suministros adicionales.",
+    "victoryRequirements": "R1, ningún investigador puede quedar derrotado",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Era Olvidada",
@@ -1479,7 +1731,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Elige: los investigadores dieron la custodia de la reliquia a Alejandro o a Harlan Earnstone.",
+    "victoryRequirements": "R1, ningún acto por completar",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Era Olvidada",
@@ -1498,7 +1753,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Elige: los investigadores dieron la custodia de la reliquia a Alejandro o a Harlan Earnstone.",
+    "victoryRequirements": "R1, ningún acto por completar",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Era Olvidada",
@@ -1518,7 +1776,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Elige: los investigadores dieron la custodia de la reliquia a Alejandro o a Harlan Earnstone.",
+    "victoryRequirements": "R1, ningún acto por completar",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Era Olvidada",
@@ -1538,7 +1799,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Elige: los investigadores dieron la custodia de la reliquia a Alejandro o a Harlan Earnstone.",
+    "victoryRequirements": "R1, ningún acto por completar",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Era Olvidada",
@@ -1556,7 +1820,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Era Olvidada",
@@ -1575,7 +1842,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Era Olvidada",
@@ -1595,7 +1865,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Era Olvidada",
@@ -1615,7 +1888,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Era Olvidada",
@@ -1633,7 +1909,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores conocen 2 caminos.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1652,7 +1931,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores conocen 2 caminos.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1672,7 +1954,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores conocen 2 caminos.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1692,7 +1977,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Los investigadores conocen 2 caminos.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1710,7 +1998,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1729,7 +2020,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1749,7 +2043,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1769,7 +2066,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Era Olvidada",
@@ -1787,7 +2087,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 y anotar «el proceso fue perfeccionado»",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Era Olvidada",
@@ -1806,7 +2109,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 y anotar «el proceso fue perfeccionado»",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Era Olvidada",
@@ -1826,7 +2132,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 y anotar «el proceso fue perfeccionado»",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Era Olvidada",
@@ -1846,7 +2155,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido.",
+    "victoryRequirements": "R1 y anotar «el proceso fue perfeccionado»",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Era Olvidada",
@@ -1864,7 +2176,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Ithaca ha recuperado la fe. Hay 6 marcas en «Furia de Yig». El Heraldo sigue Vivo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Era Olvidada",
@@ -1883,7 +2198,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Ithaca ha recuperado la fe. Hay 6 marcas en «Furia de Yig». El Heraldo sigue Vivo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Era Olvidada",
@@ -1903,7 +2221,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Ithaca ha recuperado la fe. Hay 6 marcas en «Furia de Yig». El Heraldo sigue Vivo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Era Olvidada",
@@ -1923,7 +2244,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. Ithaca ha recuperado la fe. Hay 6 marcas en «Furia de Yig». El Heraldo sigue Vivo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Era Olvidada",
@@ -1941,7 +2265,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Era Olvidada",
@@ -1960,7 +2287,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Era Olvidada",
@@ -1980,7 +2310,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Era Olvidada",
@@ -2000,7 +2333,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Círculo Roto",
@@ -2015,7 +2351,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Círculo Roto",
@@ -2031,7 +2370,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Círculo Roto",
@@ -2047,7 +2389,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Círculo Roto",
@@ -2064,7 +2409,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "El Círculo Roto",
@@ -2079,7 +2427,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Círculo Roto",
@@ -2095,7 +2446,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Círculo Roto",
@@ -2111,7 +2465,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Círculo Roto",
@@ -2128,7 +2485,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 2
   },
   {
     "campaign": "El Círculo Roto",
@@ -2143,7 +2503,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Círculo Roto",
@@ -2159,7 +2522,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Círculo Roto",
@@ -2175,7 +2541,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Círculo Roto",
@@ -2192,7 +2561,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "El Círculo Roto",
@@ -2210,7 +2582,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Hay 3 recuerdos anotados en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1 y no anotar más de 1 hereje liberado",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Círculo Roto",
@@ -2229,7 +2604,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Hay 3 recuerdos anotados en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1 y no anotar más de 1 hereje liberado",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Círculo Roto",
@@ -2248,7 +2626,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Hay 3 recuerdos anotados en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1 y no anotar más de 1 hereje liberado",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Círculo Roto",
@@ -2268,7 +2649,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Hay 3 recuerdos anotados en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1 y no anotar más de 1 hereje liberado",
+    "scenarioValue": 4
   },
   {
     "campaign": "El Círculo Roto",
@@ -2286,7 +2670,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Círculo Roto",
@@ -2305,7 +2692,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Círculo Roto",
@@ -2324,7 +2714,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Círculo Roto",
@@ -2344,7 +2737,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elige: «Los Investigadores son Miembros de la Logia», «Enemigos de la Logia» o «no descubrieron nada sobre los planes de la Logia».",
+    "victoryRequirements": "R1 o R2 o R3",
+    "scenarioValue": 5
   },
   {
     "campaign": "El Círculo Roto",
@@ -2362,7 +2758,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si cada persona en «Personas Desaparecidas» está tachada. Si los investigadores «Se han puesto de parte del Aquelarre», aplica las instrucciones correspondientes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Círculo Roto",
@@ -2381,7 +2780,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si cada persona en «Personas Desaparecidas» está tachada. Si los investigadores «Se han puesto de parte del Aquelarre», aplica las instrucciones correspondientes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Círculo Roto",
@@ -2400,7 +2802,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si cada persona en «Personas Desaparecidas» está tachada. Si los investigadores «Se han puesto de parte del Aquelarre», aplica las instrucciones correspondientes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Círculo Roto",
@@ -2420,7 +2825,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si cada persona en «Personas Desaparecidas» está tachada. Si los investigadores «Se han puesto de parte del Aquelarre», aplica las instrucciones correspondientes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "El Círculo Roto",
@@ -2438,7 +2846,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "En la preparación decide una de las siguientes: «Anette Mason está poseída por el mal» o «Carl Sanford posee los secretos del universo».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Círculo Roto",
@@ -2457,7 +2868,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "En la preparación decide una de las siguientes: «Anette Mason está poseída por el mal» o «Carl Sanford posee los secretos del universo».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Círculo Roto",
@@ -2476,7 +2890,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "En la preparación decide una de las siguientes: «Anette Mason está poseída por el mal» o «Carl Sanford posee los secretos del universo».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Círculo Roto",
@@ -2496,7 +2913,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "En la preparación decide una de las siguientes: «Anette Mason está poseída por el mal» o «Carl Sanford posee los secretos del universo».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "El Círculo Roto",
@@ -2514,7 +2934,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Anota 4 marcas en «El Camino se Extiende Ante los Investigadores».",
+    "victoryRequirements": "R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Círculo Roto",
@@ -2533,7 +2956,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Anota 4 marcas en «El Camino se Extiende Ante los Investigadores».",
+    "victoryRequirements": "R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Círculo Roto",
@@ -2552,7 +2978,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Anota 4 marcas en «El Camino se Extiende Ante los Investigadores».",
+    "victoryRequirements": "R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "El Círculo Roto",
@@ -2572,7 +3001,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Anota 4 marcas en «El Camino se Extiende Ante los Investigadores».",
+    "victoryRequirements": "R3",
+    "scenarioValue": 8
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2587,7 +3019,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2604,7 +3039,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2621,7 +3059,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2640,7 +3081,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2656,7 +3100,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2674,7 +3121,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2692,7 +3142,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2712,7 +3165,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R3",
+    "scenarioValue": 1
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2728,7 +3184,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los Gatos Obtuvieron su Tributo de los Zoogs».",
+    "victoryRequirements": "R1 o R2 y anotar al menos 7 señales de los dioses",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2746,7 +3205,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los Gatos Obtuvieron su Tributo de los Zoogs».",
+    "victoryRequirements": "R1 o R2 y anotar al menos 7 señales de los dioses",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2764,7 +3226,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los Gatos Obtuvieron su Tributo de los Zoogs».",
+    "victoryRequirements": "R1 o R2 y anotar al menos 7 señales de los dioses",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2784,7 +3249,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los Gatos Obtuvieron su Tributo de los Zoogs».",
+    "victoryRequirements": "R1 o R2 y anotar al menos 7 señales de los dioses",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2800,7 +3268,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato Negro está con los Investigadores del Mundo de la Vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2818,7 +3289,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato Negro está con los Investigadores del Mundo de la Vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2836,7 +3310,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato Negro está con los Investigadores del Mundo de la Vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2856,7 +3333,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato Negro está con los Investigadores del Mundo de la Vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 3
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2872,7 +3352,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Ninguno de los investigadores fue capturado». «Randolph Carter evitó la captura».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2890,7 +3373,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Ninguno de los investigadores fue capturado». «Randolph Carter evitó la captura».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2908,7 +3394,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Ninguno de los investigadores fue capturado». «Randolph Carter evitó la captura».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2928,7 +3417,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Ninguno de los investigadores fue capturado». «Randolph Carter evitó la captura».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2944,7 +3436,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato negro no está con los investigadores en el mundo de la Vigilia». Decide el destino de Randolph Carter con una moneda. Lanza 1d6, anota tantas marcas en «peldaños del puente».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2962,7 +3457,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato negro no está con los investigadores en el mundo de la Vigilia». Decide el destino de Randolph Carter con una moneda. Lanza 1d6, anota tantas marcas en «peldaños del puente».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -2980,7 +3478,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato negro no está con los investigadores en el mundo de la Vigilia». Decide el destino de Randolph Carter con una moneda. Lanza 1d6, anota tantas marcas en «peldaños del puente».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3000,7 +3501,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Gato negro no está con los investigadores en el mundo de la Vigilia». Decide el destino de Randolph Carter con una moneda. Lanza 1d6, anota tantas marcas en «peldaños del puente».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3016,7 +3520,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores viajaron al desierto frío». «El gato Negro está con los soñadores». Decide el destino de Randolph Carter con una moneda. No hay marcas en «pruebas de Kadath».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3034,7 +3541,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores viajaron al desierto frío». «El gato Negro está con los soñadores». Decide el destino de Randolph Carter con una moneda. No hay marcas en «pruebas de Kadath».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3052,7 +3562,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores viajaron al desierto frío». «El gato Negro está con los soñadores». Decide el destino de Randolph Carter con una moneda. No hay marcas en «pruebas de Kadath».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3072,7 +3585,10 @@
       "tablet": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores viajaron al desierto frío». «El gato Negro está con los soñadores». Decide el destino de Randolph Carter con una moneda. No hay marcas en «pruebas de Kadath».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3088,7 +3604,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d12, anota tantas marcas en «Peldaños del puente». Decide el destino de Randolph Carter con una moneda. «El gato negro está con los investigadores en el mundo de la vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3106,7 +3625,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d12, anota tantas marcas en «Peldaños del puente». Decide el destino de Randolph Carter con una moneda. «El gato negro está con los investigadores en el mundo de la vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3124,7 +3646,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d12, anota tantas marcas en «Peldaños del puente». Decide el destino de Randolph Carter con una moneda. «El gato negro está con los investigadores en el mundo de la vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "Devoradores de Sueños",
@@ -3144,7 +3669,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d12, anota tantas marcas en «Peldaños del puente». Decide el destino de Randolph Carter con una moneda. «El gato negro está con los investigadores en el mundo de la vigilia».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3161,7 +3689,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3180,7 +3711,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3199,7 +3733,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3220,7 +3757,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3237,7 +3777,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Una decisión de no separarse».",
+    "victoryRequirements": "R2, R3, R4, R5, R6 o R7",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3256,7 +3799,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Una decisión de no separarse».",
+    "victoryRequirements": "R2, R3, R4, R5, R6 o R7",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3275,7 +3821,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Una decisión de no separarse».",
+    "victoryRequirements": "R2, R3, R4, R5, R6 o R7",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3296,7 +3845,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Una decisión de no separarse».",
+    "victoryRequirements": "R2, R3, R4, R5, R6 o R7",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3313,7 +3865,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Zadok Allen quiere sangre». No hay lugar rodeado en «posibles escondites».",
+    "victoryRequirements": "R1 y anotar «los investigadores llegaron a salvo a sus vehículos»",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3332,7 +3887,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Zadok Allen quiere sangre». No hay lugar rodeado en «posibles escondites».",
+    "victoryRequirements": "R1 y anotar «los investigadores llegaron a salvo a sus vehículos»",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3351,7 +3909,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Zadok Allen quiere sangre». No hay lugar rodeado en «posibles escondites».",
+    "victoryRequirements": "R1 y anotar «los investigadores llegaron a salvo a sus vehículos»",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3372,7 +3933,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Zadok Allen quiere sangre». No hay lugar rodeado en «posibles escondites».",
+    "victoryRequirements": "R1 y anotar «los investigadores llegaron a salvo a sus vehículos»",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3389,7 +3953,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La Misión Tuvo Éxito». «Una Batalla con un Horripilante demonio».",
+    "victoryRequirements": "R1 y conseguir las 3 llaves",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3408,7 +3975,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La Misión Tuvo Éxito». «Una Batalla con un Horripilante demonio».",
+    "victoryRequirements": "R1 y conseguir las 3 llaves",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3427,7 +3997,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La Misión Tuvo Éxito». «Una Batalla con un Horripilante demonio».",
+    "victoryRequirements": "R1 y conseguir las 3 llaves",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3448,7 +4021,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La Misión Tuvo Éxito». «Una Batalla con un Horripilante demonio».",
+    "victoryRequirements": "R1 y conseguir las 3 llaves",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3465,7 +4041,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Terror del Arrecife del Diablo Sigue Vivo».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3484,7 +4063,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Terror del Arrecife del Diablo Sigue Vivo».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3503,7 +4085,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Terror del Arrecife del Diablo Sigue Vivo».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3524,7 +4109,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«El Terror del Arrecife del Diablo Sigue Vivo».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3541,7 +4129,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores llegaron al Cabo del Halcón antes de la salida del sol». «Llevaron al faro el ídolo, el manto y la diadema».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3560,7 +4151,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores llegaron al Cabo del Halcón antes de la salida del sol». «Llevaron al faro el ídolo, el manto y la diadema».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3579,7 +4173,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores llegaron al Cabo del Halcón antes de la salida del sol». «Llevaron al faro el ídolo, el manto y la diadema».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3600,7 +4197,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«Los investigadores llegaron al Cabo del Halcón antes de la salida del sol». «Llevaron al faro el ídolo, el manto y la diadema».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3617,7 +4217,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La misión tuvo éxito». «Una decisión de no separarse». «Un encuentro con una secta secreta».",
+    "victoryRequirements": "R1 y no anotar «Dagon ha despertado»",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3636,7 +4239,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La misión tuvo éxito». «Una decisión de no separarse». «Un encuentro con una secta secreta».",
+    "victoryRequirements": "R1 y no anotar «Dagon ha despertado»",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3655,7 +4261,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La misión tuvo éxito». «Una decisión de no separarse». «Un encuentro con una secta secreta».",
+    "victoryRequirements": "R1 y no anotar «Dagon ha despertado»",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3676,7 +4285,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "«La misión tuvo éxito». «Una decisión de no separarse». «Un encuentro con una secta secreta».",
+    "victoryRequirements": "R1 y no anotar «Dagon ha despertado»",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3693,7 +4305,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Antes de la preparación elegid dos condiciones entre: tener la llave de Y'ha-nthlei, tener el mapa, el guardián ha sido derrotado, la puerta te reconoce como guardián. Determinar al azar si cada investigador tiene traje de buzo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3712,7 +4327,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Antes de la preparación elegid dos condiciones entre: tener la llave de Y'ha-nthlei, tener el mapa, el guardián ha sido derrotado, la puerta te reconoce como guardián. Determinar al azar si cada investigador tiene traje de buzo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3731,7 +4349,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Antes de la preparación elegid dos condiciones entre: tener la llave de Y'ha-nthlei, tener el mapa, el guardián ha sido derrotado, la puerta te reconoce como guardián. Determinar al azar si cada investigador tiene traje de buzo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Conspiración de Innsmouth",
@@ -3752,7 +4373,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Antes de la preparación elegid dos condiciones entre: tener la llave de Y'ha-nthlei, tener el mapa, el guardián ha sido derrotado, la puerta te reconoce como guardián. Determinar al azar si cada investigador tiene traje de buzo.",
+    "victoryRequirements": "R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3768,7 +4392,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y acampar en un refugio con valor 7 o más",
+    "scenarioValue": 1
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3786,7 +4413,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y acampar en un refugio con valor 7 o más",
+    "scenarioValue": 1
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3804,7 +4434,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y acampar en un refugio con valor 7 o más",
+    "scenarioValue": 1
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3823,7 +4456,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y acampar en un refugio con valor 7 o más",
+    "scenarioValue": 1
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3839,7 +4475,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, anota esa cantidad de miembros de la expedición en «Desaparecidos». Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 y todos los nombres en «Desaparecidos» están tachados",
+    "scenarioValue": 2
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3857,7 +4496,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, anota esa cantidad de miembros de la expedición en «Desaparecidos». Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 y todos los nombres en «Desaparecidos» están tachados",
+    "scenarioValue": 2
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3875,7 +4517,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, anota esa cantidad de miembros de la expedición en «Desaparecidos». Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 y todos los nombres en «Desaparecidos» están tachados",
+    "scenarioValue": 2
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3894,7 +4539,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, anota esa cantidad de miembros de la expedición en «Desaparecidos». Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 y todos los nombres en «Desaparecidos» están tachados",
+    "scenarioValue": 2
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3910,7 +4558,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros de la expedición (están muertos). Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3928,7 +4579,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros de la expedición (están muertos). Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3946,7 +4600,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros de la expedición (están muertos). Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3965,7 +4622,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros de la expedición (están muertos). Elige un lugar al azar y revela 4 lugares adicionales.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 3
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3981,7 +4641,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que es la tercera vez que juegas. Anota al azar 9 lugares en «Recuerdos Descubiertos»; el investigador jefe puede anotar uno más. Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 y anotar al menos 3 recuerdos desterrados",
+    "scenarioValue": 4
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -3999,7 +4662,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que es la tercera vez que juegas. Anota al azar 9 lugares en «Recuerdos Descubiertos»; el investigador jefe puede anotar uno más. Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 y anotar al menos 3 recuerdos desterrados",
+    "scenarioValue": 4
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4017,7 +4683,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que es la tercera vez que juegas. Anota al azar 9 lugares en «Recuerdos Descubiertos»; el investigador jefe puede anotar uno más. Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 y anotar al menos 3 recuerdos desterrados",
+    "scenarioValue": 4
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4036,7 +4705,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Considera que es la tercera vez que juegas. Anota al azar 9 lugares en «Recuerdos Descubiertos»; el investigador jefe puede anotar uno más. Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 y anotar al menos 3 recuerdos desterrados",
+    "scenarioValue": 4
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4052,7 +4724,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota el Trineo de Madera en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4070,7 +4745,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota el Trineo de Madera en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4088,7 +4766,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota el Trineo de Madera en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4107,7 +4788,10 @@
       "tablet": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota el Trineo de Madera en «Recuerdos Recuperados».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 5
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4124,7 +4808,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota «Dinamita» en suministros recuperados. «Los Investigadores exploraron las afueras de la ciudad».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4143,7 +4830,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota «Dinamita» en suministros recuperados. «Los Investigadores exploraron las afueras de la ciudad».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4162,7 +4852,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota «Dinamita» en suministros recuperados. «Los Investigadores exploraron las afueras de la ciudad».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4182,7 +4875,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). Anota «Dinamita» en suministros recuperados. «Los Investigadores exploraron las afueras de la ciudad».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 6
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4199,7 +4895,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 o R2 y activar al menos 3 sellos",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4218,7 +4917,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 o R2 y activar al menos 3 sellos",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4237,7 +4939,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 o R2 y activar al menos 3 sellos",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4257,7 +4962,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos).",
+    "victoryRequirements": "R1 o R2 y activar al menos 3 sellos",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4274,7 +4982,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). El investigador jefe decide cuántos sellos «han sido recuperados». Por cada uno añade una debilidad Tekili-li a cada mazo. Si son elegidos menos de 5, retira al azar los sobrantes.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4293,7 +5004,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). El investigador jefe decide cuántos sellos «han sido recuperados». Por cada uno añade una debilidad Tekili-li a cada mazo. Si son elegidos menos de 5, retira al azar los sobrantes.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4312,7 +5026,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). El investigador jefe decide cuántos sellos «han sido recuperados». Por cada uno añade una debilidad Tekili-li a cada mazo. Si son elegidos menos de 5, retira al azar los sobrantes.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "Los Confines de la Tierra",
@@ -4332,7 +5049,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d8, tacha esa cantidad de miembros (están muertos). El investigador jefe decide cuántos sellos «han sido recuperados». Por cada uno añade una debilidad Tekili-li a cada mazo. Si son elegidos menos de 5, retira al azar los sobrantes.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 7
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4348,7 +5068,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4366,7 +5089,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4384,7 +5110,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4404,7 +5133,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 1
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4420,7 +5152,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R3 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4438,7 +5173,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R3 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4456,7 +5194,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R3 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4476,7 +5217,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R3 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4492,7 +5236,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4510,7 +5257,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4528,7 +5278,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4548,7 +5301,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4564,7 +5320,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4582,7 +5341,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4600,7 +5362,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4620,7 +5385,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Lanza 1d20, el tiempo transcurrido es el resultado.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4636,7 +5404,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si ha transcurrido 15 o 25 de tiempo.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4654,7 +5425,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si ha transcurrido 15 o 25 de tiempo.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4672,7 +5446,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si ha transcurrido 15 o 25 de tiempo.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4692,7 +5469,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Determina al azar si ha transcurrido 15 o 25 de tiempo.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4708,7 +5488,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4726,7 +5509,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4744,7 +5530,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4764,7 +5553,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4780,7 +5572,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4798,7 +5593,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4816,7 +5614,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4836,7 +5637,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4852,7 +5656,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El agente Flint ha desaparecido. Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4870,7 +5677,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El agente Flint ha desaparecido. Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4888,7 +5698,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El agente Flint ha desaparecido. Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4908,7 +5721,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "El agente Flint ha desaparecido. Ha transcurrido 10 de tiempo.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4924,7 +5740,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4942,7 +5761,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4960,7 +5782,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4980,7 +5805,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -4996,7 +5824,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Dado el registro complejo, elegid si llegasteis a Tunguska por informe de estado o por voluntad propia. En el juicio 1, omitid la votación. Podéis elegir si hay mayoría de síes o de noes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -5014,7 +5845,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Dado el registro complejo, elegid si llegasteis a Tunguska por informe de estado o por voluntad propia. En el juicio 1, omitid la votación. Podéis elegir si hay mayoría de síes o de noes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -5032,7 +5866,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Dado el registro complejo, elegid si llegasteis a Tunguska por informe de estado o por voluntad propia. En el juicio 1, omitid la votación. Podéis elegir si hay mayoría de síes o de noes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "Las Llaves Escarlata",
@@ -5052,7 +5889,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Dado el registro complejo, elegid si llegasteis a Tunguska por informe de estado o por voluntad propia. En el juicio 1, omitid la votación. Podéis elegir si hay mayoría de síes o de noes.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5067,7 +5907,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5083,7 +5926,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5099,7 +5945,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5117,7 +5966,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5132,7 +5984,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5148,7 +6003,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5164,7 +6022,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5182,7 +6043,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5197,7 +6061,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5213,7 +6080,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5229,7 +6099,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5247,7 +6120,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5262,7 +6138,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5278,7 +6157,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5294,7 +6176,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5312,7 +6197,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5327,7 +6215,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1, R2 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5343,7 +6234,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1, R2 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5359,7 +6253,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1, R2 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5377,7 +6274,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1, R2 o R4",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5392,7 +6292,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5408,7 +6311,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5424,7 +6330,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5442,7 +6351,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "victoryRequirements": "R1",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5457,7 +6369,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5473,7 +6388,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5489,7 +6407,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5507,7 +6428,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5522,7 +6446,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5538,7 +6465,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5554,7 +6484,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Fiesta del Valle de la Cicuta",
@@ -5572,7 +6505,10 @@
       "skull": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "victoryRequirements": "R1, R2 o R3",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5589,7 +6525,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y haber descubierto un idioma alienígena",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5607,7 +6546,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y haber descubierto un idioma alienígena",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5625,7 +6567,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y haber descubierto un idioma alienígena",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5645,7 +6590,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": null,
+    "victoryRequirements": "R1 y haber descubierto un idioma alienígena",
+    "scenarioValue": 1
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5663,7 +6611,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5682,7 +6633,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5701,7 +6655,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5722,7 +6679,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
+    "scenarioValue": 2
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5739,7 +6699,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5757,7 +6720,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5775,7 +6741,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5795,7 +6764,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
+    "scenarioValue": 3
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5812,7 +6784,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5830,7 +6805,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5848,7 +6826,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5868,7 +6849,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
+    "scenarioValue": 4
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5885,7 +6869,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5903,7 +6890,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5921,7 +6911,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5941,7 +6934,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
+    "scenarioValue": 5
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5957,7 +6953,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5974,7 +6973,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -5991,7 +6993,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6010,7 +7015,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
+    "scenarioValue": 6
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6027,7 +7035,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6045,7 +7056,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6063,7 +7077,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6083,7 +7100,10 @@
       "elder_thing": 1,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
+    "scenarioValue": 7
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6100,7 +7120,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6118,7 +7141,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6136,7 +7162,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6156,7 +7185,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "victoryRequirements": "R1",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6174,7 +7206,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección y entrará por su lado Completado. Los investigadores han obtenido tantos artefactos como jugadores, al azar.",
+    "victoryRequirements": "R1 sin pasar por «si todos los investigadores desistieron o fueron derrotados». Un investigador debe acabar con el apoyo Horror de Arcilla en juego",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6193,7 +7228,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección y entrará por su lado Completado. Los investigadores han obtenido tantos artefactos como jugadores, al azar.",
+    "victoryRequirements": "R1 sin pasar por «si todos los investigadores desistieron o fueron derrotados». Un investigador debe acabar con el apoyo Horror de Arcilla en juego",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6212,7 +7250,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección y entrará por su lado Completado. Los investigadores han obtenido tantos artefactos como jugadores, al azar.",
+    "victoryRequirements": "R1 sin pasar por «si todos los investigadores desistieron o fueron derrotados». Un investigador debe acabar con el apoyo Horror de Arcilla en juego",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6233,7 +7274,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección y entrará por su lado Completado. Los investigadores han obtenido tantos artefactos como jugadores, al azar.",
+    "victoryRequirements": "R1 sin pasar por «si todos los investigadores desistieron o fueron derrotados». Un investigador debe acabar con el apoyo Horror de Arcilla en juego",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6251,7 +7295,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección. Los investigadores han obtenido tantos artefactos como jugadores, al azar. Adicionalmente, podéis decidir tener 5 artefactos anotados y no tachados para seleccionar otra opción en «La Perdición de Arkham 1».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6270,7 +7317,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección. Los investigadores han obtenido tantos artefactos como jugadores, al azar. Adicionalmente, podéis decidir tener 5 artefactos anotados y no tachados para seleccionar otra opción en «La Perdición de Arkham 1».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6289,7 +7339,10 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección. Los investigadores han obtenido tantos artefactos como jugadores, al azar. Adicionalmente, podéis decidir tener 5 artefactos anotados y no tachados para seleccionar otra opción en «La Perdición de Arkham 1».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 8
   },
   {
     "campaign": "La Ciudad Sumergida",
@@ -6310,6 +7363,9 @@
       "elder_thing": 2,
       "tentacle": 1,
       "elder_star": 1
-    }
+    },
+    "campaignLog": "Cada investigador ha cumplido una tarea a su elección. Los investigadores han obtenido tantos artefactos como jugadores, al azar. Adicionalmente, podéis decidir tener 5 artefactos anotados y no tachados para seleccionar otra opción en «La Perdición de Arkham 1».",
+    "victoryRequirements": "R1 o R2",
+    "scenarioValue": 8
   }
 ]

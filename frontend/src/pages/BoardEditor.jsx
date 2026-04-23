@@ -48,13 +48,13 @@ function ArkhamBagEditor({ tile, onChange }) {
     if (!c || !s || !d) return;
     fetch(`/api/presets/config?campaign=${encodeURIComponent(c)}&scenario=${encodeURIComponent(s)}&difficulty=${encodeURIComponent(d)}`)
       .then(r => r.json())
-      .then(tokenCounts => {
+      .then(({ tokenCounts, campaignLog, victoryRequirements, scenarioValue }) => {
         const bag = [];
         Object.entries(tokenCounts).forEach(([token, count]) => {
           for (let i = 0; i < count; i++) bag.push(token);
         });
         onChange({
-          config: { ...config, campaign: c, scenario: s, difficulty: d, tokenCounts },
+          config: { ...config, campaign: c, scenario: s, difficulty: d, tokenCounts, campaignLog, victoryRequirements, scenarioValue },
           state: { bag, drawn: [], locked: [] }
         });
       })
