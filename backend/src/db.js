@@ -124,25 +124,20 @@ try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN campaign_log TEXT'); } ca
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN victory_requirements TEXT'); } catch (e) {}
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN scenario_value INTEGER'); } catch (e) {}
 
-// Seed chaosbag_presets from JSON file (always re-seeds reference data)
+// Seed chaosbag_presets — always replace reference data on startup
 try {
   const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'presets-seed.json'), 'utf8'));
-  const count = db.prepare('SELECT COUNT(*) as c FROM chaosbag_presets').get().c;
-  const needsReseed = count !== seedData.length ||
-    db.prepare("SELECT COUNT(*) as c FROM chaosbag_presets WHERE victory_requirements IS NULL").get().c > 0;
-  if (needsReseed) {
-    db.exec('DELETE FROM chaosbag_presets');
-    const insert = db.prepare(
-      'INSERT OR IGNORE INTO chaosbag_presets (campaign, scenario, difficulty, token_counts, campaign_log, victory_requirements, scenario_value) VALUES (?, ?, ?, ?, ?, ?, ?)'
-    );
-    const seed = db.transaction((presets) => {
-      for (const p of presets) {
-        insert.run(p.campaign, p.scenario, p.difficulty, JSON.stringify(p.tokenCounts), p.campaignLog || null, p.victoryRequirements || null, p.scenarioValue || null);
-      }
-    });
-    seed(seedData);
-    console.log(`Seeded ${seedData.length} chaos bag presets`);
-  }
+  db.exec('DELETE FROM chaosbag_presets');
+  const insert = db.prepare(
+    'INSERT INTO chaosbag_presets (campaign, scenario, difficulty, token_counts, campaign_log, victory_requirements, scenario_value) VALUES (?, ?, ?, ?, ?, ?, ?)'
+  );
+  const seed = db.transaction((presets) => {
+    for (const p of presets) {
+      insert.run(p.campaign, p.scenario, p.difficulty, JSON.stringify(p.tokenCounts), p.campaignLog || null, p.victoryRequirements || null, p.scenarioValue || null);
+    }
+  });
+  seed(seedData);
+  console.log(`Seeded ${seedData.length} chaos bag presets`);
 } catch (e) {
   console.error('Error seeding chaosbag_presets:', e.message);
 }
