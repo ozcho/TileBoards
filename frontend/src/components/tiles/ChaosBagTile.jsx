@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import TokenIcon from './TokenIcon';
 
 const TOKEN_DISPLAY = {
@@ -49,9 +49,25 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [showHistory, setShowHistory] = useState(false);
   const [showManage, setShowManage] = useState(false);
   const [showLocked, setShowLocked] = useState(false);
+  const [showStats, setShowStats] = useState(false);
+  const [showProbability, setShowProbability] = useState(false);
+  const [showBlessCurse, setShowBlessCurse] = useState(false);
+  const [showBagContents, setShowBagContents] = useState(false);
   const [addToken, setAddToken] = useState('+1');
+  const [newestDrawKey, setNewestDrawKey] = useState(0);
+  const prevDrawnRef = useRef([]);
 
   const authorName = user?.name || guestName || 'Anónimo';
+
+  useEffect(() => {
+    const prevDrawn = prevDrawnRef.current;
+    const prevLast = prevDrawn[prevDrawn.length - 1];
+    const currLast = drawn[drawn.length - 1];
+    if (drawn.length > 0 && (drawn.length !== prevDrawn.length || currLast !== prevLast)) {
+      setNewestDrawKey(k => k + 1);
+    }
+    prevDrawnRef.current = drawn;
+  }, [drawn]);
 
   useEffect(() => {
     if (!socket) return;
@@ -118,6 +134,28 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const bagSummary = {};
   bag.forEach(t => { bagSummary[t] = (bagSummary[t] || 0) + 1; });
 
+  // Progress bar
+  const totalTokens = bag.length + drawn.length + locked.length;
+  const pctRemaining = totalTokens > 0 ? Math.round((bag.length / totalTokens) * 100) : 100;
+
+  // Probability mode: chance of drawing each token type from current bag
+  const probItems = Object.entries(bagSummary)
+    .map(([token, count]) => ({ token, count, pct: bag.length > 0 ? ((count / bag.length) * 100).toFixed(1) : '0.0' }))
+    .sort((a, b) => b.count - a.count);
+
+  // Draw statistics from history
+  const tokenStats = {};
+  let totalStatDraws = 0;
+  history.forEach(entry => {
+    entry.tokens_drawn.forEach(t => {
+      tokenStats[t] = (tokenStats[t] || 0) + 1;
+      totalStatDraws++;
+    });
+  });
+  const statItems = Object.entries(tokenStats)
+    .map(([token, count]) => ({ token, count, pct: totalStatDraws > 0 ? ((count / totalStatDraws) * 100).toFixed(1) : '0.0' }))
+    .sort((a, b) => b.count - a.count);
+
   // Bless/curse counts
   const blessInBag = bag.filter(t => t === 'bless').length + drawn.filter(t => t === 'bless').length;
   const curseInBag = bag.filter(t => t === 'curse').length + drawn.filter(t => t === 'curse').length;
@@ -148,22 +186,35 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
   const content = (
     <>
-      {/* Drawn tokens display */}
-      <div className="chaosbag-drawn-area" onClick={bag.length > 0 && !boardLocked ? handleDrawFresh : undefined} style={{ cursor: bag.length > 0 && !boardLocked ? 'pointer' : 'default' }}>
+      {/* === CAJA PROTAGONISTA: tamaño fijo === */}
+      <div
+        className="chaosbag-drawn-area"
+        onClick={drawn.length > 0 && !boardLocked ? handleReturn : undefined}
+        style={{ cursor: drawn.length > 0 && !boardLocked ? 'pointer' : 'default' }}
+        title={drawn.length > 0 && !boardLocked ? 'Devolver fichas a la bolsa' : undefined}
+      >
         {drawn.length === 0 ? (
-          <div className="chaosbag-empty-draw">Saca una ficha de la bolsa</div>
+          <div className="chaosbag-empty-draw">
+            {bag.length === 0 ? 'Bolsa vacía' : 'Pulsa para sacar ficha'}
+          </div>
         ) : (
           <div className="chaosbag-drawn-tokens">
-            {drawn.map((token, i) => (
-              <span key={i} className={`chaosbag-token chaosbag-token-large ${tokenClass(token)}`}>
-                {tokenLabel(token, 28)}
-              </span>
-            ))}
+            {drawn.map((token, i) => {
+              const isNewest = i === drawn.length - 1;
+              return (
+                <span
+                  key={isNewest ? `newest-${newestDrawKey}` : i}
+                  className={`chaosbag-token ${isNewest ? 'chaosbag-token-large chaosbag-token-newest' : 'chaosbag-token-large chaosbag-token-previous'} ${tokenClass(token)}`}
+                >
+                  {tokenLabel(token, isNewest ? 56 : 30)}
+                </span>
+              );
+            })}
           </div>
         )}
       </div>
 
-      {/* Draw controls */}
+      {/* === CONTROLES === */}
       <div className="chaosbag-controls">
         <button onClick={handleDrawFresh} className="btn btn-primary" disabled={bag.length === 0 || boardLocked}>
           🎲 Sacar ficha
@@ -180,169 +231,177 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         )}
       </div>
 
-      {/* Bag summary */}
-      <div className="chaosbag-summary">
-        <span className="chaosbag-count">🎒 {bag.length} fichas en la bolsa</span>
-        {locked.length > 0 && (
-          <span className="chaosbag-locked-count">🔒 {locked.length} selladas</span>
-        )}
-      </div>
-
-      {/* Bless / Curse controls */}
-      <div className="chaosbag-bless-curse">
-        <div className="chaosbag-bc-row">
-          <span className={`chaosbag-token chaosbag-token-sm token-bless`}><TokenIcon token="bless" size={16} /></span>
-          <span className="chaosbag-bc-label">Bendito</span>
-          <span className="chaosbag-bc-count">{blessInBag}/{BLESS_CURSE_MAX}</span>
-          <button onClick={handleAddBless} className="btn btn-xs btn-success" disabled={blessAvailable <= 0 || boardLocked}>+ Añadir</button>
-          <button onClick={handleRemoveBless} className="btn btn-xs btn-danger" disabled={!bagSummary['bless'] || boardLocked}>− Quitar</button>
-        </div>
-        <div className="chaosbag-bc-row">
-          <span className={`chaosbag-token chaosbag-token-sm token-curse`}><TokenIcon token="curse" size={16} /></span>
-          <span className="chaosbag-bc-label">Maldito</span>
-          <span className="chaosbag-bc-count">{curseInBag}/{BLESS_CURSE_MAX}</span>
-          <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0 || boardLocked}>+ Añadir</button>
-          <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse'] || boardLocked}>− Quitar</button>
-        </div>
-      </div>
-
-      {/* Bag contents (collapsed) */}
-      <div className="chaosbag-bag-contents">
-        <div className="chaosbag-bag-tokens">
-          {ALL_TOKEN_TYPES.filter(t => bagSummary[t]).map(t => (
-            <div key={t} className="chaosbag-summary-chip">
-              <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(t)}`}>
-                {tokenLabel(t, 22)}
-              </span>
-              <span className="chaosbag-summary-count">×{bagSummary[t]}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Management section (accessible to all) */}
-      <div className="chaosbag-manage">
-        <button
-          type="button"
-          className="btn btn-sm btn-secondary"
-          onClick={() => setShowManage(!showManage)}
-        >
-          {showManage ? 'Cerrar gestión' : '⚙ Gestionar bolsa'}
-        </button>
-
-        {showManage && (
-          <div className="chaosbag-manage-panel">
-            <div className="chaosbag-manage-add">
-              <label>Añadir ficha:</label>
-              <select value={addToken} onChange={e => setAddToken(e.target.value)} className="input input-sm">
-                {ALL_TOKEN_TYPES.map(t => (
-                  <option key={t} value={t}>{TOKEN_DISPLAY[t]?.label || t} ({t})</option>
-                ))}
-              </select>
-              <button onClick={handleAddToken} className="btn btn-xs btn-success" disabled={boardLocked}>+ Añadir</button>
-            </div>
-
-            <div className="chaosbag-manage-remove">
-              <label>Quitar ficha (pulsa para eliminar):</label>
-              <div className="chaosbag-manage-tokens">
-                {bag.map((token, i) => (
-                  <button
-                    key={i}
-                    className={`chaosbag-token chaosbag-token-manage chaosbag-token-removable ${tokenClass(token)}`}
-                    onClick={() => !boardLocked && handleRemoveToken(i)}
-                    disabled={boardLocked}
-                    title="Quitar permanentemente"
-                  >
-                    {tokenLabel(token, 28)}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="chaosbag-manage-lock">
-              <label>Sellar ficha (pulsa para sellar):</label>
-              <div className="chaosbag-manage-tokens">
-                {bag.map((token, i) => (
-                  <button
-                    key={i}
-                    className={`chaosbag-token chaosbag-token-manage ${tokenClass(token)}`}
-                    onClick={() => !boardLocked && handleLock(i)}
-                    disabled={boardLocked}
-                    title="Sellar temporalmente"
-                  >
-                    {tokenLabel(token, 28)}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {isOwnerOrAdmin && (
-              <div className="chaosbag-manage-reset">
-                <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
-                  🔄 Resetear a configuración inicial
-                </button>
-              </div>
-            )}
+      {/* === META: conteo + barra compacta === */}
+      <div className="chaosbag-meta">
+        <span className="chaosbag-meta-count">🎒 {bag.length}{locked.length > 0 && <span className="chaosbag-meta-locked"> · 🔒{locked.length}</span>}</span>
+        {totalTokens > 0 && (
+          <div className="chaosbag-progress-track">
+            <div className="chaosbag-progress-bar" style={{ width: `${pctRemaining}%` }} />
           </div>
         )}
+        <span className="chaosbag-meta-pct">{pctRemaining}%</span>
       </div>
 
-      {/* Locked/sealed tokens */}
-      {locked.length > 0 && (
-        <div className="chaosbag-locked">
-          <button
-            type="button"
-            className="btn btn-sm btn-secondary"
-            onClick={() => setShowLocked(!showLocked)}
-          >
-            {showLocked ? 'Ocultar selladas' : `🔒 Fichas selladas (${locked.length})`}
+      {/* === BARRA SECUNDARIA: todo colapsado === */}
+      <div className="chaosbag-secondary-bar">
+        <button type="button" className={`btn btn-xs ${showBlessCurse ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowBlessCurse(v => !v)}>
+          ✨ Bendi/Maldito
+        </button>
+        <button type="button" className={`btn btn-xs ${showBagContents ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowBagContents(v => !v)}>
+          🎒 Bolsa
+        </button>
+        {history.length > 0 && (
+          <button type="button" className={`btn btn-xs ${showStats ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowStats(v => !v)}>
+            📊 Stats
           </button>
-          {showLocked && (
-            <div className="chaosbag-locked-tokens">
-              {locked.map((token, i) => (
-                <button
-                  key={i}
-                  className={`chaosbag-token chaosbag-token-manage chaosbag-token-locked ${tokenClass(token)}`}
-                  onClick={() => !boardLocked && handleUnlock(i)}
-                  disabled={boardLocked}
-                  title="Devolver a la bolsa"
-                >
-                  {tokenLabel(token, 28)}
-                </button>
+        )}
+        <button type="button" className={`btn btn-xs ${showManage ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowManage(v => !v)}>
+          ⚙ Gestionar
+        </button>
+        {locked.length > 0 && (
+          <button type="button" className={`btn btn-xs ${showLocked ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowLocked(v => !v)}>
+            🔒 ({locked.length})
+          </button>
+        )}
+        <button type="button" className={`btn btn-xs ${showHistory ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowHistory(v => !v)}>
+          📜 ({history.length})
+        </button>
+      </div>
+
+      {/* === PANELES EXPANDIBLES === */}
+
+      {showBlessCurse && (
+        <div className="chaosbag-bless-curse">
+          <div className="chaosbag-bc-row">
+            <span className="chaosbag-token chaosbag-token-sm token-bless"><TokenIcon token="bless" size={16} /></span>
+            <span className="chaosbag-bc-label">Bendito</span>
+            <span className="chaosbag-bc-count">{blessInBag}/{BLESS_CURSE_MAX}</span>
+            <button onClick={handleAddBless} className="btn btn-xs btn-success" disabled={blessAvailable <= 0 || boardLocked}>+ Añadir</button>
+            <button onClick={handleRemoveBless} className="btn btn-xs btn-danger" disabled={!bagSummary['bless'] || boardLocked}>− Quitar</button>
+          </div>
+          <div className="chaosbag-bc-row">
+            <span className="chaosbag-token chaosbag-token-sm token-curse"><TokenIcon token="curse" size={16} /></span>
+            <span className="chaosbag-bc-label">Maldito</span>
+            <span className="chaosbag-bc-count">{curseInBag}/{BLESS_CURSE_MAX}</span>
+            <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0 || boardLocked}>+ Añadir</button>
+            <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse'] || boardLocked}>− Quitar</button>
+          </div>
+        </div>
+      )}
+
+      {showBagContents && (
+        <div className="chaosbag-bag-contents">
+          <div className="chaosbag-bag-header">
+            <div className="chaosbag-bag-tokens">
+              {ALL_TOKEN_TYPES.filter(t => bagSummary[t]).map(t => (
+                <div key={t} className="chaosbag-summary-chip">
+                  <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(t)}`}>{tokenLabel(t, 22)}</span>
+                  <span className="chaosbag-summary-count">×{bagSummary[t]}</span>
+                </div>
+              ))}
+            </div>
+            {bag.length > 0 && (
+              <button type="button" className="btn btn-xs btn-ghost" onClick={() => setShowProbability(!showProbability)}>
+                {showProbability ? 'Ocultar %' : '% Prob'}
+              </button>
+            )}
+          </div>
+          {showProbability && bag.length > 0 && (
+            <div className="chaosbag-prob">
+              {probItems.map(({ token, count, pct }) => (
+                <div key={token} className="chaosbag-prob-row">
+                  <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 14)}</span>
+                  <div className="chaosbag-prob-bar-wrap"><div className="chaosbag-prob-bar-inner" style={{ width: `${pct}%` }} /></div>
+                  <span className="chaosbag-prob-pct">{pct}%</span>
+                  <span className="chaosbag-prob-count">×{count}</span>
+                </div>
               ))}
             </div>
           )}
         </div>
       )}
 
-      {/* Draw history */}
-      <div className="chaosbag-history">
-        <button
-          type="button"
-          className="btn btn-sm btn-secondary counter-history-toggle"
-          onClick={() => setShowHistory(!showHistory)}
-        >
-          {showHistory ? 'Ocultar historial' : 'Ver historial'} ({history.length})
-        </button>
-        {showHistory && (
-          <div className="chaosbag-history-list">
-            {history.length === 0 && <p className="text-muted">Sin tiradas registradas</p>}
-            {history.map(entry => (
-              <div key={entry.id} className="chaosbag-history-entry">
-                <div className="chaosbag-history-tokens">
-                  {entry.tokens_drawn.map((t, i) => (
-                    <span key={i} className={`chaosbag-token chaosbag-token-xs ${tokenClass(t)}`}>
-                      {tokenLabel(t, 12)}
-                    </span>
-                  ))}
-                </div>
-                <span className="chaosbag-history-author">{entry.author_name}</span>
-                <span className="chaosbag-history-time">{formatTime(entry.created_at)}</span>
-              </div>
-            ))}
+      {showManage && (
+        <div className="chaosbag-manage-panel">
+          <div className="chaosbag-manage-add">
+            <label>Añadir ficha:</label>
+            <select value={addToken} onChange={e => setAddToken(e.target.value)} className="input input-sm">
+              {ALL_TOKEN_TYPES.map(t => (
+                <option key={t} value={t}>{TOKEN_DISPLAY[t]?.label || t} ({t})</option>
+              ))}
+            </select>
+            <button onClick={handleAddToken} className="btn btn-xs btn-success" disabled={boardLocked}>+ Añadir</button>
           </div>
-        )}
-      </div>
+          <div className="chaosbag-manage-remove">
+            <label>Quitar ficha (pulsa para eliminar):</label>
+            <div className="chaosbag-manage-tokens">
+              {bag.map((token, i) => (
+                <button key={i} className={`chaosbag-token chaosbag-token-manage chaosbag-token-removable ${tokenClass(token)}`} onClick={() => !boardLocked && handleRemoveToken(i)} disabled={boardLocked} title="Quitar permanentemente">
+                  {tokenLabel(token, 28)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="chaosbag-manage-lock">
+            <label>Sellar ficha (pulsa para sellar):</label>
+            <div className="chaosbag-manage-tokens">
+              {bag.map((token, i) => (
+                <button key={i} className={`chaosbag-token chaosbag-token-manage ${tokenClass(token)}`} onClick={() => !boardLocked && handleLock(i)} disabled={boardLocked} title="Sellar temporalmente">
+                  {tokenLabel(token, 28)}
+                </button>
+              ))}
+            </div>
+          </div>
+          {isOwnerOrAdmin && (
+            <div className="chaosbag-manage-reset">
+              <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
+                🔄 Resetear a configuración inicial
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {showLocked && locked.length > 0 && (
+        <div className="chaosbag-locked-tokens">
+          {locked.map((token, i) => (
+            <button key={i} className={`chaosbag-token chaosbag-token-manage chaosbag-token-locked ${tokenClass(token)}`} onClick={() => !boardLocked && handleUnlock(i)} disabled={boardLocked} title="Devolver a la bolsa">
+              {tokenLabel(token, 28)}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {showStats && history.length > 0 && (
+        <div className="chaosbag-stats-panel">
+          <div className="chaosbag-stats-summary">{totalStatDraws} fichas en {history.length} tiradas</div>
+          {statItems.map(({ token, count, pct }) => (
+            <div key={token} className="chaosbag-stats-row">
+              <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 14)}</span>
+              <div className="chaosbag-stats-bar-wrap"><div className="chaosbag-stats-bar-inner" style={{ width: `${pct}%` }} /></div>
+              <span className="chaosbag-stats-pct">{pct}%</span>
+              <span className="chaosbag-stats-count">×{count}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {showHistory && (
+        <div className="chaosbag-history-list">
+          {history.length === 0 && <p className="text-muted">Sin tiradas registradas</p>}
+          {history.map(entry => (
+            <div key={entry.id} className="chaosbag-history-entry">
+              <div className="chaosbag-history-tokens">
+                {entry.tokens_drawn.map((t, i) => (
+                  <span key={i} className={`chaosbag-token chaosbag-token-xs ${tokenClass(t)}`}>{tokenLabel(t, 12)}</span>
+                ))}
+              </div>
+              <span className="chaosbag-history-author">{entry.author_name}</span>
+              <span className="chaosbag-history-time">{formatTime(entry.created_at)}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 

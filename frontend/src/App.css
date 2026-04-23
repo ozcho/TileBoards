@@ -871,12 +871,19 @@ select.input {
 .chaosbag-drawn-area {
   background: var(--color-surface-2);
   border-radius: var(--radius-sm);
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
-  min-height: 80px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+  transition: border-color 0.2s;
+}
+
+.chaosbag-drawn-area:hover:not([style*='default']) {
+  border-color: var(--color-primary);
 }
 
 .chaosbag-empty-draw {
@@ -926,7 +933,22 @@ select.input {
   height: 64px;
   font-size: 1.4rem;
   box-shadow: var(--shadow-lg);
-  animation: tokenReveal 0.3s ease-out;
+}
+
+.chaosbag-token-newest {
+  width: 110px;
+  height: 110px;
+  font-size: 2.2rem;
+  animation: tokenRevealFresh 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: var(--shadow-lg), 0 0 24px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.chaosbag-token-previous {
+  width: 56px;
+  height: 56px;
+  font-size: 1.1rem;
+  opacity: 0.55;
 }
 
 .chaosbag-token-sm {
@@ -969,6 +991,13 @@ select.input {
 @keyframes tokenReveal {
   0% { transform: scale(0) rotate(180deg); opacity: 0; }
   100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes tokenRevealFresh {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; filter: blur(6px); }
+  60% { transform: scale(1.18) rotate(6deg); opacity: 1; filter: blur(0); }
+  80% { transform: scale(0.93) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; filter: blur(0); }
 }
 
 .token-numeric {
@@ -1069,16 +1098,33 @@ select.input {
   flex-wrap: wrap;
 }
 
-.chaosbag-summary {
+.chaosbag-meta {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 0.85rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
   color: var(--color-text-muted);
 }
 
-.chaosbag-locked-count {
+.chaosbag-meta-count {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.chaosbag-meta-locked {
   color: #fcd34d;
+}
+
+.chaosbag-meta-pct {
+  white-space: nowrap;
+  flex-shrink: 0;
+  color: var(--color-text-dim);
+  font-size: 0.72rem;
+}
+
+.chaosbag-meta .chaosbag-progress-track {
+  flex: 1;
+  margin: 0;
 }
 
 .chaosbag-bag-contents {
@@ -1093,13 +1139,7 @@ select.input {
   justify-content: center;
 }
 
-.chaosbag-manage {
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.5rem;
-}
-
 .chaosbag-manage-panel {
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1140,16 +1180,10 @@ select.input {
   box-shadow: 0 0 6px rgba(239, 68, 68, 0.4);
 }
 
-.chaosbag-locked {
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.5rem;
-}
-
 .chaosbag-locked-tokens {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
-  margin-top: 0.5rem;
 }
 
 .chaosbag-token-locked {
@@ -1159,11 +1193,6 @@ select.input {
 
 .chaosbag-token-locked:hover:not(:disabled) {
   opacity: 1;
-}
-
-.chaosbag-history {
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.5rem;
 }
 
 .chaosbag-history-list {
@@ -1216,6 +1245,150 @@ select.input {
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 0.3rem;
   margin-top: 0.25rem;
+}
+
+/* === Chaos Bag: Progress Bar === */
+.chaosbag-progress-track {
+  height: 6px;
+  background: var(--color-surface-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.chaosbag-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #60a5fa);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+  min-width: 2px;
+}
+
+/* === Chaos Bag: Secondary bar === */
+.chaosbag-secondary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-ghost:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+/* === Chaos Bag: Bag Header (chips + prob button) === */
+.chaosbag-bag-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chaosbag-bag-header .chaosbag-bag-tokens {
+  flex: 1;
+}
+
+/* === Chaos Bag: Probability Mode === */
+.chaosbag-prob {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.chaosbag-prob-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chaosbag-prob-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: var(--color-surface);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chaosbag-prob-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #60a5fa);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  min-width: 2px;
+}
+
+.chaosbag-prob-pct {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  min-width: 40px;
+  text-align: right;
+}
+
+.chaosbag-prob-count {
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+  min-width: 24px;
+}
+
+/* === Chaos Bag: Draw Statistics === */
+.chaosbag-stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.chaosbag-stats-summary {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.chaosbag-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chaosbag-stats-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: var(--color-surface);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chaosbag-stats-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #7c3aed);
+  border-radius: 4px;
+  min-width: 2px;
+}
+
+.chaosbag-stats-pct {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  min-width: 40px;
+  text-align: right;
+}
+
+.chaosbag-stats-count {
+  font-size: 0.72rem;
+  color: var(--color-text-dim);
+  min-width: 24px;
 }
 
 .chaosbag-editor-token-row {
