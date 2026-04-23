@@ -774,7 +774,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (versión III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
     "victoryRequirements": "R1",
     "scenarioValue": 6
   },
@@ -796,7 +796,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (versión III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
     "victoryRequirements": "R1",
     "scenarioValue": 6
   },
@@ -818,7 +818,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (versión III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
     "victoryRequirements": "R1",
     "scenarioValue": 6
   },
@@ -842,7 +842,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
+    "campaignLog": "Usa el acto 2 – Ascender por la colina (versión III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.",
     "victoryRequirements": "R1",
     "scenarioValue": 6
   },
@@ -1026,7 +1026,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
     "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
     "scenarioValue": 2
   },
@@ -1045,7 +1045,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
     "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
     "scenarioValue": 2
   },
@@ -1064,7 +1064,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
     "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
     "scenarioValue": 2
   },
@@ -1085,7 +1085,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El hombre de la máscara pálida» a su mazo.",
     "victoryRequirements": "R1 y anotar al menos 5 VIPs entre «VIPs interrogados» y «VIPs muertos»",
     "scenarioValue": 2
   },
@@ -1102,7 +1102,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Los Investigadores huyeron de la fiesta.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 3
   },
@@ -1121,7 +1121,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Los Investigadores huyeron de la fiesta.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 3
   },
@@ -1140,7 +1140,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Los Investigadores huyeron de la fiesta.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 3
   },
@@ -1161,7 +1161,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Los Investigadores huyeron de la fiesta.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Los Investigadores huyeron de la fiesta.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 3
   },
@@ -1178,7 +1178,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
     "victoryRequirements": "R3",
     "scenarioValue": 4
   },
@@ -1197,7 +1197,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
     "victoryRequirements": "R3",
     "scenarioValue": 4
   },
@@ -1216,7 +1216,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
     "victoryRequirements": "R3",
     "scenarioValue": 4
   },
@@ -1237,7 +1237,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Constance Dumain aparece en «VIP interrogados». Los investigadores no se llevaron el broche de ónice. No leas el interludio II – Alma perdida.",
     "victoryRequirements": "R3",
     "scenarioValue": 4
   },
@@ -1254,7 +1254,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
     "victoryRequirements": "R1 y R2",
     "scenarioValue": 5
   },
@@ -1273,7 +1273,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
     "victoryRequirements": "R1 y R2",
     "scenarioValue": 5
   },
@@ -1292,7 +1292,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
     "victoryRequirements": "R1 y R2",
     "scenarioValue": 5
   },
@@ -1313,7 +1313,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. Elige Duda o Convicción. Durante la introducción elige al azar si cada evento del registro ocurrió o no. No hay marcas en «persiguiendo al extranjero». Jordan Perry aparece en «VIP interrogados». El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo.",
     "victoryRequirements": "R1 y R2",
     "scenarioValue": 5
   },
@@ -1330,7 +1330,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 6
   },
@@ -1349,7 +1349,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 6
   },
@@ -1368,7 +1368,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 6
   },
@@ -1389,7 +1389,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los Investigadores encontraron la casa de Nigel. Ishimaru Haruko aparece en «VIP Interrogados» y en «VIP Muertos».",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 6
   },
@@ -1406,7 +1406,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 7
   },
@@ -1425,7 +1425,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 7
   },
@@ -1444,7 +1444,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 7
   },
@@ -1465,7 +1465,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Añade al azar 2 fichas b, v o c. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
+    "campaignLog": "Añade al azar 2 fichas adepto, tablilla o ancestral. El investigador jefe añade «El Hombre de la Máscara Pálida» a su mazo. Los investigadores no cogen ninguna debilidad adicional.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 7
   },
@@ -1483,7 +1483,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 tablilla) o de arriba (+2 ancestral). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -1503,7 +1503,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 tablilla) o de arriba (+2 ancestral). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -1523,7 +1523,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 tablilla) o de arriba (+2 ancestral). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -1545,7 +1545,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 v) o de arriba (+2 c). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
+    "campaignLog": "Elige: Duda (8 Dudas, 0 Convicciones), Convicción (0 Dudas, 8 Convicciones) o nada (0/0). Al azar: investigadores abrieron camino de abajo (+2 tablilla) o de arriba (+2 ancestral). No hay marcas en «Persiguiendo al Extranjero». No leas el epílogo.",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -1821,7 +1821,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir adepto, tablilla, o ninguna.",
     "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
     "scenarioValue": 4
   },
@@ -1843,7 +1843,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir adepto, tablilla, o ninguna.",
     "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
     "scenarioValue": 4
   },
@@ -1866,7 +1866,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir adepto, tablilla, o ninguna.",
     "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
     "scenarioValue": 4
   },
@@ -1889,7 +1889,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir b, v, o ninguna.",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro en el primer momento que sea requerido. La Reliquia ha desaparecido. Los investigadores forjaron un vínculo con Ithaca. Los investigadores rescataron a Alejandro. En la preparación elige si añadir adepto, tablilla, o ninguna.",
     "victoryRequirements": "R1 y anotar que «Ichtaca tiene confianza en los investigadores»",
     "scenarioValue": 4
   },
@@ -2266,7 +2266,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 tablilla), Alejandro está en contra (+3 adepto), o ambos (+2 ancestral). Hay 6 marcas en «Furia de Yig».",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -2288,7 +2288,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 tablilla), Alejandro está en contra (+3 adepto), o ambos (+2 ancestral). Hay 6 marcas en «Furia de Yig».",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -2311,7 +2311,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 tablilla), Alejandro está en contra (+3 adepto), o ambos (+2 ancestral). Hay 6 marcas en «Furia de Yig».",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -2334,7 +2334,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 v), Alejandro está en contra (+3 b), o ambos (+2 c). Hay 6 marcas en «Furia de Yig».",
+    "campaignLog": "Determina al azar si el grupo tiene o no cada suministro. Los braseros están encendidos. La reliquia ha desaparecido. En la preparación elige si: Ithaca está en contra (+3 tablilla), Alejandro está en contra (+3 adepto), o ambos (+2 ancestral). Hay 6 marcas en «Furia de Yig».",
     "victoryRequirements": "R1 o R2 o R3",
     "scenarioValue": 8
   },
@@ -2428,7 +2428,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "campaignLog": "Determina al azar si añades 2 tablilla o 2 ancestral a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
     "victoryRequirements": "R1",
     "scenarioValue": 2
   },
@@ -2447,7 +2447,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "campaignLog": "Determina al azar si añades 2 tablilla o 2 ancestral a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
     "victoryRequirements": "R1",
     "scenarioValue": 2
   },
@@ -2466,7 +2466,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "campaignLog": "Determina al azar si añades 2 tablilla o 2 ancestral a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
     "victoryRequirements": "R1",
     "scenarioValue": 2
   },
@@ -2486,7 +2486,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Determina al azar si añades 2 v o 2 c a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
+    "campaignLog": "Determina al azar si añades 2 tablilla o 2 ancestral a la bolsa. Ningún perfil de «Personas Desaparecidas» está tachado. Se dejaron 3 pistas por investigador.",
     "victoryRequirements": "R1",
     "scenarioValue": 2
   },
@@ -5908,7 +5908,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 4
   },
@@ -5927,7 +5927,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 4
   },
@@ -5946,7 +5946,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 4
   },
@@ -5967,7 +5967,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 o R2",
     "scenarioValue": 4
   },
@@ -5985,7 +5985,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
     "scenarioValue": 4
   },
@@ -6004,7 +6004,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
     "scenarioValue": 4
   },
@@ -6023,7 +6023,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
     "scenarioValue": 4
   },
@@ -6044,7 +6044,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1 y «Los Investigadores han encontrado a la pequeña Sylvie», o R1 con 10+ sellos en juego, o R1 con 10+ Lugares enemigo en zona de victoria",
     "scenarioValue": 4
   },
@@ -6062,7 +6062,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6081,7 +6081,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6100,7 +6100,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6121,7 +6121,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6139,7 +6139,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6158,7 +6158,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6177,7 +6177,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6198,7 +6198,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6216,7 +6216,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1, R2 o R4",
     "scenarioValue": 4
   },
@@ -6235,7 +6235,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1, R2 o R4",
     "scenarioValue": 4
   },
@@ -6254,7 +6254,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1, R2 o R4",
     "scenarioValue": 4
   },
@@ -6275,7 +6275,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1, R2 o R4",
     "scenarioValue": 4
   },
@@ -6293,7 +6293,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6312,7 +6312,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6331,7 +6331,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6352,7 +6352,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral.",
     "victoryRequirements": "R1",
     "scenarioValue": 4
   },
@@ -6370,7 +6370,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
     "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
     "scenarioValue": 4
   },
@@ -6389,7 +6389,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
     "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
     "scenarioValue": 4
   },
@@ -6408,7 +6408,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
     "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
     "scenarioValue": 4
   },
@@ -6429,7 +6429,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. Dos o más habitantes compartieron un baile (determina al azar). El Oso fue Herido.",
     "victoryRequirements": "R1 y 2 o menos daños en apoyos historia",
     "scenarioValue": 4
   },
@@ -6447,7 +6447,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
     "victoryRequirements": "R1, R2 o R3",
     "scenarioValue": 4
   },
@@ -6466,7 +6466,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
     "victoryRequirements": "R1, R2 o R3",
     "scenarioValue": 4
   },
@@ -6485,7 +6485,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
     "victoryRequirements": "R1, R2 o R3",
     "scenarioValue": 4
   },
@@ -6506,7 +6506,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade v si estudiar, c si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade v y c; si es Día 3 añade v, v, c, c. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
+    "campaignLog": "¿Has venido a estudiar o de fiesta? Añade tablilla si estudiar, ancestral si de fiesta. Determina el día al azar (1d6): 1=Día 1 día; 2=Día 1 noche; 3=Día 2 día; 4=Día 2 noche; 5=Día 3 día; 6=Día 3 noche. Si es Día 2 añade tablilla y ancestral; si es Día 3 añade tablilla, tablilla, ancestral, ancestral. El nivel de relación con cada habitante se determina con 1d4. En «El Destino del Valle» puedes elegir cualquier opción ignorando los requisitos.",
     "victoryRequirements": "R1, R2 o R3",
     "scenarioValue": 4
   },
@@ -6612,7 +6612,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
     "scenarioValue": 2
   },
@@ -6634,7 +6634,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
     "scenarioValue": 2
   },
@@ -6656,7 +6656,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
     "scenarioValue": 2
   },
@@ -6680,7 +6680,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (2) o al este (7). Si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 3 símbolos",
     "scenarioValue": 2
   },
@@ -6700,7 +6700,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid adepto; si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
     "scenarioValue": 3
   },
@@ -6721,7 +6721,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid adepto; si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
     "scenarioValue": 3
   },
@@ -6742,7 +6742,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid adepto; si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
     "scenarioValue": 3
   },
@@ -6765,7 +6765,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid b; si al este añadid v, v, c. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (3) o al este (6). Si al oeste añadid adepto; si al este añadid tablilla, tablilla, ancestral. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1. Consigue descifrar al menos 2 símbolos",
     "scenarioValue": 3
   },
@@ -6785,7 +6785,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid adepto; si al este añadid tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
     "scenarioValue": 4
   },
@@ -6806,7 +6806,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid adepto; si al este añadid tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
     "scenarioValue": 4
   },
@@ -6827,7 +6827,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid adepto; si al este añadid tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
     "scenarioValue": 4
   },
@@ -6850,7 +6850,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid b; si al este añadid v, c. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (4) o al este (5). Si al oeste añadid adepto; si al este añadid tablilla, ancestral. Cada investigador no tiene asignada tarea. Al azar si «la criatura ha sido derrotada». Los investigadores no han obtenido ningún artefacto.",
     "victoryRequirements": "R1 o R3. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con «Máscara» Macabra en juego",
     "scenarioValue": 4
   },
@@ -6870,7 +6870,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid adepto, adepto; si al este añadid tablilla, tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
     "scenarioValue": 5
   },
@@ -6891,7 +6891,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid adepto, adepto; si al este añadid tablilla, tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
     "scenarioValue": 5
   },
@@ -6912,7 +6912,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid adepto, adepto; si al este añadid tablilla, tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
     "scenarioValue": 5
   },
@@ -6935,7 +6935,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid b, b; si al este añadid v, v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (5) o al este (4). Si al oeste añadid adepto, adepto; si al este añadid tablilla, tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si la energía fue desviada.",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con Tablilla de Marea en juego",
     "scenarioValue": 5
   },
@@ -6954,7 +6954,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
     "scenarioValue": 6
   },
@@ -6974,7 +6974,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
     "scenarioValue": 6
   },
@@ -6994,7 +6994,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
     "scenarioValue": 6
   },
@@ -7016,7 +7016,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (6) o al este (3). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con el Fragmento de Y'ch'lecht en juego",
     "scenarioValue": 6
   },
@@ -7036,7 +7036,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
     "scenarioValue": 7
   },
@@ -7057,7 +7057,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
     "scenarioValue": 7
   },
@@ -7078,7 +7078,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
     "scenarioValue": 7
   },
@@ -7101,7 +7101,7 @@
       "tentacle": 1,
       "elder_star": 1
     },
-    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid b, b, c; si al este añadid v. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
+    "campaignLog": "Elegid si la expedición se dirigió al oeste (7) o al este (2). Si al oeste añadid adepto, adepto, ancestral; si al este añadid tablilla. Cada investigador no tiene asignada tarea. Los investigadores no han obtenido ningún artefacto. Al azar si «la criatura ha sido derrotada».",
     "victoryRequirements": "R1 o R2. Consigue descifrar al menos 4 símbolos. Un investigador debe acabar con la Garra de Obsidiana en juego",
     "scenarioValue": 7
   },

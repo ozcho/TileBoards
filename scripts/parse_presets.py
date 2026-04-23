@@ -2,11 +2,44 @@
 """Parse PDF text and generate chaos bag preset seed data."""
 import re, json
 
-# Token mapping from PDF notation
+# Token mapping from PDF notation (letter → internal key)
 TOKEN_MAP = {
     'n': 'skull', 'b': 'cultist', 'v': 'tablet',
     'c': 'elder_thing', 'x': 'tentacle', 'z': 'elder_star'
 }
+
+# Spanish display names for token letters in text
+TOKEN_NAMES_ES = {
+    'n': 'calavera',
+    'b': 'adepto',
+    'v': 'tablilla',
+    'c': 'ancestral',
+    'x': 'caos',
+    'z': 'signo de los antiguos',
+}
+
+def replace_token_letters(text):
+    """Replace standalone token letters (b, v, c, n, x, z) with their Spanish names.
+
+    Only replaces when the letter appears as a standalone token reference, not as
+    part of a word or abbreviation (e.g. 'v. III' is NOT replaced).
+    """
+    if not text:
+        return text
+    def _replace(m):
+        letter = m.group(1)
+        return TOKEN_NAMES_ES[letter]
+    # Match a token letter that is:
+    #   - preceded by a space, comma, opening paren/bracket, or start of string
+    #   - followed by space, comma, closing paren, period+space (end of sentence),
+    #     period+end, or end of string
+    #   - NOT followed by '.' then a non-space (abbreviation like 'v. III')
+    return re.sub(
+        r'(?:(?<=[ ,(])|(?<=^))([nbvcxz])(?=[ ,);.]|$)',
+        _replace,
+        text,
+        flags=re.MULTILINE,
+    )
 
 def parse_tokens(line):
     """Parse a token line like '+1, +1, 0, 0, –1, –1, n, n, b, x, z' into tokenCounts dict."""
@@ -66,7 +99,7 @@ SCENARIO_INFO = {
     ('El Legado de Dunwich', 'El Essex County Express'): {'scenarioValue': 3, 'campaignLog': None, 'victoryRequirements': 'R1'},
     ('El Legado de Dunwich', 'Sangre en el Altar'): {'scenarioValue': 4, 'campaignLog': 'Al crear los «sacrificios potenciales», usa: Dr. Henry Armitage, Dr. Francis Morgan, Profesor Warren Rice, Zebulon Whateley y Earl Sawyer. Los investigadores no quedaron retrasados de camino a Dunwich. La banda de O\'Bannion no tiene cuentas que saldar.', 'victoryRequirements': 'R1, R2 o R3 y no anotar más de 3 «sacrificios a Yog-Sothoth»'},
     ('El Legado de Dunwich', 'Invisibles y Sin Dimensión'): {'scenarioValue': 5, 'campaignLog': '3 personajes fueron sacrificados a Yog-Sothoth. No incluyas el Polvo de Ibn-Ghazi en ningún mazo. No cojas ninguna Debilidad adicional. El Dr. Henry Armitage ha sido sacrificado a Yog-Sothoth.', 'victoryRequirements': 'R1 o R2 y no escapa más de una Progenie'},
-    ('El Legado de Dunwich', 'Donde Aguarda la Perdición'): {'scenarioValue': 6, 'campaignLog': 'Usa el acto 2 – Ascender por la colina (v. III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.', 'victoryRequirements': 'R1'},
+    ('El Legado de Dunwich', 'Donde Aguarda la Perdición'): {'scenarioValue': 6, 'campaignLog': 'Usa el acto 2 – Ascender por la colina (versión III). Naomi no apoya a los investigadores. No escapó ninguna Progenie de Yog-Sothoth. Los investigadores no acabaron con Silas Bishop.', 'victoryRequirements': 'R1'},
     ('El Legado de Dunwich', 'Perdidos en el Tiempo y en el Espacio'): {'scenarioValue': 7, 'campaignLog': 'No leas el epílogo de la campaña incluso aunque ganes el escenario. Considera que todos los eventos previos del registro de campaña han tenido lugar.', 'victoryRequirements': 'R1'},
     # El Camino a Carcosa
     ('El Camino a Carcosa', 'Se Cierra el Telón'): {'scenarioValue': 1, 'campaignLog': None, 'victoryRequirements': 'R1 o R2'},
@@ -167,8 +200,8 @@ def add(campaign, scenario, difficulty, tokens_str):
         'scenario': scenario,
         'difficulty': norm_diff(difficulty),
         'tokenCounts': tc,
-        'campaignLog': info.get('campaignLog'),
-        'victoryRequirements': info.get('victoryRequirements'),
+        'campaignLog': replace_token_letters(info.get('campaignLog')),
+        'victoryRequirements': replace_token_letters(info.get('victoryRequirements')),
         'scenarioValue': info.get('scenarioValue'),
     })
 
