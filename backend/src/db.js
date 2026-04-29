@@ -35,7 +35,7 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS tiles (
     id TEXT PRIMARY KEY,
     board_id TEXT NOT NULL,
-    type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag')),
+    type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch')),
     label TEXT DEFAULT '',
     config TEXT DEFAULT '{}',
     state TEXT DEFAULT '{}',
@@ -103,6 +103,31 @@ try {
         id TEXT PRIMARY KEY,
         board_id TEXT NOT NULL,
         type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag')),
+        label TEXT DEFAULT '',
+        config TEXT DEFAULT '{}',
+        state TEXT DEFAULT '{}',
+        position INTEGER DEFAULT 0,
+        created_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (board_id) REFERENCES boards(id) ON DELETE CASCADE
+      );
+      INSERT INTO tiles_new SELECT * FROM tiles;
+      DROP TABLE tiles;
+      ALTER TABLE tiles_new RENAME TO tiles;
+    `);
+  }
+} catch (e) {
+  // Already migrated
+}
+
+// Migration: update tiles CHECK constraint to include stopwatch
+try {
+  const tableInfo = db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='tiles'").get();
+  if (tableInfo && !tableInfo.sql.includes('stopwatch')) {
+    db.exec(`
+      CREATE TABLE tiles_new (
+        id TEXT PRIMARY KEY,
+        board_id TEXT NOT NULL,
+        type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch')),
         label TEXT DEFAULT '',
         config TEXT DEFAULT '{}',
         state TEXT DEFAULT '{}',
