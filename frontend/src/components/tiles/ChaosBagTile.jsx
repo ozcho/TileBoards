@@ -362,7 +362,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
               ))}
             </div>
           </div>
-          {isOwnerOrAdmin && (
+          {(isOwnerOrAdmin || tile.config?.showControlsToAll) && (
             <div className="chaosbag-manage-reset">
               <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
                 🔄 Resetear a configuración inicial

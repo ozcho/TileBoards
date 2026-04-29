@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
+  const canControl = isOwnerOrAdmin || tile.config?.showControlsToAll;
   const configH = tile.config?.hours || 0;
   const configM = tile.config?.minutes || 0;
   const configS = tile.config?.seconds || 0;
@@ -92,7 +93,7 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
           </div>
         </div>
       )}
-      {isOwnerOrAdmin && (
+      {canControl && (
         <div className="countdown-controls">
           {!isRunning ? (
             <button onClick={handleStart} className="btn btn-primary btn-sm" disabled={finished && !startedAt}>

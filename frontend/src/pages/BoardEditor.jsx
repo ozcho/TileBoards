@@ -518,6 +518,19 @@ export default function BoardEditor() {
                       onChange={(updates) => updateTile(index, updates)}
                     />
                   )}
+
+                  {['countdown', 'stopwatch', 'chaosbag', 'arkham_bag'].includes(tile.type) && (
+                    <div className="form-group" style={{ marginTop: '0.75rem' }}>
+                      <label className="checkbox-label" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input
+                          type="checkbox"
+                          checked={tile.config.showControlsToAll || false}
+                          onChange={e => updateTile(index, { config: { ...tile.config, showControlsToAll: e.target.checked } })}
+                        />
+                        Mostrar controles a todos los usuarios
+                      </label>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

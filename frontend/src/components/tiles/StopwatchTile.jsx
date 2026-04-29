@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function StopwatchTile({ tile, socket, isOwnerOrAdmin }) {
+  const canControl = isOwnerOrAdmin || tile.config?.showControlsToAll;
   const startedAt = tile.state?.startedAt || null;
   const paused = tile.state?.paused || false;
   const pausedElapsed = tile.state?.pausedElapsed || 0;
@@ -56,7 +57,7 @@ export default function StopwatchTile({ tile, socket, isOwnerOrAdmin }) {
           <span className="countdown-unit-label">seg</span>
         </div>
       </div>
-      {isOwnerOrAdmin && (
+      {canControl && (
         <div className="countdown-controls">
           {!isRunning ? (
             <button onClick={handleStart} className="btn btn-primary btn-sm">
