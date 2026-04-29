@@ -224,8 +224,9 @@ export default function BoardEditor() {
       });
 
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || 'Error al guardar');
+        const ct = res.headers.get('content-type');
+        const data = ct?.includes('application/json') ? await res.json() : {};
+        throw new Error(data.error || `Error al guardar (${res.status})`);
       }
 
       const data = await res.json();

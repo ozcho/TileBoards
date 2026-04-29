@@ -76,6 +76,12 @@ if (fs.existsSync(publicPath)) {
   });
 }
 
+// Global error handler — always return JSON, never HTML
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({ error: err.message || 'Error interno del servidor' });
+});
+
 // Socket.IO
 setupSocket(io, sessionMiddleware);
 
