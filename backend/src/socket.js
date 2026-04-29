@@ -180,6 +180,61 @@ function setupSocket(io, sessionMiddleware) {
       }
     });
 
+    // Stopwatch start
+    socket.on('stopwatch-start', ({ tileId }) => {
+      const tile = db.prepare(
+        'SELECT * FROM tiles WHERE id = ? AND type = ?'
+      ).get(tileId, 'stopwatch');
+      if (!tile) return;
+
+      const currentState = JSON.parse(tile.state || '{}');
+      let state;
+
+      if (currentState.paused) {
+        // Resume: new startedAt from now, keep accumulated elapsed
+        state = { startedAt: new Date().toISOString(), paused: false, pausedElapsed: currentState.pausedElapsed || 0 };
+      } else {
+        // Fresh start
+        state = { startedAt: new Date().toISOString(), paused: false, pausedElapsed: 0 };
+      }
+
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?')
+        .run(JSON.stringify(state), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state });
+    });
+
+    // Stopwatch pause
+    socket.on('stopwatch-pause', ({ tileId }) => {
+      const tile = db.prepare(
+        'SELECT * FROM tiles WHERE id = ? AND type = ?'
+      ).get(tileId, 'stopwatch');
+      if (!tile) return;
+
+      const currentState = JSON.parse(tile.state || '{}');
+      if (!currentState.startedAt) return;
+
+      const sinceStart = Math.floor((Date.now() - new Date(currentState.startedAt).getTime()) / 1000);
+      const pausedElapsed = (currentState.pausedElapsed || 0) + sinceStart;
+
+      const state = { startedAt: currentState.startedAt, paused: true, pausedElapsed };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?')
+        .run(JSON.stringify(state), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state });
+    });
+
+    // Stopwatch reset
+    socket.on('stopwatch-reset', ({ tileId }) => {
+      const tile = db.prepare(
+        'SELECT * FROM tiles WHERE id = ? AND type = ?'
+      ).get(tileId, 'stopwatch');
+      if (!tile) return;
+
+      const state = { startedAt: null, paused: false, pausedElapsed: 0 };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?')
+        .run(JSON.stringify(state), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state });
+    });
+
     // Message board - add message
     socket.on('message-add', ({ tileId, text, authorName }) => {
       const tile = db.prepare(

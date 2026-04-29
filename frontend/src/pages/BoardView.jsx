@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { socket } from '../socket';
 import CountdownTile from '../components/tiles/CountdownTile';
+import StopwatchTile from '../components/tiles/StopwatchTile';
 import ClockTile from '../components/tiles/ClockTile';
 import CounterTile from '../components/tiles/CounterTile';
 import MessageBoardTile from '../components/tiles/MessageBoardTile';
@@ -155,6 +156,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     const props = { key: tile.id, tile, socket, isOwnerOrAdmin, user, guestName, boardLocked };
     switch (tile.type) {
       case 'countdown': return <CountdownTile {...props} />;
+      case 'stopwatch': return <StopwatchTile {...props} />;
       case 'clock': return <ClockTile {...props} />;
       case 'counter': return <CounterTile {...props} />;
       case 'messageboard': return <MessageBoardTile {...props} />;

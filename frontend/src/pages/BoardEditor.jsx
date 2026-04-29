@@ -4,6 +4,7 @@ import TokenIcon from '../components/tiles/TokenIcon';
 
 const TILE_TYPES = [
   { value: 'countdown', label: '⏳ Cuenta Atrás' },
+  { value: 'stopwatch', label: '⏱ Cronómetro' },
   { value: 'clock', label: '🕐 Reloj' },
   { value: 'counter', label: '🔢 Contador' },
   { value: 'messageboard', label: '💬 Tablón de Mensajes' },
@@ -164,12 +165,14 @@ export default function BoardEditor() {
       type,
       label: TILE_TYPES.find(t => t.value === type)?.label.split(' ').slice(1).join(' ') || type,
       config: type === 'countdown' ? { hours: 0, minutes: 5, seconds: 0 } :
+              type === 'stopwatch' ? {} :
               type === 'clock' ? { timezone: 'Europe/Madrid', format: '24h' } :
               type === 'messageboard' ? { visibility: 'all' } :
               type === 'counter' ? { historyVisibility: 'none' } :
               type === 'chaosbag' ? { preset: 'standard', tokenCounts: { '+1': 1, '0': 2, '-1': 3, '-2': 2, '-3': 1, '-4': 1, skull: 2, cultist: 1, tablet: 1, elder_thing: 1, tentacle: 1, elder_star: 1 } } :
               type === 'arkham_bag' ? { campaign: '', scenario: '', difficulty: '' } : {},
       state: type === 'counter' ? { value: 0 } :
+             type === 'stopwatch' ? { startedAt: null, paused: false, pausedElapsed: 0 } :
              type === 'chaosbag' ? {
                bag: ['+1', '0', '0', '-1', '-1', '-1', '-2', '-2', '-3', '-4', 'skull', 'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star'],
                drawn: [],
