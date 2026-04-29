@@ -519,7 +519,7 @@ export default function BoardEditor() {
                     />
                   )}
 
-                  {['countdown', 'stopwatch', 'chaosbag', 'arkham_bag'].includes(tile.type) && (
+                  {tile.type === 'stopwatch' && (
                     <div className="form-group" style={{ marginTop: '0.75rem' }}>
                       <label className="checkbox-label" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <input
