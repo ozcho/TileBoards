@@ -31,7 +31,7 @@ router.post('/boards', (req, res) => {
   );
 
   db.transaction(() => {
-    insertBoard.run(id, name.trim(), passwordHash, 'party', qrToken);
+    insertBoard.run(id, name.trim(), passwordHash, '__party__', qrToken);
     if (Array.isArray(tiles)) {
       tiles.forEach((tile, i) => {
         insertTile.run(

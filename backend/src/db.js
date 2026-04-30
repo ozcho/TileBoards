@@ -94,6 +94,12 @@ try {
   // Column already exists
 }
 
+// Ensure party system user exists (used as owner_id for party boards)
+db.prepare(`
+  INSERT OR IGNORE INTO users (id, email, name, provider, provider_id, is_admin, approved)
+  VALUES ('__party__', '__party__@system', 'Party System', 'system', '__party__', 0, 0)
+`).run();
+
 // Migration: update tiles CHECK constraint to include chaosbag and arkham_bag
 try {
   const tableInfo = db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='tiles'").get();
