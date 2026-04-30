@@ -53,6 +53,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [showBlessCurse, setShowBlessCurse] = useState(false);
   const [showBagContents, setShowBagContents] = useState(false);
   const [addToken, setAddToken] = useState('+1');
+  const [probSkill, setProbSkill] = useState('');
+  const [probDifficulty, setProbDifficulty] = useState('');
   const [newestDrawKey, setNewestDrawKey] = useState(0);
   const prevDrawnRef = useRef([]);
   const prevLockedLenRef = useRef(locked.length);
@@ -163,6 +165,38 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const statItems = Object.entries(tokenStats)
     .map(([token, count]) => ({ token, count, pct: totalStatDraws > 0 ? ((count / totalStatDraws) * 100).toFixed(1) : '0.0' }))
     .sort((a, b) => b.count - a.count);
+
+  // Probability calculator
+  const TOKEN_NUMERIC_VALUES = {
+    '+1': 1, '0': 0, '-1': -1, '-2': -2, '-3': -3, '-4': -4,
+    '-5': -5, '-6': -6, '-7': -7, '-8': -8,
+    'bless': 2, 'curse': -2, 'frost': -1,
+  };
+  const SPECIAL_CALC_TOKENS = ['skull', 'cultist', 'tablet', 'elder_thing', 'elder_star'];
+  const calcSkill = probSkill !== '' && !isNaN(+probSkill) ? +probSkill : null;
+  const calcDiff  = probDifficulty !== '' && !isNaN(+probDifficulty) ? +probDifficulty : null;
+  const calcReady = calcSkill !== null && calcDiff !== null;
+  let calcGroups = null;
+  if (calcReady) {
+    const threshold = calcDiff - calcSkill;
+    const success = [], fail = [], special = [];
+    bag.forEach(token => {
+      if (token === 'tentacle') fail.push(token);
+      else if (SPECIAL_CALC_TOKENS.includes(token)) special.push(token);
+      else if (TOKEN_NUMERIC_VALUES[token] !== undefined)
+        (TOKEN_NUMERIC_VALUES[token] >= threshold ? success : fail).push(token);
+      else special.push(token);
+    });
+    const tally = arr => { const c = {}; arr.forEach(t => { c[t] = (c[t] || 0) + 1; }); return Object.entries(c); };
+    const pct = n => bag.length > 0 ? ((n / bag.length) * 100).toFixed(1) : '0.0';
+    calcGroups = {
+      threshold,
+      success: { list: success, tally: tally(success), pct: pct(success.length) },
+      fail:    { list: fail,    tally: tally(fail),    pct: pct(fail.length) },
+      special: { list: special, tally: tally(special), pct: pct(special.length) },
+      total: bag.length,
+    };
+  }
 
   // Bless/curse counts
   const blessInBag = bag.filter(t => t === 'bless').length + drawn.filter(t => t === 'bless').length;
@@ -322,14 +356,85 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
           </div>
           {showProbability && bag.length > 0 && (
             <div className="chaosbag-prob">
-              {probItems.map(({ token, count, pct }) => (
-                <div key={token} className="chaosbag-prob-row">
-                  <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 14)}</span>
-                  <div className="chaosbag-prob-bar-wrap"><div className="chaosbag-prob-bar-inner" style={{ width: `${pct}%` }} /></div>
-                  <span className="chaosbag-prob-pct">{pct}%</span>
-                  <span className="chaosbag-prob-count">×{count}</span>
+              <div className="chaosbag-prob-inputs">
+                <div className="chaosbag-prob-input-group">
+                  <label>Habilidad</label>
+                  <input type="number" value={probSkill} onChange={e => setProbSkill(e.target.value)} className="input input-sm chaosbag-prob-input" placeholder="—" />
                 </div>
-              ))}
+                <span className="chaosbag-prob-vs">vs</span>
+                <div className="chaosbag-prob-input-group">
+                  <label>Dificultad</label>
+                  <input type="number" value={probDifficulty} onChange={e => setProbDifficulty(e.target.value)} className="input input-sm chaosbag-prob-input" placeholder="—" />
+                </div>
+                {calcReady && (
+                  <span className="chaosbag-prob-threshold">
+                    mín. {calcGroups.threshold > 0 ? `+${calcGroups.threshold}` : calcGroups.threshold}
+                  </span>
+                )}
+              </div>
+              {calcReady ? (
+                <div className="chaosbag-prob-groups">
+                  <div className="chaosbag-prob-group chaosbag-prob-success">
+                    <div className="chaosbag-prob-group-header">
+                      <span>✅ Éxito</span>
+                      <span className="chaosbag-prob-group-pct">{calcGroups.success.pct}%</span>
+                      <span className="chaosbag-prob-group-count">({calcGroups.success.list.length}/{calcGroups.total})</span>
+                    </div>
+                    <div className="chaosbag-prob-group-tokens">
+                      {calcGroups.success.tally.map(([token, count]) => (
+                        <div key={token} className="chaosbag-summary-chip">
+                          <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 20)}</span>
+                          {count > 1 && <span className="chaosbag-summary-count">×{count}</span>}
+                        </div>
+                      ))}
+                      {calcGroups.success.list.length === 0 && <span className="chaosbag-prob-empty">Ninguna</span>}
+                    </div>
+                  </div>
+                  <div className="chaosbag-prob-group chaosbag-prob-fail">
+                    <div className="chaosbag-prob-group-header">
+                      <span>❌ Fracaso</span>
+                      <span className="chaosbag-prob-group-pct">{calcGroups.fail.pct}%</span>
+                      <span className="chaosbag-prob-group-count">({calcGroups.fail.list.length}/{calcGroups.total})</span>
+                    </div>
+                    <div className="chaosbag-prob-group-tokens">
+                      {calcGroups.fail.tally.map(([token, count]) => (
+                        <div key={token} className="chaosbag-summary-chip">
+                          <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 20)}</span>
+                          {count > 1 && <span className="chaosbag-summary-count">×{count}</span>}
+                        </div>
+                      ))}
+                      {calcGroups.fail.list.length === 0 && <span className="chaosbag-prob-empty">Ninguna</span>}
+                    </div>
+                  </div>
+                  {calcGroups.special.list.length > 0 && (
+                    <div className="chaosbag-prob-group chaosbag-prob-special">
+                      <div className="chaosbag-prob-group-header">
+                        <span>⚠️ Especiales</span>
+                        <span className="chaosbag-prob-group-pct">{calcGroups.special.pct}%</span>
+                        <span className="chaosbag-prob-group-count">({calcGroups.special.list.length}/{calcGroups.total})</span>
+                      </div>
+                      <div className="chaosbag-prob-group-tokens">
+                        {calcGroups.special.tally.map(([token, count]) => (
+                          <div key={token} className="chaosbag-summary-chip">
+                            <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 20)}</span>
+                            {count > 1 && <span className="chaosbag-summary-count">×{count}</span>}
+                          </div>
+                        ))}
+                      </div>
+                      <p className="chaosbag-prob-special-note">Efecto depende del escenario e investigador</p>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                probItems.map(({ token, count, pct }) => (
+                  <div key={token} className="chaosbag-prob-row">
+                    <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 14)}</span>
+                    <div className="chaosbag-prob-bar-wrap"><div className="chaosbag-prob-bar-inner" style={{ width: `${pct}%` }} /></div>
+                    <span className="chaosbag-prob-pct">{pct}%</span>
+                    <span className="chaosbag-prob-count">×{count}</span>
+                  </div>
+                ))
+              )}
             </div>
           )}
         </div>
