@@ -295,9 +295,19 @@ function setupSocket(io, sessionMiddleware) {
       const newState = { ...state, bag: newBag, drawn: [...drawn, token], locked };
       db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+
+      // Log the draw immediately
+      const drawId = uuidv4();
+      const now = new Date().toISOString();
+      const name = authorName || 'Anónimo';
+      db.prepare(
+        'INSERT INTO chaosbag_draws (id, tile_id, tokens_drawn, author_name, created_at) VALUES (?, ?, ?, ?, ?)'
+      ).run(drawId, tileId, JSON.stringify([token]), name, now);
+      const entry = { id: drawId, tile_id: tileId, tokens_drawn: [token], author_name: name, created_at: now };
+      io.to(tile.board_id).emit('chaosbag-draw-logged', { tileId, entry });
     });
 
-    // Return drawn tokens, log the draw, then draw a fresh token
+    // Return drawn tokens (no log), then draw a fresh token and log it
     socket.on('chaosbag-draw-fresh', ({ tileId, authorName }) => {
       const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);
       if (!tile) return;
@@ -308,17 +318,8 @@ function setupSocket(io, sessionMiddleware) {
       const locked = state.locked || [];
       const name = authorName || 'Anónimo';
 
-      // If there are drawn tokens, return them first (log + bless/curse don't go back)
+      // If there are drawn tokens, return them first (no log — was already logged at draw time)
       if (drawn.length > 0) {
-        const drawId = uuidv4();
-        const now = new Date().toISOString();
-        db.prepare(
-          'INSERT INTO chaosbag_draws (id, tile_id, tokens_drawn, author_name, created_at) VALUES (?, ?, ?, ?, ?)'
-        ).run(drawId, tileId, JSON.stringify(drawn), name, now);
-
-        const entry = { id: drawId, tile_id: tileId, tokens_drawn: drawn, author_name: name, created_at: now };
-        io.to(tile.board_id).emit('chaosbag-draw-logged', { tileId, entry });
-
         const regularTokens = drawn.filter(t => t !== 'bless' && t !== 'curse');
         bag = [...bag, ...regularTokens];
       }
@@ -339,9 +340,18 @@ function setupSocket(io, sessionMiddleware) {
       const newState = { ...state, bag, drawn: [token], locked };
       db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+
+      // Log the fresh draw immediately
+      const drawId = uuidv4();
+      const now = new Date().toISOString();
+      db.prepare(
+        'INSERT INTO chaosbag_draws (id, tile_id, tokens_drawn, author_name, created_at) VALUES (?, ?, ?, ?, ?)'
+      ).run(drawId, tileId, JSON.stringify([token]), name, now);
+      const entry = { id: drawId, tile_id: tileId, tokens_drawn: [token], author_name: name, created_at: now };
+      io.to(tile.board_id).emit('chaosbag-draw-logged', { tileId, entry });
     });
 
-    // Return all drawn tokens to the bag and log the draw
+    // Return all drawn tokens to the bag (draw was already logged at draw time)
     socket.on('chaosbag-return', ({ tileId, authorName }) => {
       const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);
       if (!tile) return;
@@ -349,17 +359,6 @@ function setupSocket(io, sessionMiddleware) {
       const state = JSON.parse(tile.state || '{}');
       const drawn = state.drawn || [];
       if (drawn.length === 0) return;
-
-      // Log the draw
-      const drawId = uuidv4();
-      const now = new Date().toISOString();
-      const name = authorName || 'Anónimo';
-      db.prepare(
-        'INSERT INTO chaosbag_draws (id, tile_id, tokens_drawn, author_name, created_at) VALUES (?, ?, ?, ?, ?)'
-      ).run(drawId, tileId, JSON.stringify(drawn), name, now);
-
-      const entry = { id: drawId, tile_id: tileId, tokens_drawn: drawn, author_name: name, created_at: now };
-      io.to(tile.board_id).emit('chaosbag-draw-logged', { tileId, entry });
 
       // Return tokens (bless/curse don't go back to bag)
       const regularTokens = drawn.filter(t => t !== 'bless' && t !== 'curse');
