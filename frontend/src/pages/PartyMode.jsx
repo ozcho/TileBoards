@@ -1,16 +1,26 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const PARTY_NAME_KEY = 'partyName';
 
 export default function PartyMode() {
-  const [name, setName] = useState(() => sessionStorage.getItem(PARTY_NAME_KEY) || '');
-  const [nameConfirmed, setNameConfirmed] = useState(() => !!sessionStorage.getItem(PARTY_NAME_KEY));
+  const { user } = useAuth();
+  const loggedName = user?.name || null;
+
+  const [name, setName] = useState(() => loggedName || sessionStorage.getItem(PARTY_NAME_KEY) || '');
+  const [nameConfirmed, setNameConfirmed] = useState(() => !!(loggedName || sessionStorage.getItem(PARTY_NAME_KEY)));
   const [boards, setBoards] = useState([]);
   const [newBoardName, setNewBoardName] = useState('');
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedName) {
+      sessionStorage.setItem('guestName', loggedName);
+    }
+  }, [loggedName]);
 
   useEffect(() => {
     if (!nameConfirmed) return;
@@ -94,12 +104,16 @@ export default function PartyMode() {
         <div className="party-logo">🎲</div>
         <div>
           <h1>Bazar Iglesias</h1>
-          <p className="party-greeting">Hola, <strong>{name}</strong> —
-            <button className="btn-link" onClick={() => {
-              sessionStorage.removeItem(PARTY_NAME_KEY);
-              setNameConfirmed(false);
-              setName('');
-            }}>cambiar nombre</button>
+          <p className="party-greeting">Hola, <strong>{name}</strong>
+            {!loggedName && (
+              <> —
+                <button className="btn-link" onClick={() => {
+                  sessionStorage.removeItem(PARTY_NAME_KEY);
+                  setNameConfirmed(false);
+                  setName('');
+                }}>cambiar nombre</button>
+              </>
+            )}
           </p>
         </div>
       </div>
