@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import bazarLogo from '../el_bazar_de_iglesias_logo_final_rgb_grande-800x467.jpg';
 
 const PARTY_NAME_KEY = 'partyName';
 
@@ -77,7 +78,9 @@ export default function PartyMode() {
     return (
       <div className="party-welcome">
         <div className="party-welcome-card">
-          <div className="party-logo">🎲</div>
+        <div className="party-logo">
+          <img src={bazarLogo} alt="El Bazar de Iglesias" className="party-logo-img" />
+        </div>
           <h1>Bazar Iglesias</h1>
           <p>¡Bienvenido! ¿Cómo te llamas?</p>
           <form onSubmit={handleNameSubmit}>
@@ -101,7 +104,9 @@ export default function PartyMode() {
   return (
     <div className="party-page">
       <div className="party-header">
-        <div className="party-logo">🎲</div>
+        <div className="party-logo">
+          <img src={bazarLogo} alt="El Bazar de Iglesias" className="party-logo-img" />
+        </div>
         <div>
           <h1>Bazar Iglesias</h1>
           <p className="party-greeting">Hola, <strong>{name}</strong>

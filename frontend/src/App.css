@@ -614,6 +614,14 @@ select.input {
   margin-bottom: 0.5rem;
 }
 
+.party-logo-img {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
 .btn-lg {
   padding: 0.75rem 1.5rem;
   font-size: 1.05rem;
@@ -635,6 +643,10 @@ select.input {
 .party-header .party-logo {
   font-size: 2.5rem;
   margin-bottom: 0;
+}
+
+.party-header .party-logo-img {
+  max-width: 140px;
 }
 
 .party-header h1 {
