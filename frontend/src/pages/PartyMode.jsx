@@ -78,9 +78,9 @@ export default function PartyMode() {
     return (
       <div className="party-welcome">
         <div className="party-welcome-card">
-        <div className="party-logo">
-          <img src={bazarLogo} alt="El Bazar de Iglesias" className="party-logo-img" />
-        </div>
+          <div className="party-logo">
+            <img src={bazarLogo} alt="El Bazar de Iglesias" className="party-logo-img" />
+          </div>
           <h1>Bazar Iglesias</h1>
           <p>¡Bienvenido! ¿Cómo te llamas?</p>
           <form onSubmit={handleNameSubmit}>

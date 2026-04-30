@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QRCode from 'react-qr-code';
 import { socket } from '../socket';
+import bazarLogo from '../el_bazar_de_iglesias_logo_final_rgb_grande-800x467.jpg';
 import CountdownTile from '../components/tiles/CountdownTile';
 import StopwatchTile from '../components/tiles/StopwatchTile';
 import ClockTile from '../components/tiles/ClockTile';
@@ -181,7 +182,11 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   return (
     <div className="board-view">
       <div className="board-header">
-        <h1>{boardName}</h1>
+        {initialBoard.party_mode ? (
+          <img src={bazarLogo} alt="El Bazar de Iglesias" className="party-board-logo" />
+        ) : (
+          <h1>{boardName}</h1>
+        )}
         <div className="board-header-actions">
           {isOwnerOrAdmin && (
             <button className="btn btn-secondary btn-sm" onClick={() => navigate(`/board/${boardId}/edit`)}>

@@ -612,12 +612,20 @@ select.input {
 .party-logo {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .party-logo-img {
   display: block;
   width: 100%;
   max-width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.party-board-logo {
+  max-width: 160px;
   height: auto;
   object-fit: contain;
 }
