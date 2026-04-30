@@ -926,7 +926,7 @@ select.input {
 .chaosbag-drawn-area {
   background: var(--color-surface-2);
   border-radius: var(--radius-sm);
-  padding: 1rem;
+  padding: 0;
   text-align: center;
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -1002,8 +1002,8 @@ select.input {
 }
 
 .chaosbag-token-newest img.token-icon-img {
-  width: 72%;
-  height: 72%;
+  width: 88%;
+  height: 88%;
 }
 
 .chaosbag-token-previous {
