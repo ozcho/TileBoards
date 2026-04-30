@@ -993,12 +993,17 @@ select.input {
 }
 
 .chaosbag-token-newest {
-  width: clamp(130px, 55%, 260px);
-  height: clamp(130px, 55%, 260px);
+  width: 95%;
+  height: 95%;
   font-size: clamp(2.6rem, 12cqw, 6rem);
   animation: tokenRevealFresh 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   box-shadow: var(--shadow-lg), 0 0 24px rgba(255, 255, 255, 0.2);
   z-index: 1;
+}
+
+.chaosbag-token-newest img.token-icon-img {
+  width: 72%;
+  height: 72%;
 }
 
 .chaosbag-token-previous {
