@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import BoardView from './BoardView';
 
 export default function BoardAccess() {
   const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const qrToken = searchParams.get('qr');
   const { user } = useAuth();
   const [board, setBoard] = useState(null);
   const [needsPassword, setNeedsPassword] = useState(false);
@@ -15,10 +17,16 @@ export default function BoardAccess() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`/api/boards/${id}/public`, { credentials: 'include' })
+    // Si viene con token QR, intentar acceso directo sin contraseña
+    const endpoint = qrToken
+      ? `/api/boards/${id}/qr/${encodeURIComponent(qrToken)}`
+      : `/api/boards/${id}/public`;
+
+    fetch(endpoint, { credentials: 'include' })
       .then(res => {
         if (res.ok) return res.json();
         if (res.status === 401) {
+          // QR inválido o expirado → pedir contraseña igualmente
           setNeedsPassword(true);
           setLoading(false);
           return null;
@@ -46,7 +54,7 @@ export default function BoardAccess() {
         setError(err.message);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, qrToken]);
 
   const handlePasswordSubmit = async (e) => {
     e.preventDefault();

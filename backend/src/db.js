@@ -124,6 +124,19 @@ try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN campaign_log TEXT'); } ca
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN victory_requirements TEXT'); } catch (e) {}
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN scenario_value INTEGER'); } catch (e) {}
 
+// Migration: add qr_token column to boards and populate existing rows
+try {
+  db.exec('ALTER TABLE boards ADD COLUMN qr_token TEXT');
+} catch (e) {}
+try {
+  const { randomUUID } = require('crypto');
+  const boardsWithoutToken = db.prepare('SELECT id FROM boards WHERE qr_token IS NULL').all();
+  const setToken = db.prepare('UPDATE boards SET qr_token = ? WHERE id = ?');
+  for (const b of boardsWithoutToken) {
+    setToken.run(randomUUID(), b.id);
+  }
+} catch (e) {}
+
 // Seed chaosbag_presets — always replace reference data on startup
 try {
   const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'presets-seed.json'), 'utf8'));

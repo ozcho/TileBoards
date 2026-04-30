@@ -113,16 +113,17 @@ router.post('/', isAuthenticated, (req, res) => {
 
   const id = uuidv4();
   const passwordHash = bcrypt.hashSync(password, 10);
+  const qrToken = uuidv4();
 
   const insertBoard = db.prepare(
-    'INSERT INTO boards (id, name, password_hash, owner_id) VALUES (?, ?, ?, ?)'
+    'INSERT INTO boards (id, name, password_hash, owner_id, qr_token) VALUES (?, ?, ?, ?, ?)'
   );
   const insertTile = db.prepare(
     'INSERT INTO tiles (id, board_id, type, label, config, state, position) VALUES (?, ?, ?, ?, ?, ?, ?)'
   );
 
   const transaction = db.transaction(() => {
-    insertBoard.run(id, name, passwordHash, req.user.id);
+    insertBoard.run(id, name, passwordHash, req.user.id, qrToken);
 
     if (tiles && Array.isArray(tiles)) {
       tiles.forEach((tile, index) => {
@@ -207,6 +208,31 @@ router.put('/:id', isAuthenticated, (req, res) => {
   });
 
   res.json({ ...updated, tiles: updatedTiles });
+});
+
+// Get QR token for a board (owner/admin only)
+router.get('/:id/qr-token', isAuthenticated, (req, res) => {
+  const board = db.prepare('SELECT id, owner_id, qr_token FROM boards WHERE id = ?').get(req.params.id);
+  if (!board) return res.status(404).json({ error: 'Board no encontrado' });
+  if (!req.user.is_admin && board.owner_id !== req.user.id) {
+    return res.status(403).json({ error: 'No autorizado' });
+  }
+  res.json({ qrToken: board.qr_token });
+});
+
+// Access board via QR token (bypasses password, grants session access)
+router.get('/:id/qr/:token', (req, res) => {
+  const board = db.prepare('SELECT id, name, owner_id, qr_token FROM boards WHERE id = ?').get(req.params.id);
+  if (!board) return res.status(404).json({ error: 'Board no encontrado' });
+  if (!board.qr_token || board.qr_token !== req.params.token) {
+    return res.status(401).json({ error: 'Token QR inválido' });
+  }
+  if (!req.session.boardAccess) req.session.boardAccess = [];
+  if (!req.session.boardAccess.includes(board.id)) {
+    req.session.boardAccess.push(board.id);
+  }
+  const tiles = db.prepare('SELECT * FROM tiles WHERE board_id = ? ORDER BY position').all(board.id);
+  res.json({ id: board.id, name: board.name, owner_id: board.owner_id, tiles });
 });
 
 // Delete board

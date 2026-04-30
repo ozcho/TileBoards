@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import QRCode from 'react-qr-code';
 import { socket } from '../socket';
 import CountdownTile from '../components/tiles/CountdownTile';
 import StopwatchTile from '../components/tiles/StopwatchTile';
@@ -14,6 +15,8 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   const [boardName, setBoardName] = useState(initialBoard.name);
   const [connected, setConnected] = useState(false);
   const [boardLocked, setBoardLocked] = useState(false);
+  const [showQR, setShowQR] = useState(false);
+  const [qrToken, setQrToken] = useState(null);
   const navigate = useNavigate();
   const boardId = initialBoard.id;
   const wakeLockRef = useRef(null);
@@ -150,6 +153,15 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     };
   }, [boardId, navigate]);
 
+  useEffect(() => {
+    if (!isOwnerOrAdmin) return;
+    fetch(`/api/boards/${boardId}/qr-token`, { credentials: 'include' })
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data?.qrToken) setQrToken(data.qrToken); })
+      .catch(() => {});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [boardId]);
+
   const isOwnerOrAdmin = user && (user.is_admin || user.id === initialBoard.owner_id);
 
   const renderTile = useCallback((tile) => {
@@ -176,6 +188,11 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
               ✏️ Editar
             </button>
           )}
+          {isOwnerOrAdmin && qrToken && (
+            <button className="btn btn-secondary btn-sm" onClick={() => setShowQR(true)} title="Compartir QR">
+              📱 QR
+            </button>
+          )}
           {isOwnerOrAdmin && (
             boardLocked
               ? <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>🔓 Desbloquear</button>
@@ -197,6 +214,24 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       {boardLocked && (
         <div className="board-locked-banner">
           <span>🔒 Tiles bloqueados — la cuenta atrás ha terminado</span>
+        </div>
+      )}
+      {showQR && qrToken && (
+        <div className="qr-modal-overlay" onClick={() => setShowQR(false)}>
+          <div className="qr-modal" onClick={e => e.stopPropagation()}>
+            <h2>Compartir board</h2>
+            <p>Escanea para unirte sin contraseña</p>
+            <div className="qr-code-wrapper">
+              <QRCode
+                value={`${window.location.origin}/board/${boardId}?qr=${qrToken}`}
+                size={220}
+                bgColor="#ffffff"
+                fgColor="#1a1a2e"
+              />
+            </div>
+            <p className="qr-url">{`${window.location.origin}/board/${boardId}?qr=${qrToken}`}</p>
+            <button className="btn btn-secondary" onClick={() => setShowQR(false)}>Cerrar</button>
+          </div>
         </div>
       )}
       <div className="tiles-grid">
