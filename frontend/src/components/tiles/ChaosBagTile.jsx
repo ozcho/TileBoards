@@ -56,8 +56,17 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [addToken, setAddToken] = useState('+1');
   const [newestDrawKey, setNewestDrawKey] = useState(0);
   const prevDrawnRef = useRef([]);
+  const prevLockedLenRef = useRef(locked.length);
 
   const authorName = user?.name || guestName || 'Anónimo';
+
+  // Auto-open locked panel when a new token gets locked
+  useEffect(() => {
+    if (locked.length > prevLockedLenRef.current) {
+      setShowLocked(true);
+    }
+    prevLockedLenRef.current = locked.length;
+  }, [locked.length]);
 
   useEffect(() => {
     const prevDrawn = prevDrawnRef.current;
@@ -362,6 +371,18 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
               ))}
             </div>
           </div>
+          {locked.length > 0 && (
+            <div className="chaosbag-manage-locked">
+              <label>Fichas selladas — pulsa para devolver a la bolsa:</label>
+              <div className="chaosbag-manage-tokens">
+                {locked.map((token, i) => (
+                  <button key={i} className={`chaosbag-token chaosbag-token-manage chaosbag-token-locked ${tokenClass(token)}`} onClick={() => !boardLocked && handleUnlock(i)} disabled={boardLocked} title="Devolver a la bolsa">
+                    {tokenLabel(token, 28)}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           {isOwnerOrAdmin && (
             <div className="chaosbag-manage-reset">
               <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>

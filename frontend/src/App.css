@@ -1244,10 +1244,18 @@ select.input {
 .chaosbag-token-locked {
   cursor: pointer;
   opacity: 0.6;
+  border-color: var(--color-warning, #f59e0b) !important;
+  box-shadow: 0 0 0 1px var(--color-warning, #f59e0b);
 }
 
 .chaosbag-token-locked:hover:not(:disabled) {
   opacity: 1;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
+}
+
+.chaosbag-manage-locked {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
 }
 
 .chaosbag-history-list {
