@@ -48,7 +48,6 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
   const [showManage, setShowManage] = useState(false);
-  const [showLocked, setShowLocked] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showProbability, setShowProbability] = useState(false);
   const [showBlessCurse, setShowBlessCurse] = useState(false);
@@ -60,10 +59,10 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
   const authorName = user?.name || guestName || 'Anónimo';
 
-  // Auto-open locked panel when a new token gets locked
+  // Auto-open Gestionar panel when a new token gets locked
   useEffect(() => {
     if (locked.length > prevLockedLenRef.current) {
-      setShowLocked(true);
+      setShowManage(true);
     }
     prevLockedLenRef.current = locked.length;
   }, [locked.length]);
@@ -277,11 +276,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         <button type="button" className={`btn btn-xs ${showManage ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowManage(v => !v)}>
           ⚙ Gestionar
         </button>
-        {locked.length > 0 && (
-          <button type="button" className={`btn btn-xs ${showLocked ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowLocked(v => !v)}>
-            🔒 ({locked.length})
-          </button>
-        )}
+
         <button type="button" className={`btn btn-xs ${showHistory ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowHistory(v => !v)}>
           📜 ({history.length})
         </button>
@@ -393,15 +388,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         </div>
       )}
 
-      {showLocked && locked.length > 0 && (
-        <div className="chaosbag-locked-tokens">
-          {locked.map((token, i) => (
-            <button key={i} className={`chaosbag-token chaosbag-token-manage chaosbag-token-locked ${tokenClass(token)}`} onClick={() => !boardLocked && handleUnlock(i)} disabled={boardLocked} title="Devolver a la bolsa">
-              {tokenLabel(token, 28)}
-            </button>
-          ))}
-        </div>
-      )}
+
 
       {showStats && history.length > 0 && (
         <div className="chaosbag-stats-panel">
