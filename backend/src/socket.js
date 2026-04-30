@@ -6,6 +6,31 @@ function setupSocket(io, sessionMiddleware) {
   // In-memory lock state: boardId -> { locked: bool, tileId: string|null }
   const boardLockState = new Map();
 
+  // Party board auto-delete: boardId -> timeoutHandle
+  const partyDeleteTimers = new Map();
+  const PARTY_TTL_MS = 30 * 60 * 1000; // 30 minutes
+
+  function schedulePartyDelete(boardId) {
+    if (partyDeleteTimers.has(boardId)) return; // already scheduled
+    const handle = setTimeout(() => {
+      partyDeleteTimers.delete(boardId);
+      const sockets = io.sockets.adapter.rooms.get(boardId);
+      if (!sockets || sockets.size === 0) {
+        db.prepare('DELETE FROM boards WHERE id = ? AND party_mode = 1').run(boardId);
+        console.log(`Party board ${boardId} auto-deleted after 30min idle`);
+      }
+    }, PARTY_TTL_MS);
+    partyDeleteTimers.set(boardId, handle);
+  }
+
+  function cancelPartyDelete(boardId) {
+    const handle = partyDeleteTimers.get(boardId);
+    if (handle) {
+      clearTimeout(handle);
+      partyDeleteTimers.delete(boardId);
+    }
+  }
+
   // Share session with Socket.IO
   io.use((socket, next) => {
     sessionMiddleware(socket.request, {}, next);
@@ -48,6 +73,9 @@ function setupSocket(io, sessionMiddleware) {
 
       socket.join(boardId);
       socket.boardId = boardId;
+
+      // Cancel any pending auto-delete for party boards
+      if (board.party_mode) cancelPartyDelete(boardId);
 
       // Send current board state
       const tiles = db.prepare(
@@ -569,6 +597,19 @@ function setupSocket(io, sessionMiddleware) {
 
     socket.on('disconnect', () => {
       console.log('Client disconnected:', socket.id);
+      const boardId = socket.boardId;
+      if (boardId) {
+        // After disconnect, check if party board is now empty
+        setImmediate(() => {
+          const board = db.prepare('SELECT party_mode FROM boards WHERE id = ?').get(boardId);
+          if (board?.party_mode) {
+            const room = io.sockets.adapter.rooms.get(boardId);
+            if (!room || room.size === 0) {
+              schedulePartyDelete(boardId);
+            }
+          }
+        });
+      }
     });
   });
 }

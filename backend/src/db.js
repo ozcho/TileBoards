@@ -137,6 +137,9 @@ try {
   }
 } catch (e) {}
 
+// Migration: add party_mode column to boards
+try { db.exec('ALTER TABLE boards ADD COLUMN party_mode INTEGER DEFAULT 0'); } catch (e) {}
+
 // Seed chaosbag_presets — always replace reference data on startup
 try {
   const seedData = JSON.parse(fs.readFileSync(path.join(__dirname, 'presets-seed.json'), 'utf8'));

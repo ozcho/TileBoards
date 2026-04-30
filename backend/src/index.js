@@ -58,6 +58,7 @@ app.set('io', io);
 app.use('/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/boards', require('./routes/boards'));
+app.use('/api/party', require('./routes/party'));
 app.use('/api/presets', require('./routes/presets'));
 
 // Serve frontend in production

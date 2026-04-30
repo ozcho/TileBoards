@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import BoardAccess from './pages/BoardAccess';
 import BoardEditor from './pages/BoardEditor';
 import AdminPanel from './pages/AdminPanel';
+import PartyMode from './pages/PartyMode';
 import TokenIcon from './components/tiles/TokenIcon';
 
 const ALL_TOKENS = ['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
@@ -47,6 +48,7 @@ export default function App() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={user ? <Dashboard /> : <Login />} />
+          <Route path="/bazariglesias" element={<PartyMode />} />
           <Route path="/board/:id" element={<BoardAccess />} />
           <Route path="/board/:id/edit" element={user ? <BoardEditor /> : <Login />} />
           <Route path="/board/new" element={user ? <BoardEditor /> : <Login />} />

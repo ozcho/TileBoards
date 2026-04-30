@@ -575,6 +575,149 @@ select.input {
   max-width: 100%;
 }
 
+/* === Party Mode === */
+.party-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.party-welcome-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.party-welcome-card h1 {
+  margin-bottom: 0.5rem;
+}
+
+.party-welcome-card > p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.party-welcome-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.party-logo {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+}
+
+.party-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.party-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.party-header .party-logo {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.party-header h1 {
+  margin: 0 0 0.25rem;
+}
+
+.party-greeting {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.party-create-section,
+.party-boards-section {
+  margin-bottom: 2rem;
+}
+
+.party-create-section h2,
+.party-boards-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+}
+
+.party-create-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.party-create-form .input {
+  flex: 1;
+}
+
+.party-error {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.party-empty {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.party-boards-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.party-board-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+}
+
+.party-board-name {
+  font-weight: 500;
+}
+
 /* === QR Modal === */
 .qr-modal-overlay {
   position: fixed;

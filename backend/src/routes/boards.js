@@ -83,6 +83,17 @@ router.post('/:id/access', (req, res) => {
 router.get('/:id/public', (req, res) => {
   const boardId = req.params.id;
 
+  const board = db.prepare('SELECT id, name, owner_id, party_mode FROM boards WHERE id = ?').get(boardId);
+  if (!board) return res.status(404).json({ error: 'Board no encontrado' });
+
+  // Party boards are always open
+  if (board.party_mode) {
+    if (!req.session.boardAccess) req.session.boardAccess = [];
+    if (!req.session.boardAccess.includes(boardId)) req.session.boardAccess.push(boardId);
+    const tiles = db.prepare('SELECT * FROM tiles WHERE board_id = ? ORDER BY position').all(boardId);
+    return res.json({ ...board, tiles });
+  }
+
   const hasSessionAccess = req.session.boardAccess?.includes(boardId);
   let isOwnerOrAdmin = false;
   if (req.isAuthenticated()) {
@@ -93,9 +104,6 @@ router.get('/:id/public', (req, res) => {
   if (!hasSessionAccess && !isOwnerOrAdmin) {
     return res.status(401).json({ error: 'Acceso no autorizado', needsPassword: true });
   }
-
-  const board = db.prepare('SELECT id, name, owner_id FROM boards WHERE id = ?').get(boardId);
-  if (!board) return res.status(404).json({ error: 'Board no encontrado' });
 
   const tiles = db.prepare(
     'SELECT * FROM tiles WHERE board_id = ? ORDER BY position'
