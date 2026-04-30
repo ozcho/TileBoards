@@ -7,6 +7,19 @@ import Dashboard from './pages/Dashboard';
 import BoardAccess from './pages/BoardAccess';
 import BoardEditor from './pages/BoardEditor';
 import AdminPanel from './pages/AdminPanel';
+import TokenIcon from './components/tiles/TokenIcon';
+
+const ALL_TOKENS = ['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
+  'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star',
+  'frost', 'bless', 'curse'];
+
+function TokenPreloader() {
+  return (
+    <div aria-hidden="true" style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+      {ALL_TOKENS.map(t => <TokenIcon key={t} token={t} size={1} />)}
+    </div>
+  );
+}
 
 export default function App() {
   const { user, loading } = useAuth();
@@ -29,6 +42,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <TokenPreloader />
       <Navbar />
       <main className="main-content">
         <Routes>
