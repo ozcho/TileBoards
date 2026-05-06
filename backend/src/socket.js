@@ -538,21 +538,33 @@ function setupSocket(io, sessionMiddleware) {
 
     // ===== Dice =====
 
-    socket.on('dice-roll', ({ tileId, diceType, authorName }) => {
+    socket.on('dice-roll', ({ tileId, dice, authorName }) => {
       const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'dice'").get(tileId);
       if (!tile) return;
+      if (!Array.isArray(dice) || dice.length === 0) return;
 
       const sides = { d4: 4, d6: 6, d8: 8, d10: 10, d12: 12, d20: 20, d100: 100 };
-      const numSides = sides[diceType];
-      if (!numSides) return;
-
-      const value = Math.floor(Math.random() * numSides) + 1;
-      const rolledAt = new Date().toISOString();
       const name = authorName || 'Anónimo';
+      const rolledAt = new Date().toISOString();
+
+      const results = [];
+      for (const entry of dice) {
+        if (!entry || typeof entry !== 'object') continue;
+        const numSides = sides[entry.type];
+        const n = parseInt(entry.count, 10);
+        if (!numSides || !Number.isInteger(n) || n < 1 || n > 9) continue;
+        for (let i = 0; i < n; i++) {
+          results.push({ type: entry.type, value: Math.floor(Math.random() * numSides) + 1 });
+        }
+        if (results.length >= 20) break; // safety cap
+      }
+      if (results.length === 0) return;
+
+      const total = results.reduce((sum, r) => sum + r.value, 0);
+      const newEntry = { dice: results, total, authorName: name, rolledAt };
 
       const currentState = JSON.parse(tile.state || '{}');
       const history = currentState.history || [];
-      const newEntry = { diceType, value, authorName: name, rolledAt };
       const newHistory = [newEntry, ...history].slice(0, 10);
 
       const newState = { lastRoll: newEntry, history: newHistory };
