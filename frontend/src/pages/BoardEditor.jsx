@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import TokenIcon from '../components/tiles/TokenIcon';
 
+const ALL_DICE_TYPES = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
+
 const TILE_TYPES = [
   { value: 'countdown', label: '⏳ Cuenta Atrás' },
   { value: 'stopwatch', label: '⏱ Cronómetro' },
@@ -10,6 +12,7 @@ const TILE_TYPES = [
   { value: 'messageboard', label: '💬 Tablón de Mensajes' },
   { value: 'chaosbag', label: '🎒 Bolsa del Caos' },
   { value: 'arkham_bag', label: '🐙 Bolsa PAP' },
+  { value: 'dice', label: '🎲 Dados' },
 ];
 
 function ArkhamBagEditor({ tile, onChange }) {
@@ -170,7 +173,8 @@ export default function BoardEditor() {
               type === 'messageboard' ? { visibility: 'all' } :
               type === 'counter' ? { historyVisibility: 'none' } :
               type === 'chaosbag' ? { preset: 'standard', tokenCounts: { '+1': 1, '0': 2, '-1': 3, '-2': 2, '-3': 1, '-4': 1, skull: 2, cultist: 1, tablet: 1, elder_thing: 1, tentacle: 1, elder_star: 1 } } :
-              type === 'arkham_bag' ? { campaign: '', scenario: '', difficulty: '' } : {},
+              type === 'arkham_bag' ? { campaign: '', scenario: '', difficulty: '' } :
+              type === 'dice' ? { availableDice: [...ALL_DICE_TYPES] } : {},
       state: type === 'counter' ? { value: 0 } :
              type === 'stopwatch' ? { startedAt: null, paused: false, pausedElapsed: 0 } :
              type === 'chaosbag' ? {
@@ -178,7 +182,8 @@ export default function BoardEditor() {
                drawn: [],
                locked: []
              } :
-             type === 'arkham_bag' ? { bag: [], drawn: [], locked: [] } : {},
+             type === 'arkham_bag' ? { bag: [], drawn: [], locked: [] } :
+             type === 'dice' ? { lastRoll: null, history: [] } : {},
     };
     setTiles([...tiles, newTile]);
   };
@@ -525,6 +530,33 @@ export default function BoardEditor() {
                       tile={tile}
                       onChange={(updates) => updateTile(index, updates)}
                     />
+                  )}
+
+                  {tile.type === 'dice' && (
+                    <div className="form-group">
+                      <label>Tipos de dados disponibles</label>
+                      <div className="dice-editor-checkboxes">
+                        {ALL_DICE_TYPES.map(die => {
+                          const checked = (tile.config?.availableDice ?? ALL_DICE_TYPES).includes(die);
+                          return (
+                            <label key={die} className="checkbox-label" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                              <input
+                                type="checkbox"
+                                checked={checked}
+                                onChange={e => {
+                                  const current = tile.config?.availableDice ?? ALL_DICE_TYPES;
+                                  const next = e.target.checked
+                                    ? [...current, die]
+                                    : current.filter(d => d !== die);
+                                  updateTile(index, { config: { ...tile.config, availableDice: next } });
+                                }}
+                              />
+                              {die}
+                            </label>
+                          );
+                        })}
+                      </div>
+                    </div>
                   )}
 
                   {tile.type === 'stopwatch' && (

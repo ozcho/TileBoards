@@ -536,6 +536,30 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('tile-updated', { tileId, state });
     });
 
+    // ===== Dice =====
+
+    socket.on('dice-roll', ({ tileId, diceType, authorName }) => {
+      const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'dice'").get(tileId);
+      if (!tile) return;
+
+      const sides = { d4: 4, d6: 6, d8: 8, d10: 10, d12: 12, d20: 20, d100: 100 };
+      const numSides = sides[diceType];
+      if (!numSides) return;
+
+      const value = Math.floor(Math.random() * numSides) + 1;
+      const rolledAt = new Date().toISOString();
+      const name = authorName || 'Anónimo';
+
+      const currentState = JSON.parse(tile.state || '{}');
+      const history = currentState.history || [];
+      const newEntry = { diceType, value, authorName: name, rolledAt };
+      const newHistory = [newEntry, ...history].slice(0, 10);
+
+      const newState = { lastRoll: newEntry, history: newHistory };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
     // Countdown finished - lock the board if lockOnZero is configured
     socket.on('countdown-finished', ({ tileId }) => {
       const tile = db.prepare(
