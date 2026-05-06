@@ -59,6 +59,7 @@ export default function DiceTile({ tile, socket, isOwnerOrAdmin, user, guestName
   const initCounts = () => Object.fromEntries(availableDice.map(d => [d, 0]));
   const [counts, setCounts] = useState(initCounts);
   const [animating, setAnimating] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
   const prevRollRef = useRef(null);
 
   const authorName = user?.name || guestName || 'Anónimo';
@@ -157,21 +158,32 @@ export default function DiceTile({ tile, socket, isOwnerOrAdmin, user, guestName
       )}
 
       {history.length > 1 && (
-        <div className="dice-history">
-          {history.slice(1, 5).map((roll, i) => (
-            <div key={i} className="dice-history-entry">
-              <div className="dice-history-dice">
-                {(roll.dice || []).map((r, j) => (
-                  <DieIcon key={j} type={r.type} value={r.value} size={24} isResult />
-                ))}
-              </div>
-              {roll.total !== undefined && (
-                <span className="dice-history-total">= {roll.total}</span>
-              )}
-              <span className="dice-history-author">{roll.authorName}</span>
-              <span className="dice-history-time">{formatTime(roll.rolledAt)}</span>
+        <div className="dice-history-wrapper">
+          <button
+            type="button"
+            className={`btn btn-xs ${showHistory ? 'btn-secondary' : 'btn-ghost'}`}
+            onClick={() => setShowHistory(v => !v)}
+          >
+            {showHistory ? 'Ocultar historial' : 'Ver historial'} ({history.length - 1})
+          </button>
+          {showHistory && (
+            <div className="dice-history">
+              {history.slice(1, 10).map((roll, i) => (
+                <div key={i} className="dice-history-entry">
+                  <div className="dice-history-dice">
+                    {(roll.dice || []).map((r, j) => (
+                      <DieIcon key={j} type={r.type} value={r.value} size={24} isResult />
+                    ))}
+                  </div>
+                  {roll.total !== undefined && (
+                    <span className="dice-history-total">= {roll.total}</span>
+                  )}
+                  <span className="dice-history-author">{roll.authorName}</span>
+                  <span className="dice-history-time">{formatTime(roll.rolledAt)}</span>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       )}
     </div>

@@ -1310,10 +1310,17 @@ select.input {
   align-items: center;
 }
 
-/* History */
-.dice-history {
+/* History toggle */
+.dice-history-wrapper {
   border-top: 1px solid var(--color-border);
   padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* History */
+.dice-history {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
