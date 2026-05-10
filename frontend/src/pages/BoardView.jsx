@@ -165,6 +165,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
   }, [boardId]);
 
   const isOwnerOrAdmin = user && (user.is_admin || user.id === initialBoard.owner_id);
+  const canEditBoard = isOwnerOrAdmin || !!initialBoard.party_mode;
 
   const renderTile = useCallback((tile) => {
     const props = { key: tile.id, tile, socket, isOwnerOrAdmin, user, guestName, boardLocked };
@@ -190,7 +191,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
           <h1>{boardName}</h1>
         )}
         <div className="board-header-actions">
-          {isOwnerOrAdmin && (
+          {canEditBoard && (
             <button className="btn btn-secondary btn-sm" onClick={() => navigate(`/board/${boardId}/edit`)}>
               ✏️ Editar
             </button>

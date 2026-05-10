@@ -50,7 +50,7 @@ export default function App() {
           <Route path="/" element={user ? <Dashboard /> : <Login />} />
           <Route path="/bazariglesias" element={<PartyMode />} />
           <Route path="/board/:id" element={<BoardAccess />} />
-          <Route path="/board/:id/edit" element={user ? <BoardEditor /> : <Login />} />
+          <Route path="/board/:id/edit" element={<BoardEditor />} />
           <Route path="/board/new" element={user ? <BoardEditor /> : <Login />} />
           <Route path="/admin" element={user?.is_admin ? <AdminPanel /> : <Login />} />
         </Routes>

@@ -35,8 +35,8 @@ router.get('/', isAuthenticated, (req, res) => {
   res.json(boards);
 });
 
-// Get board by ID (authenticated owner or admin)
-router.get('/:id', isAuthenticated, (req, res) => {
+// Get board by ID
+router.get('/:id', (req, res) => {
   const board = db.prepare(`
     SELECT b.*, u.name as owner_name
     FROM boards b
@@ -46,8 +46,14 @@ router.get('/:id', isAuthenticated, (req, res) => {
 
   if (!board) return res.status(404).json({ error: 'Board no encontrado' });
 
-  if (!req.user.is_admin && board.owner_id !== req.user.id) {
-    return res.status(403).json({ error: 'No autorizado' });
+  // Party boards are editable/readable by anyone.
+  if (!board.party_mode) {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ error: 'No autenticado' });
+    }
+    if (!req.user.is_admin && board.owner_id !== req.user.id) {
+      return res.status(403).json({ error: 'No autorizado' });
+    }
   }
 
   const tiles = db.prepare(
@@ -155,12 +161,17 @@ router.post('/', isAuthenticated, (req, res) => {
 });
 
 // Update board
-router.put('/:id', isAuthenticated, (req, res) => {
+router.put('/:id', (req, res) => {
   const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(req.params.id);
   if (!board) return res.status(404).json({ error: 'Board no encontrado' });
 
-  if (!req.user.is_admin && board.owner_id !== req.user.id) {
-    return res.status(403).json({ error: 'No autorizado' });
+  if (!board.party_mode) {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ error: 'No autenticado' });
+    }
+    if (!req.user.is_admin && board.owner_id !== req.user.id) {
+      return res.status(403).json({ error: 'No autorizado' });
+    }
   }
 
   const { name, password, tiles } = req.body;
@@ -170,7 +181,11 @@ router.put('/:id', isAuthenticated, (req, res) => {
     const params = [];
 
     if (name) { updates.push('name = ?'); params.push(name); }
-    if (password) { updates.push('password_hash = ?'); params.push(bcrypt.hashSync(password, 10)); }
+    // Party boards do not use password auth.
+    if (password && !board.party_mode) {
+      updates.push('password_hash = ?');
+      params.push(bcrypt.hashSync(password, 10));
+    }
 
     if (updates.length > 0) {
       updates.push("updated_at = datetime('now')");
