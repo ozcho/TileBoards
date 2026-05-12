@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const [showLogin, setShowLogin] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -32,6 +34,14 @@ export default function Navbar() {
         )}
       </div>
       <div className="navbar-user">
+        <button
+          onClick={toggleTheme}
+          className="btn btn-sm theme-toggle"
+          title={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+          aria-label="Cambiar tema"
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
         {user ? (
           <>
             <span className="user-name">{user.name}</span>

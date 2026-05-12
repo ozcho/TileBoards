@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { playAlarm } from '../../utils/sounds';
 
 export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
   const canControl = isOwnerOrAdmin || tile.config?.showControlsToAll;
@@ -13,15 +14,21 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
   const paused = tile.state?.paused || false;
   const pausedRemaining = tile.state?.pausedRemaining || 0;
 
+  const soundEnabled = tile.config?.soundEnabled || false;
+
   const [remaining, setRemaining] = useState(totalConfigSeconds);
   const [finished, setFinished] = useState(false);
   const finishedEmittedRef = useRef(false);
+  const soundPlayedRef = useRef(false);
+  const observedRunningRef = useRef(false);
 
   useEffect(() => {
     if (!startedAt) {
       setRemaining(totalConfigSeconds);
       setFinished(false);
       finishedEmittedRef.current = false;
+      soundPlayedRef.current = false;
+      observedRunningRef.current = false;
       return;
     }
 
@@ -40,6 +47,7 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
       } else {
         setRemaining(left);
         setFinished(false);
+        observedRunningRef.current = true;
       }
     };
 
@@ -55,6 +63,14 @@ export default function CountdownTile({ tile, socket, isOwnerOrAdmin }) {
       socket.emit('countdown-finished', { tileId: tile.id });
     }
   }, [finished, lockOnZero, socket, tile.id]);
+
+  // Play alarm sound when countdown reaches zero (only if it was running during this session)
+  useEffect(() => {
+    if (finished && soundEnabled && observedRunningRef.current && !soundPlayedRef.current) {
+      soundPlayedRef.current = true;
+      playAlarm();
+    }
+  }, [finished, soundEnabled]);
 
   const hours = Math.floor(remaining / 3600);
   const minutes = Math.floor((remaining % 3600) / 60);

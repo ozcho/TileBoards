@@ -597,6 +597,21 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('board-locked', { tileId });
     });
 
+    // Admin siren — broadcasts a play-sound event to all devices in the board
+    socket.on('admin-siren', ({ boardId }) => {
+      const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(boardId);
+      if (!board) return;
+
+      const session = socket.request.session;
+      const userId = session?.passport?.user;
+      if (!userId) return;
+
+      const dbUser = db.prepare('SELECT * FROM users WHERE id = ?').get(userId);
+      if (!dbUser || (!dbUser.is_admin && board.owner_id !== dbUser.id)) return;
+
+      io.to(boardId).emit('play-sound', { type: 'siren' });
+    });
+
     // Board lock manual (owner/admin only)
     socket.on('board-lock', ({ boardId }) => {
       const board = db.prepare('SELECT * FROM boards WHERE id = ?').get(boardId);

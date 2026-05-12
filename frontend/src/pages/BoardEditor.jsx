@@ -372,6 +372,14 @@ export default function BoardEditor() {
                         />
                         Mostrar controles a todos los usuarios
                       </label>
+                      <label className="checkbox-label" style={{ marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input
+                          type="checkbox"
+                          checked={tile.config.soundEnabled || false}
+                          onChange={e => updateTile(index, { config: { ...tile.config, soundEnabled: e.target.checked } })}
+                        />
+                        Reproducir sonido al llegar a 0
+                      </label>
                     </div>
                   )}
 
@@ -447,6 +455,14 @@ export default function BoardEditor() {
                         <option value="all">Visible para todos</option>
                         <option value="owner_admin">Solo dueño y admin</option>
                       </select>
+                      <label className="checkbox-label" style={{ marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <input
+                          type="checkbox"
+                          checked={tile.config.soundEnabled || false}
+                          onChange={e => updateTile(index, { config: { ...tile.config, soundEnabled: e.target.checked } })}
+                        />
+                        Reproducir sonido al recibir mensajes
+                      </label>
                     </div>
                   )}
 

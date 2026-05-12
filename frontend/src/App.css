@@ -25,6 +25,18 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
 
+[data-theme="light"] {
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-2: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-text-dim: #94a3b8;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--color-bg);
@@ -2369,5 +2381,50 @@ select.input {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--color-primary, #a78bfa);
+  line-height: 1;
+}
+
+/* ===== Light theme overrides for hardcoded colors ===== */
+[data-theme="light"] .alert-error {
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+}
+
+[data-theme="light"] .badge-admin {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4f46e5;
+}
+
+[data-theme="light"] .badge-pending {
+  background: rgba(251, 191, 36, 0.15);
+  color: #b45309;
+}
+
+[data-theme="light"] .board-locked-banner {
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+}
+
+[data-theme="light"] .btn-minus,
+[data-theme="light"] .btn-minus-big {
+  color: #dc2626;
+}
+
+[data-theme="light"] .btn-plus,
+[data-theme="light"] .btn-plus-big {
+  color: #16a34a;
+}
+
+[data-theme="light"] .counter-history-delta.positive {
+  color: #16a34a;
+}
+
+[data-theme="light"] .counter-history-delta.negative {
+  color: #dc2626;
+}
+
+[data-theme="light"] .theme-toggle {
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
   line-height: 1;
 }

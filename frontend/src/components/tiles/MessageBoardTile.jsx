@@ -1,10 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { playPop } from '../../utils/sounds';
 
 export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, guestName, boardLocked }) {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState('');
   const visibility = tile.config?.visibility || 'all';
   const canWrite = visibility === 'all' || isOwnerOrAdmin;
+
+  // Keep a ref so the socket handler always reads the latest config
+  const soundEnabledRef = useRef(tile.config?.soundEnabled || false);
+  soundEnabledRef.current = tile.config?.soundEnabled || false;
 
   useEffect(() => {
     // Request messages when socket connects/reconnects
@@ -24,6 +29,7 @@ export default function MessageBoardTile({ tile, socket, isOwnerOrAdmin, user, g
     const handleNewMessage = ({ tileId, message }) => {
       if (tileId === tile.id) {
         setMessages(prev => [message, ...prev]);
+        if (soundEnabledRef.current) playPop();
       }
     };
     const handleDeleteMessage = ({ tileId, messageId }) => {

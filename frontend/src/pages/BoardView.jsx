@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QRCode from 'react-qr-code';
 import { socket } from '../socket';
+import { playSiren } from '../utils/sounds';
 import bazarLogo from '../el_bazar_de_iglesias_logo_final_rgb_grande-800x467.jpg';
 import CountdownTile from '../components/tiles/CountdownTile';
 import StopwatchTile from '../components/tiles/StopwatchTile';
@@ -124,6 +125,10 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     const onBoardLocked = () => setBoardLocked(true);
     const onBoardUnlocked = () => setBoardLocked(false);
 
+    const onPlaySound = ({ type }) => {
+      if (type === 'siren') playSiren();
+    };
+
     const onBoardDeleted = () => {
       alert('Este board ha sido eliminado.');
       navigate('/');
@@ -137,6 +142,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
     socket.on('board-updated', onBoardUpdated);
     socket.on('board-locked', onBoardLocked);
     socket.on('board-unlocked', onBoardUnlocked);
+    socket.on('play-sound', onPlaySound);
     socket.on('board-deleted', onBoardDeleted);
     document.addEventListener('visibilitychange', onVisibilityChange);
 
@@ -149,6 +155,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       socket.off('board-updated', onBoardUpdated);
       socket.off('board-locked', onBoardLocked);
       socket.off('board-unlocked', onBoardUnlocked);
+      socket.off('play-sound', onPlaySound);
       socket.off('board-deleted', onBoardDeleted);
       document.removeEventListener('visibilitychange', onVisibilityChange);
       socket.disconnect();
@@ -205,6 +212,15 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
             boardLocked
               ? <button className="btn btn-sm btn-warning" onClick={() => socket.emit('board-unlock', { boardId })}>🔓 Desbloquear</button>
               : <button className="btn btn-sm btn-danger" onClick={() => socket.emit('board-lock', { boardId })}>🔒 Bloquear</button>
+          )}
+          {isOwnerOrAdmin && (
+            <button
+              className="btn btn-sm btn-danger"
+              onClick={() => socket.emit('admin-siren', { boardId })}
+              title="Emitir sirena en todos los dispositivos"
+            >
+              🚨 Sirena
+            </button>
           )}
           {wakeLockSupported && (
             <label className="wakelock-switch" title={wakeLockActive ? 'Pantalla siempre activa' : 'Pantalla puede bloquearse'}>
