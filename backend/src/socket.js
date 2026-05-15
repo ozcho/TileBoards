@@ -395,6 +395,20 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
     });
 
+    // Return ALL drawn tokens to bag (including bless/curse) — used by the special "vaciar caja" button
+    socket.on('chaosbag-return-all', ({ tileId }) => {
+      const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);
+      if (!tile) return;
+
+      const state = JSON.parse(tile.state || '{}');
+      const drawn = state.drawn || [];
+      if (drawn.length === 0) return;
+
+      const newState = { ...state, bag: [...(state.bag || []), ...drawn], drawn: [] };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
     // Lock/seal a token (remove from bag temporarily)
     socket.on('chaosbag-lock', ({ tileId, tokenIndex }) => {
       const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);

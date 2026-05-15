@@ -24,7 +24,7 @@ const TOKEN_DISPLAY = {
 };
 
 const ALL_TOKEN_TYPES = ['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
-  'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost'];
+  'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost', 'bless', 'curse'];
 
 const BLESS_CURSE_MAX = 10;
 
@@ -55,6 +55,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [addToken, setAddToken] = useState('+1');
   const [probSkill, setProbSkill] = useState('');
   const [probDifficulty, setProbDifficulty] = useState('');
+  const [iconValues, setIconValues] = useState({});
   const [newestDrawKey, setNewestDrawKey] = useState(0);
   const prevDrawnRef = useRef([]);
   const prevLockedLenRef = useRef(locked.length);
@@ -115,6 +116,11 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     socket.emit('chaosbag-return', { tileId: tile.id, authorName });
   };
 
+  const handleReturnAll = () => {
+    if (drawn.length === 0) return;
+    socket.emit('chaosbag-return-all', { tileId: tile.id });
+  };
+
   const handleLock = (tokenIndex) => {
     socket.emit('chaosbag-lock', { tileId: tile.id, tokenIndex });
   };
@@ -144,13 +150,18 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const bagSummary = {};
   bag.forEach(t => { bagSummary[t] = (bagSummary[t] || 0) + 1; });
 
+  // Full bag summary: includes drawn (in display box) but NOT locked/sealed tokens
+  const fullBagSummary = {};
+  [...bag, ...drawn].forEach(t => { fullBagSummary[t] = (fullBagSummary[t] || 0) + 1; });
+  const fullBagTotal = bag.length + drawn.length;
+
   // Progress bar
-  const totalTokens = bag.length + drawn.length + locked.length;
+  const totalTokens = fullBagTotal;
   const pctRemaining = totalTokens > 0 ? Math.round((bag.length / totalTokens) * 100) : 100;
 
-  // Probability mode: chance of drawing each token type from current bag
-  const probItems = Object.entries(bagSummary)
-    .map(([token, count]) => ({ token, count, pct: bag.length > 0 ? ((count / bag.length) * 100).toFixed(1) : '0.0' }))
+  // Bag composition: shows all tokens (including drawn/locked) with their composition percentage
+  const probItems = Object.entries(fullBagSummary)
+    .map(([token, count]) => ({ token, count, pct: fullBagTotal > 0 ? ((count / fullBagTotal) * 100).toFixed(1) : '0.0' }))
     .sort((a, b) => b.count - a.count);
 
   // Draw statistics from history
@@ -172,20 +183,34 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     '-5': -5, '-6': -6, '-7': -7, '-8': -8,
     'bless': 2, 'curse': -2, 'frost': -1,
   };
-  const SPECIAL_CALC_TOKENS = ['skull', 'cultist', 'tablet', 'elder_thing', 'elder_star'];
+  const SPECIAL_CALC_TOKENS = ['skull', 'cultist', 'tablet', 'elder_thing'];
   const calcSkill = probSkill !== '' && !isNaN(+probSkill) ? +probSkill : null;
   const calcDiff  = probDifficulty !== '' && !isNaN(+probDifficulty) ? +probDifficulty : null;
   const calcReady = calcSkill !== null && calcDiff !== null;
+  // Special tokens present in the full bag (to show icon value inputs)
+  const specialInBag = SPECIAL_CALC_TOKENS.filter(t => fullBagSummary[t]);
   let calcGroups = null;
   if (calcReady) {
     const threshold = calcDiff - calcSkill;
     const success = [], fail = [], special = [];
     bag.forEach(token => {
-      if (token === 'tentacle') fail.push(token);
-      else if (SPECIAL_CALC_TOKENS.includes(token)) special.push(token);
-      else if (TOKEN_NUMERIC_VALUES[token] !== undefined)
+      if (token === 'elder_star') {
+        success.push(token);
+      } else if (token === 'tentacle') {
+        fail.push(token);
+      } else if (SPECIAL_CALC_TOKENS.includes(token)) {
+        const iv = iconValues[token];
+        const numVal = iv !== undefined && iv !== '' && !isNaN(+iv) ? -Math.abs(+iv) : null;
+        if (numVal !== null) {
+          (numVal >= threshold ? success : fail).push(token);
+        } else {
+          special.push(token);
+        }
+      } else if (TOKEN_NUMERIC_VALUES[token] !== undefined) {
         (TOKEN_NUMERIC_VALUES[token] >= threshold ? success : fail).push(token);
-      else special.push(token);
+      } else {
+        special.push(token);
+      }
     });
     const tally = arr => { const c = {}; arr.forEach(t => { c[t] = (c[t] || 0) + 1; }); return Object.entries(c); };
     const pct = n => bag.length > 0 ? ((n / bag.length) * 100).toFixed(1) : '0.0';
@@ -250,19 +275,30 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
             {bag.length === 0 ? 'Bolsa vacía' : 'Pulsa para sacar ficha'}
           </div>
         ) : (
-          <div className="chaosbag-drawn-tokens">
-            {drawn.map((token, i) => {
-              const isNewest = i === drawn.length - 1;
-              return (
-                <span
-                  key={isNewest ? `newest-${newestDrawKey}` : i}
-                  className={`chaosbag-token ${isNewest ? 'chaosbag-token-large chaosbag-token-newest' : 'chaosbag-token-large chaosbag-token-previous'} ${tokenClass(token)}`}
-                >
-                  {tokenLabel(token, isNewest ? 70 : 30)}
-                </span>
-              );
-            })}
-          </div>
+          <>
+            <div className="chaosbag-drawn-tokens">
+              {drawn.map((token, i) => {
+                const isNewest = i === drawn.length - 1;
+                return (
+                  <span
+                    key={isNewest ? `newest-${newestDrawKey}` : i}
+                    className={`chaosbag-token ${isNewest ? 'chaosbag-token-large chaosbag-token-newest' : 'chaosbag-token-large chaosbag-token-previous'} ${tokenClass(token)}`}
+                  >
+                    {tokenLabel(token, isNewest ? 70 : 30)}
+                  </span>
+                );
+              })}
+            </div>
+            {!boardLocked && drawn.some(t => t === 'bless' || t === 'curse') && (
+              <button
+                className="btn btn-xs btn-warning chaosbag-return-bc-btn"
+                onClick={e => { e.stopPropagation(); handleReturnAll(); }}
+                title="Devolver todas las fichas de la caja a la bolsa"
+              >
+                ↩ Devolver todas
+              </button>
+            )}
+          </>
         )}
       </div>
 
@@ -341,20 +377,20 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         <div className="chaosbag-bag-contents">
           <div className="chaosbag-bag-header">
             <div className="chaosbag-bag-tokens">
-              {ALL_TOKEN_TYPES.filter(t => bagSummary[t]).map(t => (
+              {ALL_TOKEN_TYPES.filter(t => fullBagSummary[t]).map(t => (
                 <div key={t} className="chaosbag-summary-chip">
                   <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(t)}`}>{tokenLabel(t, 22)}</span>
-                  <span className="chaosbag-summary-count">×{bagSummary[t]}</span>
+                  <span className="chaosbag-summary-count">×{fullBagSummary[t]}</span>
                 </div>
               ))}
             </div>
-            {bag.length > 0 && (
+            {fullBagTotal > 0 && (
               <button type="button" className="btn btn-xs btn-ghost" onClick={() => setShowProbability(!showProbability)}>
                 {showProbability ? 'Ocultar %' : '% Prob'}
               </button>
             )}
           </div>
-          {showProbability && bag.length > 0 && (
+          {showProbability && fullBagTotal > 0 && (
             <div className="chaosbag-prob">
               <div className="chaosbag-prob-inputs">
                 <div className="chaosbag-prob-input-group">
@@ -372,6 +408,29 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                   </span>
                 )}
               </div>
+              {specialInBag.length > 0 && (
+                <div className="chaosbag-icon-values">
+                  <span className="chaosbag-icon-values-label">Modificador según escenario:</span>
+                  <div className="chaosbag-icon-values-row">
+                    {specialInBag.map(token => (
+                      <div key={token} className="chaosbag-icon-value-item">
+                        <span className={`chaosbag-token chaosbag-token-xs ${tokenClass(token)}`}>{tokenLabel(token, 18)}</span>
+                        <div className="chaosbag-icon-val-wrap">
+                          <span className="chaosbag-icon-val-minus">−</span>
+                          <input
+                            type="number"
+                            min="0"
+                            value={iconValues[token] ?? ''}
+                            onChange={e => setIconValues(v => ({ ...v, [token]: e.target.value }))}
+                            className="input input-sm chaosbag-icon-val-input"
+                            placeholder="?"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               {calcReady ? (
                 <div className="chaosbag-prob-groups">
                   <div className="chaosbag-prob-group chaosbag-prob-success">
