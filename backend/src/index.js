@@ -60,6 +60,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/boards', require('./routes/boards'));
 app.use('/api/party', require('./routes/party'));
 app.use('/api/presets', require('./routes/presets'));
+app.use('/api/special-dice-configs', require('./routes/specialDiceConfigs'));
 
 // Serve frontend in production
 const publicPath = path.join(__dirname, '..', 'public');

@@ -615,6 +615,68 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
     });
 
+    socket.on('special-dice-roll', ({ tileId, configId, dice, authorName }) => {
+      const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'special_dice'").get(tileId);
+      if (!tile) return;
+      if (!Array.isArray(dice) || dice.length === 0) return;
+
+      const config = JSON.parse(tile.config || '{}');
+      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
+      const selected = configurations.find(c => c.id === configId)
+        || configurations.find(c => c.id === config.selectedConfigId)
+        || configurations[0];
+      if (!selected) return;
+
+      const diceMap = new Map(
+        (Array.isArray(selected.dice) ? selected.dice : []).map((die) => [die.id, die])
+      );
+
+      const results = [];
+      for (const entry of dice) {
+        if (!entry || typeof entry !== 'object') continue;
+        const die = diceMap.get(entry.id);
+        if (!die) continue;
+
+        const sides = Math.max(2, Math.min(100, parseInt(die.sides, 10) || 0));
+        const faces = Array.isArray(die.faces) ? die.faces.slice(0, sides) : [];
+        while (faces.length < sides) faces.push('');
+
+        const n = parseInt(entry.count, 10);
+        if (!Number.isInteger(n) || n < 1 || n > 9) continue;
+
+        for (let i = 0; i < n; i++) {
+          const faceIndex = Math.floor(Math.random() * sides);
+          const value = String(faces[faceIndex] || '').slice(0, 24);
+          const color = /^#[0-9a-fA-F]{6}$/.test(String(die.color || '').trim())
+            ? String(die.color).trim()
+            : '#3b82f6';
+          results.push({
+            dieId: die.id,
+            title: String(die.title || 'Dado'),
+            color,
+            sides,
+            value,
+            faceIndex: faceIndex + 1
+          });
+        }
+
+        if (results.length >= 30) break;
+      }
+      if (results.length === 0) return;
+
+      const name = authorName || 'Anónimo';
+      const rolledAt = new Date().toISOString();
+      const newEntry = { dice: results, authorName: name, rolledAt };
+
+      const currentState = JSON.parse(tile.state || '{}');
+      const history = currentState.history || [];
+      const newHistory = [newEntry, ...history].slice(0, 10);
+
+      const newState = { lastRoll: newEntry, history: newHistory };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
     // Countdown finished - lock the board if lockOnZero is configured
     socket.on('countdown-finished', ({ tileId }) => {
       const tile = db.prepare(

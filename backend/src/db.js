@@ -150,6 +150,43 @@ try {
   // Already migrated
 }
 
+// Migration: update tiles CHECK constraint to include special_dice
+try {
+  const tableInfo = db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='tiles'").get();
+  if (tableInfo && !tableInfo.sql.includes("'special_dice'")) {
+    db.exec(`
+      CREATE TABLE tiles_new (
+        id TEXT PRIMARY KEY,
+        board_id TEXT NOT NULL,
+        type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch', 'dice', 'special_dice')),
+        label TEXT DEFAULT '',
+        config TEXT DEFAULT '{}',
+        state TEXT DEFAULT '{}',
+        position INTEGER DEFAULT 0,
+        created_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (board_id) REFERENCES boards(id) ON DELETE CASCADE
+      );
+      INSERT INTO tiles_new SELECT * FROM tiles;
+      DROP TABLE tiles;
+      ALTER TABLE tiles_new RENAME TO tiles;
+    `);
+  }
+} catch (e) {
+  // Already migrated
+}
+
+// Special dice configurations table
+db.exec(`
+  CREATE TABLE IF NOT EXISTS special_dice_configs (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    dice TEXT NOT NULL DEFAULT '[]',
+    owner_id TEXT NOT NULL,
+    created_at TEXT DEFAULT (datetime('now')),
+    FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE
+  );
+`);
+
 // Migration: add new preset columns if missing
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN campaign_log TEXT'); } catch (e) {}
 try { db.exec('ALTER TABLE chaosbag_presets ADD COLUMN victory_requirements TEXT'); } catch (e) {}

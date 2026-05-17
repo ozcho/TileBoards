@@ -277,6 +277,8 @@ router.delete('/:id', isAuthenticated, (req, res) => {
 function getDefaultState(type) {
   switch (type) {
     case 'counter': return { value: 0 };
+    case 'dice': return { lastRoll: null, history: [] };
+    case 'special_dice': return { lastRoll: null, history: [] };
     default: return {};
   }
 }

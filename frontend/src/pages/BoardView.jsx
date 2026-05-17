@@ -12,6 +12,7 @@ import MessageBoardTile from '../components/tiles/MessageBoardTile';
 import ChaosBagTile from '../components/tiles/ChaosBagTile';
 import ArkhamBagTile from '../components/tiles/ArkhamBagTile';
 import DiceTile from '../components/tiles/DiceTile';
+import SpecialDiceTile from '../components/tiles/SpecialDiceTile';
 
 export default function BoardView({ board: initialBoard, user, guestName }) {
   const [tiles, setTiles] = useState(initialBoard.tiles || []);
@@ -185,6 +186,7 @@ export default function BoardView({ board: initialBoard, user, guestName }) {
       case 'chaosbag': return <ChaosBagTile {...props} />;
       case 'arkham_bag': return <ArkhamBagTile {...props} />;
       case 'dice': return <DiceTile {...props} />;
+      case 'special_dice': return <SpecialDiceTile {...props} />;
       default: return null;
     }
   }, [isOwnerOrAdmin, user, guestName, boardLocked]);

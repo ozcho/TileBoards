@@ -4,6 +4,30 @@ import TokenIcon from '../components/tiles/TokenIcon';
 
 const ALL_DICE_TYPES = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
 
+const SPECIAL_DICE_TEXT_LIMIT = 6;
+const SPECIAL_DICE_DEFAULT_COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'];
+
+function normalizeDieColor(value, fallback = SPECIAL_DICE_DEFAULT_COLORS[0]) {
+  const color = String(value || '').trim();
+  return /^#[0-9a-fA-F]{6}$/.test(color) ? color : fallback;
+}
+
+function createDefaultSpecialDiceConfig() {
+  return {
+    id: crypto.randomUUID(),
+    name: 'Configuracion base',
+    dice: [
+      {
+        id: crypto.randomUUID(),
+        title: 'Dado principal',
+        color: SPECIAL_DICE_DEFAULT_COLORS[0],
+        sides: 6,
+        faces: Array(6).fill('')
+      }
+    ]
+  };
+}
+
 const TILE_TYPES = [
   { value: 'countdown', label: '⏳ Cuenta Atrás' },
   { value: 'stopwatch', label: '⏱ Cronómetro' },
@@ -13,7 +37,365 @@ const TILE_TYPES = [
   { value: 'chaosbag', label: '🎒 Bolsa del Caos' },
   { value: 'arkham_bag', label: '🐙 Bolsa PAP' },
   { value: 'dice', label: '🎲 Dados' },
+  { value: 'special_dice', label: '🎲 Dados Especiales' },
 ];
+
+function SpecialDiceConfigEditor({ tile, onChange }) {
+  const config = tile.config || {};
+  const selectedConfigId = config.selectedConfigId || '';
+
+  // Source of truth: loaded from API. Kept in sync with tile.config.configurations
+  // so the board tile view always has the full data embedded.
+  const [apiConfigs, setApiConfigs] = useState(
+    Array.isArray(config.configurations) ? config.configurations : []
+  );
+  const [loadingConfigs, setLoadingConfigs] = useState(false);
+  const [apiError, setApiError] = useState('');
+
+  const [showModal, setShowModal] = useState(false);
+  const [editingConfigId, setEditingConfigId] = useState(null); // null = create, id = edit
+  const [modalError, setModalError] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [newName, setNewName] = useState('');
+  const [draftDice, setDraftDice] = useState([]);
+  const [dieTitle, setDieTitle] = useState('');
+  const [dieSides, setDieSides] = useState(6);
+  const [dieColor, setDieColor] = useState(SPECIAL_DICE_DEFAULT_COLORS[0]);
+
+  // Load configs from API on mount
+  useEffect(() => {
+    setLoadingConfigs(true);
+    fetch('/api/special-dice-configs', { credentials: 'include' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        setApiConfigs(data);
+        // Sync tile.config so the board view has the latest data
+        const newSelectedId = data.find(c => c.id === config.selectedConfigId)
+          ? config.selectedConfigId
+          : data[0]?.id || '';
+        onChange({ config: { ...config, configurations: data, selectedConfigId: newSelectedId } });
+      })
+      .catch(() => setApiError('No se pudieron cargar las configuraciones.'))
+      .finally(() => setLoadingConfigs(false));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const selectedConfig = apiConfigs.find(c => c.id === selectedConfigId);
+
+  const openModal = () => {
+    setEditingConfigId(null);
+    setNewName('');
+    setDraftDice([]);
+    setDieTitle('');
+    setDieSides(6);
+    setDieColor(SPECIAL_DICE_DEFAULT_COLORS[0]);
+    setModalError('');
+    setShowModal(true);
+  };
+
+  const openEditModal = () => {
+    if (!selectedConfig) return;
+    setEditingConfigId(selectedConfig.id);
+    setNewName(selectedConfig.name);
+    setDraftDice(
+      (Array.isArray(selectedConfig.dice) ? selectedConfig.dice : []).map(d => ({
+        id: d.id || crypto.randomUUID(),
+        title: d.title || 'Dado',
+        color: normalizeDieColor(d.color, SPECIAL_DICE_DEFAULT_COLORS[0]),
+        sides: Math.max(2, Math.min(100, parseInt(d.sides, 10) || 6)),
+        faces: Array.isArray(d.faces) ? [...d.faces] : []
+      }))
+    );
+    setDieTitle('');
+    setDieSides(6);
+    setDieColor(SPECIAL_DICE_DEFAULT_COLORS[0]);
+    setModalError('');
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setEditingConfigId(null);
+    setModalError('');
+  };
+
+  const addDraftDie = () => {
+    const cleanTitle = dieTitle.trim();
+    const normalizedSides = Math.max(2, Math.min(100, parseInt(dieSides, 10) || 2));
+
+    if (!cleanTitle) {
+      setModalError('El titulo del dado es obligatorio.');
+      return;
+    }
+
+    setDraftDice(prev => ([
+      ...prev,
+      {
+        id: crypto.randomUUID(),
+        title: cleanTitle,
+        color: normalizeDieColor(dieColor, SPECIAL_DICE_DEFAULT_COLORS[draftDice.length % SPECIAL_DICE_DEFAULT_COLORS.length]),
+        sides: normalizedSides,
+        faces: Array(normalizedSides).fill('')
+      }
+    ]));
+    setDieTitle('');
+    setDieSides(6);
+    setDieColor(SPECIAL_DICE_DEFAULT_COLORS[(draftDice.length + 1) % SPECIAL_DICE_DEFAULT_COLORS.length]);
+    setModalError('');
+  };
+
+  const removeDraftDie = (dieId) => {
+    setDraftDice(prev => prev.filter(d => d.id !== dieId));
+  };
+
+  const updateFaceText = (dieId, faceIndex, value) => {
+    const chars = Array.from(value || '');
+    const trimmed = chars.slice(0, SPECIAL_DICE_TEXT_LIMIT).join('');
+    setDraftDice(prev => prev.map(d => {
+      if (d.id !== dieId) return d;
+      const nextFaces = [...d.faces];
+      nextFaces[faceIndex] = trimmed;
+      return { ...d, faces: nextFaces };
+    }));
+  };
+
+  const addFaceSlot = (dieId) => {
+    setDraftDice(prev => prev.map(d => {
+      if (d.id !== dieId) return d;
+      if (d.faces.length >= d.sides) return d;
+      return { ...d, faces: [...d.faces, ''] };
+    }));
+  };
+
+  const deleteSelectedConfig = async () => {
+    if (apiConfigs.length <= 1) return;
+    try {
+      const res = await fetch(`/api/special-dice-configs/${selectedConfigId}`, {
+        method: 'DELETE',
+        credentials: 'include'
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setApiError(data.error || 'Error al eliminar la configuracion.');
+        return;
+      }
+      const remaining = apiConfigs.filter(c => c.id !== selectedConfigId);
+      setApiConfigs(remaining);
+      onChange({
+        config: { ...config, configurations: remaining, selectedConfigId: remaining[0]?.id || '' },
+        state: { lastRoll: null, history: [] }
+      });
+    } catch {
+      setApiError('Error de red al eliminar la configuracion.');
+    }
+  };
+
+  const saveNewConfig = async () => {
+    const cleanName = newName.trim();
+    if (!cleanName) {
+      setModalError('El nombre de la configuracion es obligatorio.');
+      return;
+    }
+    if (draftDice.length === 0) {
+      setModalError('Debes agregar al menos un dado.');
+      return;
+    }
+
+    const sanitizedDice = draftDice.map(d => ({
+      ...d,
+      color: normalizeDieColor(d.color, SPECIAL_DICE_DEFAULT_COLORS[0]),
+      faces: (d.faces || []).slice(0, d.sides).map(face => Array.from(face || '').slice(0, SPECIAL_DICE_TEXT_LIMIT).join(''))
+    }));
+
+    setSaving(true);
+    try {
+      const isEditing = !!editingConfigId;
+      const url = isEditing
+        ? `/api/special-dice-configs/${editingConfigId}`
+        : '/api/special-dice-configs';
+      const res = await fetch(url, {
+        method: isEditing ? 'PUT' : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ name: cleanName, dice: sanitizedDice })
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setModalError(data.error || 'Error al guardar la configuracion.');
+        return;
+      }
+      const saved = await res.json();
+      const nextConfigs = isEditing
+        ? apiConfigs.map(c => c.id === saved.id ? saved : c)
+        : [...apiConfigs, saved];
+      setApiConfigs(nextConfigs);
+      onChange({
+        config: { ...config, configurations: nextConfigs, selectedConfigId: saved.id },
+        state: { lastRoll: null, history: [] }
+      });
+      closeModal();
+    } catch {
+      setModalError('Error de red al guardar la configuracion.');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="form-group">
+      {apiError && <div className="alert alert-error" style={{ marginBottom: '0.5rem' }}>{apiError}</div>}
+      <label>Configuracion activa {loadingConfigs && <span style={{ fontWeight: 400, opacity: 0.6 }}>(cargando…)</span>}</label>
+      <select
+        value={selectedConfigId}
+        onChange={e => onChange({ config: { ...config, selectedConfigId: e.target.value } })}
+        className="input"
+        disabled={loadingConfigs}
+      >
+        {apiConfigs.map(cfg => (
+          <option key={cfg.id} value={cfg.id}>{cfg.name}</option>
+        ))}
+      </select>
+
+      <div className="special-dice-editor-actions">
+        <button type="button" className="btn btn-sm btn-secondary" onClick={openModal} disabled={loadingConfigs}>
+          + Nueva configuracion
+        </button>
+        {selectedConfig && (
+          <button type="button" className="btn btn-sm" onClick={openEditModal} disabled={loadingConfigs}>
+            ✏️ Editar
+          </button>
+        )}
+        {apiConfigs.length > 1 && (
+          <button
+            type="button"
+            className="btn btn-sm btn-danger"
+            onClick={deleteSelectedConfig}
+            title="Eliminar esta configuracion"
+          >
+            🗑 Eliminar
+          </button>
+        )}
+      </div>
+
+      {selectedConfig ? (
+        <div className="special-dice-config-preview">
+          {selectedConfig.dice.map((die) => (
+            <div key={die.id} className="special-dice-config-preview-item">
+              <strong>{die.title}</strong>
+              <span>{die.sides} caras</span>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="form-hint">{loadingConfigs ? 'Cargando…' : 'No hay configuraciones disponibles.'}</p>
+      )}
+
+      {showModal && (
+        <div className="special-dice-modal-overlay" onClick={closeModal}>
+          <div className="special-dice-modal" onClick={e => e.stopPropagation()}>
+            <h3>{editingConfigId ? 'Editar configuracion de dados' : 'Nueva configuracion de dados'}</h3>
+            {modalError && <div className="alert alert-error">{modalError}</div>}
+
+            <div className="form-group">
+              <label>Nombre de la configuracion</label>
+              <input
+                type="text"
+                value={newName}
+                onChange={e => setNewName(e.target.value)}
+                className="input"
+                placeholder="Ej: Daño + Estado"
+              />
+            </div>
+
+            <div className="special-dice-modal-adddie">
+              <h4>Agregar dado</h4>
+              <div className="form-group">
+                <label>Titulo del dado</label>
+                <input
+                  type="text"
+                  value={dieTitle}
+                  onChange={e => setDieTitle(e.target.value)}
+                  className="input"
+                  placeholder="Ej: Dado de daño"
+                />
+              </div>
+              <div className="form-group">
+                <label>Numero de caras</label>
+                <input
+                  type="number"
+                  min="2"
+                  max="100"
+                  value={dieSides}
+                  onChange={e => setDieSides(e.target.value)}
+                  className="input"
+                />
+              </div>
+              <div className="form-group">
+                <label>Color del dado</label>
+                <input
+                  type="color"
+                  value={dieColor}
+                  onChange={e => setDieColor(normalizeDieColor(e.target.value))}
+                  className="special-dice-color-input"
+                />
+              </div>
+              <button type="button" className="btn btn-sm" onClick={addDraftDie}>Agregar dado</button>
+            </div>
+
+            <div className="special-dice-modal-dice-list">
+              {draftDice.map(die => (
+                <div key={die.id} className="special-dice-modal-die-card">
+                  <div className="special-dice-modal-die-header">
+                    <strong className="special-dice-die-title-with-color">
+                      <span className="special-dice-color-dot" style={{ backgroundColor: normalizeDieColor(die.color, SPECIAL_DICE_DEFAULT_COLORS[0]) }} />
+                      {die.title}
+                    </strong>
+                    <span>{die.sides} caras</span>
+                    <button type="button" className="btn btn-xs btn-danger" onClick={() => removeDraftDie(die.id)}>Eliminar</button>
+                  </div>
+
+                  <div className="special-dice-modal-faces-grid">
+                    {die.faces.map((face, faceIndex) => (
+                      <label key={`${die.id}-${faceIndex}`} className="special-dice-face-input">
+                        <span>Cara {faceIndex + 1}</span>
+                        <input
+                          type="text"
+                          value={face}
+                          maxLength={SPECIAL_DICE_TEXT_LIMIT * 2}
+                          onChange={e => updateFaceText(die.id, faceIndex, e.target.value)}
+                          className="input"
+                          placeholder="Texto o emoji"
+                        />
+                      </label>
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    className="btn btn-xs"
+                    onClick={() => addFaceSlot(die.id)}
+                    disabled={die.faces.length >= die.sides}
+                  >
+                    + Agregar cara
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            <p className="form-hint">Cada cara admite hasta {SPECIAL_DICE_TEXT_LIMIT} caracteres (incluye emojis).</p>
+
+            <div className="form-actions">
+              <button type="button" className="btn btn-primary" onClick={saveNewConfig} disabled={saving}>
+                {saving ? 'Guardando…' : (editingConfigId ? 'Guardar cambios' : 'Guardar configuracion')}
+              </button>
+              <button type="button" className="btn" onClick={closeModal} disabled={saving}>Cancelar</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function ArkhamBagEditor({ tile, onChange }) {
   const config = tile.config || {};
@@ -174,7 +556,11 @@ export default function BoardEditor() {
               type === 'counter' ? { historyVisibility: 'none' } :
               type === 'chaosbag' ? { preset: 'standard', tokenCounts: { '+1': 1, '0': 2, '-1': 3, '-2': 2, '-3': 1, '-4': 1, skull: 2, cultist: 1, tablet: 1, elder_thing: 1, tentacle: 1, elder_star: 1 } } :
               type === 'arkham_bag' ? { campaign: '', scenario: '', difficulty: '' } :
-              type === 'dice' ? { availableDice: [...ALL_DICE_TYPES] } : {},
+              type === 'dice' ? { availableDice: [...ALL_DICE_TYPES] } :
+              type === 'special_dice' ? (() => {
+                const initialConfig = createDefaultSpecialDiceConfig();
+                return { configurations: [initialConfig], selectedConfigId: initialConfig.id };
+              })() : {},
       state: type === 'counter' ? { value: 0 } :
              type === 'stopwatch' ? { startedAt: null, paused: false, pausedElapsed: 0 } :
              type === 'chaosbag' ? {
@@ -183,7 +569,8 @@ export default function BoardEditor() {
                locked: []
              } :
              type === 'arkham_bag' ? { bag: [], drawn: [], locked: [] } :
-             type === 'dice' ? { lastRoll: null, history: [] } : {},
+             type === 'dice' ? { lastRoll: null, history: [] } :
+             type === 'special_dice' ? { lastRoll: null, history: [] } : {},
     };
     setTiles([...tiles, newTile]);
   };
@@ -573,6 +960,13 @@ export default function BoardEditor() {
                         })}
                       </div>
                     </div>
+                  )}
+
+                  {tile.type === 'special_dice' && (
+                    <SpecialDiceConfigEditor
+                      tile={tile}
+                      onChange={(updates) => updateTile(index, updates)}
+                    />
                   )}
 
                   {tile.type === 'stopwatch' && (
