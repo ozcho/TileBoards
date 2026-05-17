@@ -55,7 +55,9 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [addToken, setAddToken] = useState('+1');
   const [probSkill, setProbSkill] = useState('');
   const [probDifficulty, setProbDifficulty] = useState('');
-  const [iconValues, setIconValues] = useState({});
+  const [iconValues, setIconValues] = useState(
+    state.iconValues && typeof state.iconValues === 'object' ? state.iconValues : {}
+  );
   const [newestDrawKey, setNewestDrawKey] = useState(0);
   const prevDrawnRef = useRef([]);
   const prevLockedLenRef = useRef(locked.length);
@@ -79,6 +81,11 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     }
     prevDrawnRef.current = drawn;
   }, [drawn]);
+
+  useEffect(() => {
+    const synced = state.iconValues && typeof state.iconValues === 'object' ? state.iconValues : {};
+    setIconValues(synced);
+  }, [tile.id, state.iconValues]);
 
   useEffect(() => {
     if (!socket) return;
@@ -141,6 +148,42 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     socket.emit('chaosbag-reset', { tileId: tile.id });
   };
 
+  const handleIconValueChange = (token, rawValue) => {
+    setIconValues(prev => {
+      const next = { ...prev };
+      if (rawValue === '') {
+        delete next[token];
+      } else {
+        next[token] = rawValue;
+      }
+      return next;
+    });
+  };
+
+  const handleIconValueBlur = (token, rawValue) => {
+    if (!socket) return;
+
+    const normalized = rawValue === ''
+      ? ''
+      : String(Math.max(0, Number.parseInt(rawValue, 10) || 0));
+
+    setIconValues(prev => {
+      const next = { ...prev };
+      if (normalized === '') {
+        delete next[token];
+      } else {
+        next[token] = normalized;
+      }
+      return next;
+    });
+
+    socket.emit('chaosbag-set-icon-value', {
+      tileId: tile.id,
+      token,
+      value: normalized,
+    });
+  };
+
   const formatTime = (iso) => {
     const d = new Date(iso);
     return d.toLocaleString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit', day: '2-digit', month: '2-digit' });
@@ -189,6 +232,16 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const calcReady = calcSkill !== null && calcDiff !== null;
   // Special tokens present in the full bag (to show icon value inputs)
   const specialInBag = SPECIAL_CALC_TOKENS.filter(t => fullBagSummary[t]);
+  const latestDrawnToken = drawn[drawn.length - 1];
+  const latestDrawnIconValue = SPECIAL_CALC_TOKENS.includes(latestDrawnToken)
+    ? iconValues[latestDrawnToken]
+    : null;
+  const latestDrawnIconValueLabel = latestDrawnIconValue !== undefined
+    && latestDrawnIconValue !== null
+    && latestDrawnIconValue !== ''
+    && !isNaN(+latestDrawnIconValue)
+    ? `-${Math.abs(+latestDrawnIconValue)}`
+    : null;
   let calcGroups = null;
   if (calcReady) {
     const threshold = calcDiff - calcSkill;
@@ -270,6 +323,11 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
           undefined
         }
       >
+        {latestDrawnIconValueLabel && (
+          <div className="chaosbag-drawn-icon-value" title="Valor configurado del icono">
+            {latestDrawnIconValueLabel}
+          </div>
+        )}
         {drawn.length === 0 ? (
           <div className="chaosbag-empty-draw">
             {bag.length === 0 ? 'Bolsa vacía' : 'Pulsa para sacar ficha'}
@@ -293,9 +351,9 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
               <button
                 className="btn btn-xs btn-warning chaosbag-return-bc-btn"
                 onClick={e => { e.stopPropagation(); handleReturnAll(); }}
-                title="Devolver todas las fichas de la caja a la bolsa"
+                title="devolucion completa"
               >
-                ↩ Devolver todas
+                ↩ devolucion completa
               </button>
             )}
           </>
@@ -310,10 +368,10 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         {drawn.length > 0 && (
           <>
             <button onClick={handleDrawAnother} className="btn btn-secondary" disabled={bag.length === 0 || boardLocked} title="Sacar otra ficha sin devolver">
-              + Otra
+              ⟳ Sacar otra
             </button>
             <button onClick={handleReturn} className="btn btn-warning" disabled={boardLocked}>
-              ↩ Devolver ({drawn.length})
+              ↩ Limpiar ({drawn.length})
             </button>
           </>
         )}
@@ -421,7 +479,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                             type="number"
                             min="0"
                             value={iconValues[token] ?? ''}
-                            onChange={e => setIconValues(v => ({ ...v, [token]: e.target.value }))}
+                            onChange={e => handleIconValueChange(token, e.target.value)}
+                            onBlur={e => handleIconValueBlur(token, e.target.value)}
                             className="input input-sm chaosbag-icon-val-input"
                             placeholder="?"
                           />

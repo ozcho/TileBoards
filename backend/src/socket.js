@@ -493,6 +493,35 @@ function setupSocket(io, sessionMiddleware) {
       });
     });
 
+    // Persist icon token modifiers used by probability calculator and sync to all sessions
+    socket.on('chaosbag-set-icon-value', ({ tileId, token, value }) => {
+      const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);
+      if (!tile) return;
+
+      const allowedTokens = new Set(['skull', 'cultist', 'tablet', 'elder_thing']);
+      if (!allowedTokens.has(token)) return;
+
+      const state = JSON.parse(tile.state || '{}');
+      const iconValues = (state.iconValues && typeof state.iconValues === 'object')
+        ? { ...state.iconValues }
+        : {};
+
+      if (value === '' || value === null || value === undefined) {
+        if (iconValues[token] === undefined) return;
+        delete iconValues[token];
+      } else {
+        const parsed = Number.parseInt(String(value), 10);
+        if (!Number.isInteger(parsed)) return;
+        const normalized = String(Math.max(0, parsed));
+        if (iconValues[token] === normalized) return;
+        iconValues[token] = normalized;
+      }
+
+      const newState = { ...state, iconValues };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
     // Reset chaos bag to initial config (owner/admin only) or apply preset
     socket.on('chaosbag-reset', ({ tileId, tokenCounts: incomingTokenCounts, presetMeta }) => {
       const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);

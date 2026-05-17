@@ -1410,6 +1410,24 @@ select.input {
   border-color: var(--color-primary);
 }
 
+.chaosbag-drawn-icon-value {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  min-width: 2rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(22, 24, 28, 0.9);
+  border: 1px solid var(--color-primary);
+  color: var(--color-text);
+  font-weight: 800;
+  font-size: 0.82rem;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .chaosbag-return-bc-btn {
   position: absolute;
   bottom: 0.4rem;
