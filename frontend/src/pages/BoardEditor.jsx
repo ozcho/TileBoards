@@ -1,12 +1,57 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import TokenIcon from '../components/tiles/TokenIcon';
+import iconBrownWorm from '../tokens/jungle-icons-clean/icon-brown-worm.png';
+import iconGreenDiamond from '../tokens/jungle-icons-clean/icon-green-diamond.png';
+import iconMagentaCrescent from '../tokens/jungle-icons-clean/icon-magenta-crescent.png';
+import iconMaroonHourglass from '../tokens/jungle-icons-clean/icon-maroon-hourglass.png';
+import iconNavyHat from '../tokens/jungle-icons-clean/icon-navy-hat.png';
+import iconOliveSlash from '../tokens/jungle-icons-clean/icon-olive-slash.png';
+import iconOrangeHeart from '../tokens/jungle-icons-clean/icon-orange-heart.png';
+import iconPurpleTriangle from '../tokens/jungle-icons-clean/icon-purple-triangle.png';
+import iconRedSquare from '../tokens/jungle-icons-clean/icon-red-square.png';
+import iconYellowRing from '../tokens/jungle-icons-clean/icon-yellow-ring.png';
 
 const ALL_DICE_TYPES = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
 
 const SPECIAL_DICE_TEXT_LIMIT = 6;
 const SPECIAL_DICE_DEFAULT_COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'];
 const RANDOM_CARD_TEXT_LIMIT = 16;
+
+const ARKHAM_LOCATION_CARDS = [
+  'brown-worm',
+  'green-diamond',
+  'magenta-crescent',
+  'maroon-hourglass',
+  'navy-hat',
+  'olive-slash',
+  'orange-heart',
+  'purple-triangle',
+  'red-square',
+  'yellow-ring'
+];
+
+const ARKHAM_EDITOR_ICON_BY_KEY = {
+  'brown-worm': iconBrownWorm,
+  'green-diamond': iconGreenDiamond,
+  'magenta-crescent': iconMagentaCrescent,
+  'maroon-hourglass': iconMaroonHourglass,
+  'navy-hat': iconNavyHat,
+  'olive-slash': iconOliveSlash,
+  'orange-heart': iconOrangeHeart,
+  'purple-triangle': iconPurpleTriangle,
+  'red-square': iconRedSquare,
+  'yellow-ring': iconYellowRing
+};
+
+function renderRandomCardEditorLabel(text) {
+  const cleanText = String(text || '').trim();
+  const src = ARKHAM_EDITOR_ICON_BY_KEY[cleanText.toLowerCase()];
+  if (src) {
+    return <img className="random-card-editor-icon" src={src} alt={cleanText} />;
+  }
+  return <strong>{cleanText}</strong>;
+}
 
 function normalizeDieColor(value, fallback = SPECIAL_DICE_DEFAULT_COLORS[0]) {
   const color = String(value || '').trim();
@@ -36,14 +81,8 @@ function clampRandomCardText(value) {
 function createDefaultRandomCardConfig() {
   return {
     id: crypto.randomUUID(),
-    name: 'Baraja base',
-    cards: [
-      { id: crypto.randomUUID(), text: '💥 Golpe' },
-      { id: crypto.randomUUID(), text: '🛡 Bloqueo' },
-      { id: crypto.randomUUID(), text: '🔍 Pista' },
-      { id: crypto.randomUUID(), text: '😱 Horror' },
-      { id: crypto.randomUUID(), text: '✨ Suerte' }
-    ]
+    name: 'Lugares de Arkham',
+    cards: ARKHAM_LOCATION_CARDS.map((text) => ({ id: crypto.randomUUID(), text }))
   };
 }
 
@@ -434,6 +473,58 @@ function RandomCardsConfigEditor({ tile, onChange }) {
   const [newName, setNewName] = useState('');
   const [draftCards, setDraftCards] = useState([]);
 
+  const selectedCardCountsByConfigId =
+    config.selectedCardCountsByConfigId && typeof config.selectedCardCountsByConfigId === 'object'
+      ? config.selectedCardCountsByConfigId
+      : {};
+  const legacySelectedCardIdsByConfigId =
+    config.selectedCardIdsByConfigId && typeof config.selectedCardIdsByConfigId === 'object'
+      ? config.selectedCardIdsByConfigId
+      : {};
+
+  const getCardCountForConfigCard = (cfg, cardId, countsMap = selectedCardCountsByConfigId) => {
+    const configId = String(cfg?.id || '').trim();
+    const normalizedCardId = String(cardId || '').trim();
+    if (!configId || !normalizedCardId) return 0;
+
+    const hasCounts = Object.prototype.hasOwnProperty.call(countsMap, configId)
+      && countsMap[configId]
+      && typeof countsMap[configId] === 'object';
+    if (hasCounts) {
+      if (!Object.prototype.hasOwnProperty.call(countsMap[configId], normalizedCardId)) {
+        return 1;
+      }
+      const raw = parseInt(countsMap[configId][normalizedCardId], 10);
+      return Number.isFinite(raw) ? Math.max(0, raw) : 1;
+    }
+
+    const hasLegacySubset = Object.prototype.hasOwnProperty.call(legacySelectedCardIdsByConfigId, configId);
+    if (hasLegacySubset) {
+      const legacyIds = Array.isArray(legacySelectedCardIdsByConfigId[configId])
+        ? legacySelectedCardIdsByConfigId[configId].map((id) => String(id || '').trim())
+        : [];
+      return legacyIds.includes(normalizedCardId) ? 1 : 0;
+    }
+
+    return 1;
+  };
+
+  const getCardsForTile = (cfg, countsMap = selectedCardCountsByConfigId) => {
+    const baseCards = Array.isArray(cfg?.cards) ? cfg.cards : [];
+    const expandedCards = [];
+
+    baseCards.forEach((card) => {
+      const cardId = String(card?.id || '').trim();
+      if (!cardId) return;
+      const count = getCardCountForConfigCard(cfg, cardId, countsMap);
+      for (let i = 0; i < count; i += 1) {
+        expandedCards.push(card);
+      }
+    });
+
+    return expandedCards;
+  };
+
   const cardsToState = (cards) => {
     const cardIds = (Array.isArray(cards) ? cards : [])
       .map(c => String(c?.id || '').trim())
@@ -442,26 +533,60 @@ function RandomCardsConfigEditor({ tile, onChange }) {
   };
 
   useEffect(() => {
-    setLoadingConfigs(true);
-    fetch('/api/random-card-configs', { credentials: 'include' })
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then(data => {
+    const loadConfigs = async () => {
+      setLoadingConfigs(true);
+      try {
+        const initialRes = await fetch('/api/random-card-configs', { credentials: 'include' });
+        if (!initialRes.ok) throw new Error('load_failed');
+        let data = await initialRes.json();
+
+        const hasArkhamPreset = data.some((cfg) => String(cfg?.name || '').trim() === 'Lugares de Arkham');
+        if (!hasArkhamPreset) {
+          const presetCards = ARKHAM_LOCATION_CARDS.map((text) => ({
+            id: crypto.randomUUID(),
+            text
+          }));
+
+          const createRes = await fetch('/api/random-card-configs', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ name: 'Lugares de Arkham', cards: presetCards })
+          });
+
+          if (createRes.ok) {
+            const created = await createRes.json();
+            data = [...data, created];
+          }
+        }
+
         setApiConfigs(data);
         const newSelectedId = data.find(c => c.id === config.selectedConfigId)
           ? config.selectedConfigId
           : data[0]?.id || '';
         const selected = data.find(c => c.id === newSelectedId);
         onChange({
-          config: { ...config, configurations: data, selectedConfigId: newSelectedId },
-          ...(selected ? { state: cardsToState(selected.cards) } : {})
+          config: {
+            ...config,
+            configurations: data,
+            selectedConfigId: newSelectedId,
+            selectedCardCountsByConfigId
+          },
+          ...(selected ? { state: cardsToState(getCardsForTile(selected, selectedCardCountsByConfigId)) } : {})
         });
-      })
-      .catch(() => setApiError('No se pudieron cargar las configuraciones.'))
-      .finally(() => setLoadingConfigs(false));
+      } catch {
+        setApiError('No se pudieron cargar las configuraciones.');
+      } finally {
+        setLoadingConfigs(false);
+      }
+    };
+
+    loadConfigs();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedConfig = apiConfigs.find(c => c.id === selectedConfigId);
+  const selectedCardsForTile = getCardsForTile(selectedConfig);
 
   const openModal = () => {
     setEditingConfigId(null);
@@ -489,6 +614,69 @@ function RandomCardsConfigEditor({ tile, onChange }) {
     setShowModal(false);
     setEditingConfigId(null);
     setModalError('');
+  };
+
+  const setCardCountFromActiveConfig = (cardId, rawValue) => {
+    if (!selectedConfig) return;
+
+    const cfgId = String(selectedConfig.id || '').trim();
+    if (!cfgId) return;
+    const normalizedCardId = String(cardId || '').trim();
+    if (!normalizedCardId) return;
+
+    const parsedValue = parseInt(rawValue, 10);
+    const safeCount = Number.isFinite(parsedValue) ? Math.max(0, parsedValue) : 0;
+
+    // Build from effective counts (including defaults and legacy selection)
+    // so updating one card does not accidentally reset others.
+    const baseCounts = {};
+    (Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).forEach((card) => {
+      const id = String(card?.id || '').trim();
+      if (!id) return;
+      baseCounts[id] = getCardCountForConfigCard(selectedConfig, id, selectedCardCountsByConfigId);
+    });
+
+    const nextCountsForConfig = { ...baseCounts, [normalizedCardId]: safeCount };
+    const nextSubsets = { ...selectedCardCountsByConfigId, [cfgId]: nextCountsForConfig };
+    onChange({
+      config: { ...config, selectedCardCountsByConfigId: nextSubsets },
+      state: cardsToState(getCardsForTile(selectedConfig, nextSubsets))
+    });
+  };
+
+  const selectAllCardsFromActiveConfig = () => {
+    if (!selectedConfig) return;
+    const cfgId = String(selectedConfig.id || '').trim();
+    if (!cfgId) return;
+
+    const allCounts = {};
+    (Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).forEach((card) => {
+      const id = String(card?.id || '').trim();
+      if (id) allCounts[id] = 1;
+    });
+    const nextSubsets = { ...selectedCardCountsByConfigId, [cfgId]: allCounts };
+
+    onChange({
+      config: { ...config, selectedCardCountsByConfigId: nextSubsets },
+      state: cardsToState(getCardsForTile(selectedConfig, nextSubsets))
+    });
+  };
+
+  const clearCardsFromActiveConfig = () => {
+    if (!selectedConfig) return;
+    const cfgId = String(selectedConfig.id || '').trim();
+    if (!cfgId) return;
+
+    const noneCounts = {};
+    (Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).forEach((card) => {
+      const id = String(card?.id || '').trim();
+      if (id) noneCounts[id] = 0;
+    });
+    const nextSubsets = { ...selectedCardCountsByConfigId, [cfgId]: noneCounts };
+    onChange({
+      config: { ...config, selectedCardCountsByConfigId: nextSubsets },
+      state: cardsToState(getCardsForTile(selectedConfig, nextSubsets))
+    });
   };
 
   const addDraftCard = () => {
@@ -520,10 +708,17 @@ function RandomCardsConfigEditor({ tile, onChange }) {
       }
       const remaining = apiConfigs.filter(c => c.id !== selectedConfigId);
       const fallback = remaining[0] || null;
+      const nextSubsets = { ...selectedCardCountsByConfigId };
+      delete nextSubsets[selectedConfigId];
       setApiConfigs(remaining);
       onChange({
-        config: { ...config, configurations: remaining, selectedConfigId: fallback?.id || '' },
-        state: cardsToState(fallback?.cards || [])
+        config: {
+          ...config,
+          configurations: remaining,
+          selectedConfigId: fallback?.id || '',
+          selectedCardCountsByConfigId: nextSubsets
+        },
+        state: cardsToState(getCardsForTile(fallback, nextSubsets))
       });
     } catch {
       setApiError('Error de red al eliminar la configuracion.');
@@ -570,10 +765,35 @@ function RandomCardsConfigEditor({ tile, onChange }) {
         ? apiConfigs.map(c => c.id === saved.id ? saved : c)
         : [...apiConfigs, saved];
 
+      const nextSubsets = { ...selectedCardCountsByConfigId };
+      if (Object.prototype.hasOwnProperty.call(nextSubsets, saved.id)) {
+        const validIds = new Set(
+          (Array.isArray(saved.cards) ? saved.cards : [])
+            .map((card) => String(card?.id || '').trim())
+            .filter(Boolean)
+        );
+        const currentCounts = nextSubsets[saved.id] && typeof nextSubsets[saved.id] === 'object'
+          ? nextSubsets[saved.id]
+          : {};
+        const sanitizedCounts = {};
+        Object.entries(currentCounts).forEach(([cardId, rawCount]) => {
+          const cleanId = String(cardId || '').trim();
+          if (!validIds.has(cleanId)) return;
+          const parsedCount = parseInt(rawCount, 10);
+          sanitizedCounts[cleanId] = Number.isFinite(parsedCount) ? Math.max(0, parsedCount) : 0;
+        });
+        nextSubsets[saved.id] = sanitizedCounts;
+      }
+
       setApiConfigs(nextConfigs);
       onChange({
-        config: { ...config, configurations: nextConfigs, selectedConfigId: saved.id },
-        state: cardsToState(saved.cards)
+        config: {
+          ...config,
+          configurations: nextConfigs,
+          selectedConfigId: saved.id,
+          selectedCardCountsByConfigId: nextSubsets
+        },
+        state: cardsToState(getCardsForTile(saved, nextSubsets))
       });
       closeModal();
     } catch {
@@ -593,8 +813,8 @@ function RandomCardsConfigEditor({ tile, onChange }) {
           const nextId = e.target.value;
           const selected = apiConfigs.find(c => c.id === nextId);
           onChange({
-            config: { ...config, selectedConfigId: nextId },
-            ...(selected ? { state: cardsToState(selected.cards) } : {})
+            config: { ...config, selectedConfigId: nextId, selectedCardCountsByConfigId },
+            ...(selected ? { state: cardsToState(getCardsForTile(selected, selectedCardCountsByConfigId)) } : {})
           });
         }}
         className="input"
@@ -627,13 +847,38 @@ function RandomCardsConfigEditor({ tile, onChange }) {
       </div>
 
       {selectedConfig ? (
-        <div className="special-dice-config-preview">
-          {(Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).map((card) => (
-            <div key={card.id} className="special-dice-config-preview-item">
-              <strong>{card.text}</strong>
-            </div>
-          ))}
-        </div>
+        <>
+          <p className="form-hint" style={{ marginTop: '0.5rem' }}>
+            Cantidad por carta para este tablero: usa 0 para excluir y cualquier n mayor para duplicar.
+          </p>
+          <div className="special-dice-editor-actions" style={{ marginBottom: '0.5rem' }}>
+            <button type="button" className="btn btn-sm" onClick={selectAllCardsFromActiveConfig}>
+              Seleccionar todo
+            </button>
+            <button type="button" className="btn btn-sm btn-secondary" onClick={clearCardsFromActiveConfig}>
+              Limpiar
+            </button>
+          </div>
+          <div className="special-dice-config-preview">
+            {(Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).map((card) => {
+              const normalizedId = String(card?.id || '').trim();
+              const count = getCardCountForConfigCard(selectedConfig, normalizedId);
+              return (
+                <label key={card.id} className="special-dice-config-preview-item" style={{ cursor: 'pointer' }}>
+                  <input
+                    type="number"
+                    min="0"
+                    step="1"
+                    value={count}
+                    onChange={(e) => setCardCountFromActiveConfig(normalizedId, e.target.value)}
+                    className="input random-card-count-input"
+                  />
+                  {renderRandomCardEditorLabel(card.text)}
+                </label>
+              );
+            })}
+          </div>
+        </>
       ) : (
         <p className="form-hint">{loadingConfigs ? 'Cargando…' : 'No hay configuraciones disponibles.'}</p>
       )}

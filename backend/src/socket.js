@@ -31,6 +31,97 @@ function setupSocket(io, sessionMiddleware) {
     }
   }
 
+  function getRandomCardsDeckFromConfig(config) {
+    const safeConfig = config && typeof config === 'object' ? config : {};
+    const configurations = Array.isArray(safeConfig.configurations) ? safeConfig.configurations : [];
+    const selected = configurations.find(c => c.id === safeConfig.selectedConfigId) || configurations[0];
+    const rawCards = selected
+      ? (Array.isArray(selected.cards) ? selected.cards : [])
+      : (Array.isArray(safeConfig.cards) ? safeConfig.cards : []);
+
+    const cardDefs = rawCards
+      .map((card) => {
+        const id = String(card?.id || '').trim();
+        const text = Array.from(String(card?.text || '').trim()).slice(0, 16).join('');
+        if (!id || !text) return null;
+        return { id, text };
+      })
+      .filter(Boolean);
+
+    const countsMap = safeConfig.selectedCardCountsByConfigId && typeof safeConfig.selectedCardCountsByConfigId === 'object'
+      ? safeConfig.selectedCardCountsByConfigId
+      : {};
+    const legacySubsetMap = safeConfig.selectedCardIdsByConfigId && typeof safeConfig.selectedCardIdsByConfigId === 'object'
+      ? safeConfig.selectedCardIdsByConfigId
+      : {};
+
+    const selectedConfigId = String(selected?.id || '').trim();
+    const hasCounts = selectedConfigId
+      && Object.prototype.hasOwnProperty.call(countsMap, selectedConfigId)
+      && countsMap[selectedConfigId]
+      && typeof countsMap[selectedConfigId] === 'object';
+    const hasLegacySubset = selectedConfigId && Object.prototype.hasOwnProperty.call(legacySubsetMap, selectedConfigId);
+    const legacySet = hasLegacySubset
+      ? new Set(
+        (Array.isArray(legacySubsetMap[selectedConfigId]) ? legacySubsetMap[selectedConfigId] : [])
+          .map(id => String(id || '').trim())
+          .filter(Boolean)
+      )
+      : null;
+
+    const deckIds = [];
+    cardDefs.forEach((card) => {
+      let countValue = 1;
+      if (hasCounts) {
+        if (Object.prototype.hasOwnProperty.call(countsMap[selectedConfigId], card.id)) {
+          const raw = parseInt(countsMap[selectedConfigId][card.id], 10);
+          countValue = Number.isFinite(raw) ? Math.max(0, raw) : 1;
+        }
+      } else if (legacySet) {
+        countValue = legacySet.has(card.id) ? 1 : 0;
+      }
+
+      for (let i = 0; i < countValue; i += 1) {
+        deckIds.push(card.id);
+      }
+    });
+
+    return { cardDefs, deckIds };
+  }
+
+  function reconcileRandomCardsState(state, deckIds) {
+    const safeState = state && typeof state === 'object' ? state : {};
+    const desiredCounts = new Map();
+    deckIds.forEach((id) => {
+      desiredCounts.set(id, (desiredCounts.get(id) || 0) + 1);
+    });
+
+    const takeFrom = (source) => {
+      const src = Array.isArray(source) ? source : [];
+      const out = [];
+      src.forEach((id) => {
+        const cleanId = String(id || '').trim();
+        if (!cleanId) return;
+        const left = desiredCounts.get(cleanId) || 0;
+        if (left <= 0) return;
+        out.push(cleanId);
+        desiredCounts.set(cleanId, left - 1);
+      });
+      return out;
+    };
+
+    const remaining = takeFrom(safeState.remaining);
+    const drawn = takeFrom(safeState.drawn);
+
+    desiredCounts.forEach((left, id) => {
+      for (let i = 0; i < left; i += 1) {
+        remaining.push(id);
+      }
+    });
+
+    return { remaining, drawn };
+  }
+
   // Share session with Socket.IO
   io.use((socket, next) => {
     sessionMiddleware(socket.request, {}, next);
@@ -682,29 +773,18 @@ function setupSocket(io, sessionMiddleware) {
       if (!tile) return;
 
       const config = JSON.parse(tile.config || '{}');
-      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
-      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
-      const rawCards = selected
-        ? (Array.isArray(selected.cards) ? selected.cards : [])
-        : (Array.isArray(config.cards) ? config.cards : []);
-      const cards = rawCards
-        .map((card) => {
-          const id = String(card?.id || '').trim();
-          const text = Array.from(String(card?.text || '').trim()).slice(0, 16).join('');
-          if (!id || !text) return null;
-          return { id, text };
-        })
-        .filter(Boolean);
-
-      if (cards.length === 0) return;
-
-      const validIds = new Set(cards.map(c => c.id));
       const state = JSON.parse(tile.state || '{}');
 
-      const hasStateRemaining = Array.isArray(state.remaining);
-      const initialRemaining = hasStateRemaining
-        ? state.remaining.filter(id => validIds.has(id))
-        : cards.map(c => c.id);
+      const { cardDefs, deckIds } = getRandomCardsDeckFromConfig(config);
+      if (deckIds.length === 0 || cardDefs.length === 0) return;
+
+      const cardTextById = new Map();
+      cardDefs.forEach((card) => {
+        if (!cardTextById.has(card.id)) cardTextById.set(card.id, card.text);
+      });
+
+      const reconciled = reconcileRandomCardsState(state, deckIds);
+      const initialRemaining = reconciled.remaining;
 
       if (initialRemaining.length === 0) return;
 
@@ -722,17 +802,15 @@ function setupSocket(io, sessionMiddleware) {
       const name = authorName || 'Anónimo';
       const drawnAt = new Date().toISOString();
       const drawnCards = pickedIds.map((cardId) => {
-        const match = cards.find(c => c.id === cardId);
-        return { cardId, text: match?.text || '' };
+        return { cardId, text: cardTextById.get(cardId) || '' };
       });
 
       const newEntry = { cards: drawnCards, authorName: name, drawnAt };
       const history = Array.isArray(state.history) ? state.history : [];
-      const prevDrawn = Array.isArray(state.drawn) ? state.drawn.filter(id => validIds.has(id)) : [];
       const newState = {
         ...state,
         remaining: pool,
-        drawn: [...prevDrawn, ...pickedIds],
+        drawn: [...reconciled.drawn, ...pickedIds],
         lastDraw: newEntry,
         history: [newEntry, ...history].slice(0, 12)
       };
@@ -746,32 +824,18 @@ function setupSocket(io, sessionMiddleware) {
       if (!tile) return;
 
       const config = JSON.parse(tile.config || '{}');
-      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
-      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
-      const rawCards = selected
-        ? (Array.isArray(selected.cards) ? selected.cards : [])
-        : (Array.isArray(config.cards) ? config.cards : []);
-      const cards = rawCards
-        .map((card) => {
-          const id = String(card?.id || '').trim();
-          const text = Array.from(String(card?.text || '').trim()).slice(0, 16).join('');
-          if (!id || !text) return null;
-          return { id, text };
-        })
-        .filter(Boolean);
-
-      if (cards.length === 0) return;
-
-      const validIds = new Set(cards.map(c => c.id));
       const state = JSON.parse(tile.state || '{}');
 
-      const hasStateRemaining = Array.isArray(state.remaining);
-      const baseRemaining = hasStateRemaining
-        ? state.remaining.filter(id => validIds.has(id))
-        : cards.map(c => c.id);
-      const currentDrawn = Array.isArray(state.drawn) ? state.drawn.filter(id => validIds.has(id)) : [];
+      const { cardDefs, deckIds } = getRandomCardsDeckFromConfig(config);
+      if (deckIds.length === 0 || cardDefs.length === 0) return;
 
-      const fullPool = [...new Set([...baseRemaining, ...currentDrawn])];
+      const cardTextById = new Map();
+      cardDefs.forEach((card) => {
+        if (!cardTextById.has(card.id)) cardTextById.set(card.id, card.text);
+      });
+
+      const reconciled = reconcileRandomCardsState(state, deckIds);
+      const fullPool = [...reconciled.remaining, ...reconciled.drawn];
       if (fullPool.length === 0) return;
 
       const requested = Math.max(1, Math.min(9, parseInt(count, 10) || 1));
@@ -788,8 +852,7 @@ function setupSocket(io, sessionMiddleware) {
       const name = authorName || 'Anónimo';
       const drawnAt = new Date().toISOString();
       const drawnCards = pickedIds.map((cardId) => {
-        const match = cards.find(c => c.id === cardId);
-        return { cardId, text: match?.text || '' };
+        return { cardId, text: cardTextById.get(cardId) || '' };
       });
 
       const newEntry = { cards: drawnCards, authorName: name, drawnAt };
@@ -812,17 +875,10 @@ function setupSocket(io, sessionMiddleware) {
 
       const config = JSON.parse(tile.config || '{}');
       const state = JSON.parse(tile.state || '{}');
-      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
-      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
-      const rawCards = selected
-        ? (Array.isArray(selected.cards) ? selected.cards : [])
-        : (Array.isArray(config.cards) ? config.cards : []);
-      const ids = rawCards
-        .map(card => String(card?.id || '').trim())
-        .filter(Boolean);
+      const { deckIds } = getRandomCardsDeckFromConfig(config);
 
       const history = Array.isArray(state.history) ? state.history : [];
-      const newState = { remaining: ids, drawn: [], lastDraw: null, history };
+      const newState = { remaining: deckIds, drawn: [], lastDraw: null, history };
       db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
     });

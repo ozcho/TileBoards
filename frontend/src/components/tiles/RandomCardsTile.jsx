@@ -1,4 +1,27 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import iconBrownWorm from '../../tokens/jungle-icons-clean/icon-brown-worm.png';
+import iconGreenDiamond from '../../tokens/jungle-icons-clean/icon-green-diamond.png';
+import iconMagentaCrescent from '../../tokens/jungle-icons-clean/icon-magenta-crescent.png';
+import iconMaroonHourglass from '../../tokens/jungle-icons-clean/icon-maroon-hourglass.png';
+import iconNavyHat from '../../tokens/jungle-icons-clean/icon-navy-hat.png';
+import iconOliveSlash from '../../tokens/jungle-icons-clean/icon-olive-slash.png';
+import iconOrangeHeart from '../../tokens/jungle-icons-clean/icon-orange-heart.png';
+import iconPurpleTriangle from '../../tokens/jungle-icons-clean/icon-purple-triangle.png';
+import iconRedSquare from '../../tokens/jungle-icons-clean/icon-red-square.png';
+import iconYellowRing from '../../tokens/jungle-icons-clean/icon-yellow-ring.png';
+
+const ARKHAM_ICON_BY_KEY = {
+  'brown-worm': iconBrownWorm,
+  'green-diamond': iconGreenDiamond,
+  'magenta-crescent': iconMagentaCrescent,
+  'maroon-hourglass': iconMaroonHourglass,
+  'navy-hat': iconNavyHat,
+  'olive-slash': iconOliveSlash,
+  'orange-heart': iconOrangeHeart,
+  'purple-triangle': iconPurpleTriangle,
+  'red-square': iconRedSquare,
+  'yellow-ring': iconYellowRing
+};
 
 function clampCardText(value) {
   return Array.from(String(value || '').trim()).slice(0, 16).join('');
@@ -10,7 +33,29 @@ function normalizeCards(config) {
   const rawCards = selected
     ? (Array.isArray(selected.cards) ? selected.cards : [])
     : (Array.isArray(config?.cards) ? config.cards : []);
-  const cards = rawCards
+  const countsMap =
+    config?.selectedCardCountsByConfigId && typeof config.selectedCardCountsByConfigId === 'object'
+      ? config.selectedCardCountsByConfigId
+      : {};
+  const legacySubsetMap =
+    config?.selectedCardIdsByConfigId && typeof config.selectedCardIdsByConfigId === 'object'
+      ? config.selectedCardIdsByConfigId
+      : {};
+  const selectedConfigId = String(selected?.id || '').trim();
+  const hasCounts = selectedConfigId
+    && Object.prototype.hasOwnProperty.call(countsMap, selectedConfigId)
+    && countsMap[selectedConfigId]
+    && typeof countsMap[selectedConfigId] === 'object';
+  const hasLegacySubset = selectedConfigId && Object.prototype.hasOwnProperty.call(legacySubsetMap, selectedConfigId);
+  const legacySet = hasLegacySubset
+    ? new Set(
+      (Array.isArray(legacySubsetMap[selectedConfigId]) ? legacySubsetMap[selectedConfigId] : [])
+        .map((id) => String(id || '').trim())
+        .filter(Boolean)
+    )
+    : null;
+
+  const normalizedCards = rawCards
     .map((card) => {
       const id = String(card?.id || '').trim();
       const text = clampCardText(card?.text || '');
@@ -19,10 +64,37 @@ function normalizeCards(config) {
     })
     .filter(Boolean);
 
+  const cards = [];
+  normalizedCards.forEach((card) => {
+    let count = 1;
+
+    if (hasCounts) {
+      if (Object.prototype.hasOwnProperty.call(countsMap[selectedConfigId], card.id)) {
+        const raw = parseInt(countsMap[selectedConfigId][card.id], 10);
+        count = Number.isFinite(raw) ? Math.max(0, raw) : 1;
+      }
+    } else if (legacySet) {
+      count = legacySet.has(card.id) ? 1 : 0;
+    }
+
+    for (let i = 0; i < count; i += 1) {
+      cards.push(card);
+    }
+  });
+
   return {
     selectedName: String(selected?.name || '').trim(),
     cards
   };
+}
+
+function renderCardContent(text, imageClassName = 'random-card-icon') {
+  const key = String(text || '').trim().toLowerCase();
+  const src = ARKHAM_ICON_BY_KEY[key];
+  if (src) {
+    return <img className={imageClassName} src={src} alt={key} />;
+  }
+  return text;
 }
 
 export default function RandomCardsTile({ tile, socket, user, guestName, boardLocked }) {
@@ -94,13 +166,26 @@ export default function RandomCardsTile({ tile, socket, user, guestName, boardLo
         <span>Quedan <strong>{remainingCount}</strong> de <strong>{totalCards}</strong></span>
       </div>
 
-      <div className={`random-cards-drawn-area${animating ? ' random-cards-drawn-animate' : ''}`}>
+      <div
+        className={`random-cards-drawn-area${animating ? ' random-cards-drawn-animate' : ''}`}
+        onClick={handleDraw}
+        role="button"
+        tabIndex={boardLocked ? -1 : 0}
+        aria-disabled={boardLocked}
+        onKeyDown={(e) => {
+          if (boardLocked) return;
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleDraw();
+          }
+        }}
+      >
         {drawn.length > 0 ? (
           <div className="random-cards-drawn-list">
             {drawn.map((cardId, idx) => {
               const card = cards.find(c => c.id === cardId);
               return (
-                <div key={`${cardId}-${idx}`} className="random-card-chip">{card?.text || ''}</div>
+                <div key={`${cardId}-${idx}`} className="random-card-chip">{renderCardContent(card?.text || '')}</div>
               );
             })}
           </div>
@@ -166,7 +251,9 @@ export default function RandomCardsTile({ tile, socket, user, guestName, boardLo
                 <span className="dice-result-dot">·</span>
                 <div className="random-cards-history-list">
                   {(entry.cards || []).map((card, cardIndex) => (
-                    <span key={`${card.cardId}-${cardIndex}`} className="random-card-history-chip">{card.text}</span>
+                    <span key={`${card.cardId}-${cardIndex}`} className="random-card-history-chip">
+                      {renderCardContent(card.text, 'random-card-history-icon')}
+                    </span>
                   ))}
                 </div>
                 <span className="dice-history-time">{formatTime(entry.drawnAt)}</span>

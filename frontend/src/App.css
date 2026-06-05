@@ -1398,7 +1398,7 @@ select.input {
 
 .special-dice-config-preview-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.6rem;
   background: var(--color-surface-2);
@@ -1406,11 +1406,27 @@ select.input {
   border-radius: var(--radius-sm);
   padding: 0.45rem 0.65rem;
   font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .special-dice-config-preview-item span {
   color: var(--color-text-muted);
   font-size: 0.78rem;
+}
+
+.random-card-editor-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline;
+  vertical-align: middle;
+}
+
+.random-card-count-input {
+  width: 4.5rem;
+  margin-right: 0.35rem;
+  text-align: left;
+  display: inline;
+  vertical-align: middle;
 }
 
 .special-dice-modal-overlay {
@@ -1662,15 +1678,22 @@ select.input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 1.8rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  padding: 0.12rem;
+  border-radius: 999px;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
+}
+
+.random-card-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: block;
 }
 
 .random-cards-controls {
@@ -1691,11 +1714,19 @@ select.input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.06rem 0.32rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  padding: 0;
   border: 1px solid var(--color-border);
   border-radius: 999px;
   font-size: 0.76rem;
   background: var(--color-surface-2);
+}
+
+.random-card-history-icon {
+  width: 1.18rem;
+  height: 1.18rem;
+  display: block;
 }
 
 /* ===== Chaos Bag ===== */
