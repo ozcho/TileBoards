@@ -107,6 +107,7 @@ export default function RandomCardsTile({ tile, socket, user, guestName, boardLo
 
   const [drawCount, setDrawCount] = useState(1);
   const [animating, setAnimating] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
   const prevDrawRef = useRef(null);
 
   const authorName = user?.name || guestName || 'Anónimo';
@@ -244,22 +245,31 @@ export default function RandomCardsTile({ tile, socket, user, guestName, boardLo
 
       {history.length > 1 && (
         <div className="dice-history-wrapper">
-          <div className="dice-history">
-            {history.slice(1, 6).map((entry, idx) => (
-              <div key={`${entry.drawnAt || idx}-${idx}`} className="dice-history-entry">
-                <span className="dice-history-author">{entry.authorName}</span>
-                <span className="dice-result-dot">·</span>
-                <div className="random-cards-history-list">
-                  {(entry.cards || []).map((card, cardIndex) => (
-                    <span key={`${card.cardId}-${cardIndex}`} className="random-card-history-chip">
-                      {renderCardContent(card.text, 'random-card-history-icon')}
-                    </span>
-                  ))}
+          <button
+            type="button"
+            className={`btn btn-xs ${showHistory ? 'btn-secondary' : 'btn-ghost'}`}
+            onClick={() => setShowHistory(v => !v)}
+          >
+            {showHistory ? 'Ocultar historial' : 'Ver historial'} ({history.length - 1})
+          </button>
+          {showHistory && (
+            <div className="dice-history">
+              {history.slice(1, 6).map((entry, idx) => (
+                <div key={`${entry.drawnAt || idx}-${idx}`} className="dice-history-entry">
+                  <span className="dice-history-author">{entry.authorName}</span>
+                  <span className="dice-result-dot">·</span>
+                  <div className="random-cards-history-list">
+                    {(entry.cards || []).map((card, cardIndex) => (
+                      <span key={`${card.cardId}-${cardIndex}`} className="random-card-history-chip">
+                        {renderCardContent(card.text, 'random-card-history-icon')}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="dice-history-time">{formatTime(entry.drawnAt)}</span>
                 </div>
-                <span className="dice-history-time">{formatTime(entry.drawnAt)}</span>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
