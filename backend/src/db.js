@@ -35,7 +35,7 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS tiles (
     id TEXT PRIMARY KEY,
     board_id TEXT NOT NULL,
-    type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch', 'dice')),
+    type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch', 'dice', 'special_dice', 'random_cards')),
     label TEXT DEFAULT '',
     config TEXT DEFAULT '{}',
     state TEXT DEFAULT '{}',
@@ -175,12 +175,49 @@ try {
   // Already migrated
 }
 
+// Migration: update tiles CHECK constraint to include random_cards
+try {
+  const tableInfo = db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='tiles'").get();
+  if (tableInfo && !tableInfo.sql.includes("'random_cards'")) {
+    db.exec(`
+      CREATE TABLE tiles_new (
+        id TEXT PRIMARY KEY,
+        board_id TEXT NOT NULL,
+        type TEXT NOT NULL CHECK(type IN ('countdown', 'clock', 'counter', 'messageboard', 'chaosbag', 'arkham_bag', 'stopwatch', 'dice', 'special_dice', 'random_cards')),
+        label TEXT DEFAULT '',
+        config TEXT DEFAULT '{}',
+        state TEXT DEFAULT '{}',
+        position INTEGER DEFAULT 0,
+        created_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (board_id) REFERENCES boards(id) ON DELETE CASCADE
+      );
+      INSERT INTO tiles_new SELECT * FROM tiles;
+      DROP TABLE tiles;
+      ALTER TABLE tiles_new RENAME TO tiles;
+    `);
+  }
+} catch (e) {
+  // Already migrated
+}
+
 // Special dice configurations table
 db.exec(`
   CREATE TABLE IF NOT EXISTS special_dice_configs (
     id TEXT PRIMARY KEY,
     name TEXT NOT NULL,
     dice TEXT NOT NULL DEFAULT '[]',
+    owner_id TEXT NOT NULL,
+    created_at TEXT DEFAULT (datetime('now')),
+    FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE
+  );
+`);
+
+// Random card configurations table
+db.exec(`
+  CREATE TABLE IF NOT EXISTS random_card_configs (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    cards TEXT NOT NULL DEFAULT '[]',
     owner_id TEXT NOT NULL,
     created_at TEXT DEFAULT (datetime('now')),
     FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE

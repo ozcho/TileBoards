@@ -61,6 +61,7 @@ app.use('/api/boards', require('./routes/boards'));
 app.use('/api/party', require('./routes/party'));
 app.use('/api/presets', require('./routes/presets'));
 app.use('/api/special-dice-configs', require('./routes/specialDiceConfigs'));
+app.use('/api/random-card-configs', require('./routes/randomCardConfigs'));
 
 // Serve frontend in production
 const publicPath = path.join(__dirname, '..', 'public');

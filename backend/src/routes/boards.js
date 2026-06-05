@@ -279,6 +279,7 @@ function getDefaultState(type) {
     case 'counter': return { value: 0 };
     case 'dice': return { lastRoll: null, history: [] };
     case 'special_dice': return { lastRoll: null, history: [] };
+    case 'random_cards': return { remaining: [], drawn: [], lastDraw: null, history: [] };
     default: return {};
   }
 }

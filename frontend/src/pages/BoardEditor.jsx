@@ -6,6 +6,7 @@ const ALL_DICE_TYPES = ['d4', 'd6', 'd8', 'd10', 'd12', 'd20', 'd100'];
 
 const SPECIAL_DICE_TEXT_LIMIT = 6;
 const SPECIAL_DICE_DEFAULT_COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'];
+const RANDOM_CARD_TEXT_LIMIT = 16;
 
 function normalizeDieColor(value, fallback = SPECIAL_DICE_DEFAULT_COLORS[0]) {
   const color = String(value || '').trim();
@@ -28,6 +29,24 @@ function createDefaultSpecialDiceConfig() {
   };
 }
 
+function clampRandomCardText(value) {
+  return Array.from(String(value || '').trim()).slice(0, RANDOM_CARD_TEXT_LIMIT).join('');
+}
+
+function createDefaultRandomCardConfig() {
+  return {
+    id: crypto.randomUUID(),
+    name: 'Baraja base',
+    cards: [
+      { id: crypto.randomUUID(), text: '💥 Golpe' },
+      { id: crypto.randomUUID(), text: '🛡 Bloqueo' },
+      { id: crypto.randomUUID(), text: '🔍 Pista' },
+      { id: crypto.randomUUID(), text: '😱 Horror' },
+      { id: crypto.randomUUID(), text: '✨ Suerte' }
+    ]
+  };
+}
+
 const TILE_TYPES = [
   { value: 'countdown', label: '⏳ Cuenta Atrás' },
   { value: 'stopwatch', label: '⏱ Cronómetro' },
@@ -38,6 +57,7 @@ const TILE_TYPES = [
   { value: 'arkham_bag', label: '🐙 Bolsa PAP' },
   { value: 'dice', label: '🎲 Dados' },
   { value: 'special_dice', label: '🎲 Dados Especiales' },
+  { value: 'random_cards', label: '🃏 Cartas Aleatorias' },
 ];
 
 function SpecialDiceConfigEditor({ tile, onChange }) {
@@ -397,6 +417,280 @@ function SpecialDiceConfigEditor({ tile, onChange }) {
   );
 }
 
+function RandomCardsConfigEditor({ tile, onChange }) {
+  const config = tile.config || {};
+  const selectedConfigId = config.selectedConfigId || '';
+
+  const [apiConfigs, setApiConfigs] = useState(
+    Array.isArray(config.configurations) ? config.configurations : []
+  );
+  const [loadingConfigs, setLoadingConfigs] = useState(false);
+  const [apiError, setApiError] = useState('');
+
+  const [showModal, setShowModal] = useState(false);
+  const [editingConfigId, setEditingConfigId] = useState(null);
+  const [modalError, setModalError] = useState('');
+  const [saving, setSaving] = useState(false);
+  const [newName, setNewName] = useState('');
+  const [draftCards, setDraftCards] = useState([]);
+
+  const cardsToState = (cards) => {
+    const cardIds = (Array.isArray(cards) ? cards : [])
+      .map(c => String(c?.id || '').trim())
+      .filter(Boolean);
+    return { remaining: cardIds, drawn: [], lastDraw: null, history: [] };
+  };
+
+  useEffect(() => {
+    setLoadingConfigs(true);
+    fetch('/api/random-card-configs', { credentials: 'include' })
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(data => {
+        setApiConfigs(data);
+        const newSelectedId = data.find(c => c.id === config.selectedConfigId)
+          ? config.selectedConfigId
+          : data[0]?.id || '';
+        const selected = data.find(c => c.id === newSelectedId);
+        onChange({
+          config: { ...config, configurations: data, selectedConfigId: newSelectedId },
+          ...(selected ? { state: cardsToState(selected.cards) } : {})
+        });
+      })
+      .catch(() => setApiError('No se pudieron cargar las configuraciones.'))
+      .finally(() => setLoadingConfigs(false));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const selectedConfig = apiConfigs.find(c => c.id === selectedConfigId);
+
+  const openModal = () => {
+    setEditingConfigId(null);
+    setNewName('');
+    setDraftCards([]);
+    setModalError('');
+    setShowModal(true);
+  };
+
+  const openEditModal = () => {
+    if (!selectedConfig) return;
+    setEditingConfigId(selectedConfig.id);
+    setNewName(selectedConfig.name);
+    setDraftCards(
+      (Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).map(card => ({
+        id: card.id || crypto.randomUUID(),
+        text: clampRandomCardText(card.text || '')
+      }))
+    );
+    setModalError('');
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setEditingConfigId(null);
+    setModalError('');
+  };
+
+  const addDraftCard = () => {
+    setDraftCards(prev => [...prev, { id: crypto.randomUUID(), text: '' }]);
+  };
+
+  const updateDraftCard = (cardId, value) => {
+    const trimmed = clampRandomCardText(value);
+    setDraftCards(prev => prev.map(card => (
+      card.id === cardId ? { ...card, text: trimmed } : card
+    )));
+  };
+
+  const removeDraftCard = (cardId) => {
+    setDraftCards(prev => prev.filter(card => card.id !== cardId));
+  };
+
+  const deleteSelectedConfig = async () => {
+    if (apiConfigs.length <= 1) return;
+    try {
+      const res = await fetch(`/api/random-card-configs/${selectedConfigId}`, {
+        method: 'DELETE',
+        credentials: 'include'
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setApiError(data.error || 'Error al eliminar la configuracion.');
+        return;
+      }
+      const remaining = apiConfigs.filter(c => c.id !== selectedConfigId);
+      const fallback = remaining[0] || null;
+      setApiConfigs(remaining);
+      onChange({
+        config: { ...config, configurations: remaining, selectedConfigId: fallback?.id || '' },
+        state: cardsToState(fallback?.cards || [])
+      });
+    } catch {
+      setApiError('Error de red al eliminar la configuracion.');
+    }
+  };
+
+  const saveConfig = async () => {
+    const cleanName = newName.trim();
+    const sanitizedCards = draftCards
+      .map(card => ({ id: card.id || crypto.randomUUID(), text: clampRandomCardText(card.text || '') }))
+      .filter(card => card.text !== '');
+
+    if (!cleanName) {
+      setModalError('El nombre de la configuracion es obligatorio.');
+      return;
+    }
+    if (sanitizedCards.length === 0) {
+      setModalError('Debes agregar al menos una carta con texto.');
+      return;
+    }
+
+    setSaving(true);
+    try {
+      const isEditing = !!editingConfigId;
+      const url = isEditing
+        ? `/api/random-card-configs/${editingConfigId}`
+        : '/api/random-card-configs';
+
+      const res = await fetch(url, {
+        method: isEditing ? 'PUT' : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ name: cleanName, cards: sanitizedCards })
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setModalError(data.error || 'Error al guardar la configuracion.');
+        return;
+      }
+
+      const saved = await res.json();
+      const nextConfigs = isEditing
+        ? apiConfigs.map(c => c.id === saved.id ? saved : c)
+        : [...apiConfigs, saved];
+
+      setApiConfigs(nextConfigs);
+      onChange({
+        config: { ...config, configurations: nextConfigs, selectedConfigId: saved.id },
+        state: cardsToState(saved.cards)
+      });
+      closeModal();
+    } catch {
+      setModalError('Error de red al guardar la configuracion.');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  return (
+    <div className="form-group">
+      {apiError && <div className="alert alert-error" style={{ marginBottom: '0.5rem' }}>{apiError}</div>}
+      <label>Configuracion activa {loadingConfigs && <span style={{ fontWeight: 400, opacity: 0.6 }}>(cargando…)</span>}</label>
+      <select
+        value={selectedConfigId}
+        onChange={e => {
+          const nextId = e.target.value;
+          const selected = apiConfigs.find(c => c.id === nextId);
+          onChange({
+            config: { ...config, selectedConfigId: nextId },
+            ...(selected ? { state: cardsToState(selected.cards) } : {})
+          });
+        }}
+        className="input"
+        disabled={loadingConfigs}
+      >
+        {apiConfigs.map(cfg => (
+          <option key={cfg.id} value={cfg.id}>{cfg.name}</option>
+        ))}
+      </select>
+
+      <div className="special-dice-editor-actions">
+        <button type="button" className="btn btn-sm btn-secondary" onClick={openModal} disabled={loadingConfigs}>
+          + Nueva configuracion
+        </button>
+        {selectedConfig && (
+          <button type="button" className="btn btn-sm" onClick={openEditModal} disabled={loadingConfigs}>
+            ✏️ Editar
+          </button>
+        )}
+        {apiConfigs.length > 1 && (
+          <button
+            type="button"
+            className="btn btn-sm btn-danger"
+            onClick={deleteSelectedConfig}
+            title="Eliminar esta configuracion"
+          >
+            🗑 Eliminar
+          </button>
+        )}
+      </div>
+
+      {selectedConfig ? (
+        <div className="special-dice-config-preview">
+          {(Array.isArray(selectedConfig.cards) ? selectedConfig.cards : []).map((card) => (
+            <div key={card.id} className="special-dice-config-preview-item">
+              <strong>{card.text}</strong>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="form-hint">{loadingConfigs ? 'Cargando…' : 'No hay configuraciones disponibles.'}</p>
+      )}
+
+      {showModal && (
+        <div className="special-dice-modal-overlay" onClick={closeModal}>
+          <div className="special-dice-modal" onClick={e => e.stopPropagation()}>
+            <h3>{editingConfigId ? 'Editar configuracion de cartas' : 'Nueva configuracion de cartas'}</h3>
+            {modalError && <div className="alert alert-error">{modalError}</div>}
+
+            <div className="form-group">
+              <label>Nombre de la configuracion</label>
+              <input
+                type="text"
+                value={newName}
+                onChange={e => setNewName(e.target.value)}
+                className="input"
+                placeholder="Ej: Encuentros acto 1"
+              />
+            </div>
+
+            <div className="special-dice-modal-dice-list">
+              {draftCards.map((card, index) => (
+                <div key={card.id} className="special-dice-modal-die-card">
+                  <div className="special-dice-modal-die-header" style={{ marginBottom: 0 }}>
+                    <strong>Carta {index + 1}</strong>
+                    <button type="button" className="btn btn-xs btn-danger" onClick={() => removeDraftCard(card.id)}>Eliminar</button>
+                  </div>
+                  <input
+                    type="text"
+                    value={card.text}
+                    maxLength={RANDOM_CARD_TEXT_LIMIT * 2}
+                    onChange={e => updateDraftCard(card.id, e.target.value)}
+                    className="input"
+                    placeholder="Texto o emoji"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <button type="button" className="btn btn-sm" style={{ marginTop: '0.75rem' }} onClick={addDraftCard}>+ Agregar carta</button>
+
+            <p className="form-hint">Cada carta admite hasta {RANDOM_CARD_TEXT_LIMIT} caracteres (incluye emojis).</p>
+
+            <div className="form-actions">
+              <button type="button" className="btn btn-primary" onClick={saveConfig} disabled={saving}>
+                {saving ? 'Guardando…' : (editingConfigId ? 'Guardar cambios' : 'Guardar configuracion')}
+              </button>
+              <button type="button" className="btn" onClick={closeModal} disabled={saving}>Cancelar</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ArkhamBagEditor({ tile, onChange }) {
   const config = tile.config || {};
   const [campaigns, setCampaigns] = useState([]);
@@ -545,6 +839,8 @@ export default function BoardEditor() {
   }, [id, isEditing]);
 
   const addTile = (type) => {
+    const initialRandomCardConfig = type === 'random_cards' ? createDefaultRandomCardConfig() : null;
+
     const newTile = {
       id: crypto.randomUUID(),
       type,
@@ -560,7 +856,11 @@ export default function BoardEditor() {
               type === 'special_dice' ? (() => {
                 const initialConfig = createDefaultSpecialDiceConfig();
                 return { configurations: [initialConfig], selectedConfigId: initialConfig.id };
-              })() : {},
+              })() :
+              type === 'random_cards' ? {
+                configurations: [initialRandomCardConfig],
+                selectedConfigId: initialRandomCardConfig.id
+              } : {},
       state: type === 'counter' ? { value: 0 } :
              type === 'stopwatch' ? { startedAt: null, paused: false, pausedElapsed: 0 } :
              type === 'chaosbag' ? {
@@ -570,7 +870,13 @@ export default function BoardEditor() {
              } :
              type === 'arkham_bag' ? { bag: [], drawn: [], locked: [] } :
              type === 'dice' ? { lastRoll: null, history: [] } :
-             type === 'special_dice' ? { lastRoll: null, history: [] } : {},
+             type === 'special_dice' ? { lastRoll: null, history: [] } :
+             type === 'random_cards' ? {
+               remaining: (initialRandomCardConfig?.cards || []).map(c => c.id),
+               drawn: [],
+               lastDraw: null,
+               history: []
+             } : {},
     };
     setTiles([...tiles, newTile]);
   };
@@ -964,6 +1270,13 @@ export default function BoardEditor() {
 
                   {tile.type === 'special_dice' && (
                     <SpecialDiceConfigEditor
+                      tile={tile}
+                      onChange={(updates) => updateTile(index, updates)}
+                    />
+                  )}
+
+                  {tile.type === 'random_cards' && (
+                    <RandomCardsConfigEditor
                       tile={tile}
                       onChange={(updates) => updateTile(index, updates)}
                     />

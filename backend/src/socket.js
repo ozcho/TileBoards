@@ -677,6 +677,156 @@ function setupSocket(io, sessionMiddleware) {
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
     });
 
+    socket.on('random-cards-draw', ({ tileId, count, authorName }) => {
+      const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'random_cards'").get(tileId);
+      if (!tile) return;
+
+      const config = JSON.parse(tile.config || '{}');
+      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
+      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
+      const rawCards = selected
+        ? (Array.isArray(selected.cards) ? selected.cards : [])
+        : (Array.isArray(config.cards) ? config.cards : []);
+      const cards = rawCards
+        .map((card) => {
+          const id = String(card?.id || '').trim();
+          const text = Array.from(String(card?.text || '').trim()).slice(0, 16).join('');
+          if (!id || !text) return null;
+          return { id, text };
+        })
+        .filter(Boolean);
+
+      if (cards.length === 0) return;
+
+      const validIds = new Set(cards.map(c => c.id));
+      const state = JSON.parse(tile.state || '{}');
+
+      const hasStateRemaining = Array.isArray(state.remaining);
+      const initialRemaining = hasStateRemaining
+        ? state.remaining.filter(id => validIds.has(id))
+        : cards.map(c => c.id);
+
+      if (initialRemaining.length === 0) return;
+
+      const requested = Math.max(1, Math.min(9, parseInt(count, 10) || 1));
+      const drawCount = Math.min(requested, initialRemaining.length);
+      const pool = [...initialRemaining];
+      const pickedIds = [];
+
+      for (let i = 0; i < drawCount; i += 1) {
+        const idx = Math.floor(Math.random() * pool.length);
+        pickedIds.push(pool[idx]);
+        pool.splice(idx, 1);
+      }
+
+      const name = authorName || 'Anónimo';
+      const drawnAt = new Date().toISOString();
+      const drawnCards = pickedIds.map((cardId) => {
+        const match = cards.find(c => c.id === cardId);
+        return { cardId, text: match?.text || '' };
+      });
+
+      const newEntry = { cards: drawnCards, authorName: name, drawnAt };
+      const history = Array.isArray(state.history) ? state.history : [];
+      const prevDrawn = Array.isArray(state.drawn) ? state.drawn.filter(id => validIds.has(id)) : [];
+      const newState = {
+        ...state,
+        remaining: pool,
+        drawn: [...prevDrawn, ...pickedIds],
+        lastDraw: newEntry,
+        history: [newEntry, ...history].slice(0, 12)
+      };
+
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
+    socket.on('random-cards-draw-fresh', ({ tileId, count, authorName }) => {
+      const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'random_cards'").get(tileId);
+      if (!tile) return;
+
+      const config = JSON.parse(tile.config || '{}');
+      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
+      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
+      const rawCards = selected
+        ? (Array.isArray(selected.cards) ? selected.cards : [])
+        : (Array.isArray(config.cards) ? config.cards : []);
+      const cards = rawCards
+        .map((card) => {
+          const id = String(card?.id || '').trim();
+          const text = Array.from(String(card?.text || '').trim()).slice(0, 16).join('');
+          if (!id || !text) return null;
+          return { id, text };
+        })
+        .filter(Boolean);
+
+      if (cards.length === 0) return;
+
+      const validIds = new Set(cards.map(c => c.id));
+      const state = JSON.parse(tile.state || '{}');
+
+      const hasStateRemaining = Array.isArray(state.remaining);
+      const baseRemaining = hasStateRemaining
+        ? state.remaining.filter(id => validIds.has(id))
+        : cards.map(c => c.id);
+      const currentDrawn = Array.isArray(state.drawn) ? state.drawn.filter(id => validIds.has(id)) : [];
+
+      const fullPool = [...new Set([...baseRemaining, ...currentDrawn])];
+      if (fullPool.length === 0) return;
+
+      const requested = Math.max(1, Math.min(9, parseInt(count, 10) || 1));
+      const drawCount = Math.min(requested, fullPool.length);
+      const pool = [...fullPool];
+      const pickedIds = [];
+
+      for (let i = 0; i < drawCount; i += 1) {
+        const idx = Math.floor(Math.random() * pool.length);
+        pickedIds.push(pool[idx]);
+        pool.splice(idx, 1);
+      }
+
+      const name = authorName || 'Anónimo';
+      const drawnAt = new Date().toISOString();
+      const drawnCards = pickedIds.map((cardId) => {
+        const match = cards.find(c => c.id === cardId);
+        return { cardId, text: match?.text || '' };
+      });
+
+      const newEntry = { cards: drawnCards, authorName: name, drawnAt };
+      const history = Array.isArray(state.history) ? state.history : [];
+      const newState = {
+        ...state,
+        remaining: pool,
+        drawn: pickedIds,
+        lastDraw: newEntry,
+        history: [newEntry, ...history].slice(0, 12)
+      };
+
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
+    socket.on('random-cards-reset', ({ tileId }) => {
+      const tile = db.prepare("SELECT * FROM tiles WHERE id = ? AND type = 'random_cards'").get(tileId);
+      if (!tile) return;
+
+      const config = JSON.parse(tile.config || '{}');
+      const state = JSON.parse(tile.state || '{}');
+      const configurations = Array.isArray(config.configurations) ? config.configurations : [];
+      const selected = configurations.find(c => c.id === config.selectedConfigId) || configurations[0];
+      const rawCards = selected
+        ? (Array.isArray(selected.cards) ? selected.cards : [])
+        : (Array.isArray(config.cards) ? config.cards : []);
+      const ids = rawCards
+        .map(card => String(card?.id || '').trim())
+        .filter(Boolean);
+
+      const history = Array.isArray(state.history) ? state.history : [];
+      const newState = { remaining: ids, drawn: [], lastDraw: null, history };
+      db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
+      io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
+    });
+
     // Countdown finished - lock the board if lockOnZero is configured
     socket.on('countdown-finished', ({ tileId }) => {
       const tile = db.prepare(
