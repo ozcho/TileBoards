@@ -545,10 +545,14 @@ function setupSocket(io, sessionMiddleware) {
       const state = JSON.parse(tile.state || '{}');
       const bag = state.bag || [];
       const drawn = state.drawn || [];
+      const locked = state.locked || [];
 
-      // Enforce max 10 bless/curse
+      // Enforce max 10 bless/curse. Sealed (locked) tokens count against the
+      // max too, so they can't be used to sneak extra tokens into the bag.
       if (token === 'bless' || token === 'curse') {
-        const count = bag.filter(t => t === token).length + drawn.filter(t => t === token).length;
+        const count = bag.filter(t => t === token).length
+          + drawn.filter(t => t === token).length
+          + locked.filter(t => t === token).length;
         if (count >= 10) return;
       }
 

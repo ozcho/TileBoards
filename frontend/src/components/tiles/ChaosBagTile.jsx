@@ -48,6 +48,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
   const [showManage, setShowManage] = useState(false);
+  const [showSeal, setShowSeal] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showProbability, setShowProbability] = useState(false);
   const [showBlessCurse, setShowBlessCurse] = useState(false);
@@ -64,10 +65,10 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
   const authorName = user?.name || guestName || 'Anónimo';
 
-  // Auto-open Gestionar panel when a new token gets locked
+  // Auto-open Sellar panel when a new token gets locked
   useEffect(() => {
     if (locked.length > prevLockedLenRef.current) {
-      setShowManage(true);
+      setShowSeal(true);
     }
     prevLockedLenRef.current = locked.length;
   }, [locked.length]);
@@ -276,11 +277,17 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     };
   }
 
-  // Bless/curse counts
+  // Bless/curse counts. Sealed (locked) tokens are excluded from the pool,
+  // so they lower the effective max: you can't have more than BLESS_CURSE_MAX
+  // tokens total (in bag/drawn + sealed).
+  const blessSealed = locked.filter(t => t === 'bless').length;
+  const curseSealed = locked.filter(t => t === 'curse').length;
   const blessInBag = bag.filter(t => t === 'bless').length + drawn.filter(t => t === 'bless').length;
   const curseInBag = bag.filter(t => t === 'curse').length + drawn.filter(t => t === 'curse').length;
-  const blessAvailable = BLESS_CURSE_MAX - blessInBag;
-  const curseAvailable = BLESS_CURSE_MAX - curseInBag;
+  const blessMax = BLESS_CURSE_MAX - blessSealed;
+  const curseMax = BLESS_CURSE_MAX - curseSealed;
+  const blessAvailable = blessMax - blessInBag;
+  const curseAvailable = curseMax - curseInBag;
 
   const handleAddBless = () => {
     if (blessAvailable <= 0) return;
@@ -405,6 +412,10 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
           ⚙ Gestionar
         </button>
 
+        <button type="button" className={`btn btn-xs ${showSeal ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowSeal(v => !v)}>
+          🔒 Sellar{locked.length > 0 ? ` (${locked.length})` : ''}
+        </button>
+
         <button type="button" className={`btn btn-xs ${showHistory ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowHistory(v => !v)}>
           📜 ({history.length})
         </button>
@@ -417,14 +428,14 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
           <div className="chaosbag-bc-row">
             <span className="chaosbag-token chaosbag-token-sm token-bless"><TokenIcon token="bless" size={16} /></span>
             <span className="chaosbag-bc-label">Bendito</span>
-            <span className="chaosbag-bc-count">{blessInBag}/{BLESS_CURSE_MAX}</span>
+            <span className="chaosbag-bc-count">{blessInBag}/{blessMax}</span>
             <button onClick={handleAddBless} className="btn btn-xs btn-success" disabled={blessAvailable <= 0 || boardLocked}>+ Añadir</button>
             <button onClick={handleRemoveBless} className="btn btn-xs btn-danger" disabled={!bagSummary['bless'] || boardLocked}>− Quitar</button>
           </div>
           <div className="chaosbag-bc-row">
             <span className="chaosbag-token chaosbag-token-sm token-curse"><TokenIcon token="curse" size={16} /></span>
             <span className="chaosbag-bc-label">Maldito</span>
-            <span className="chaosbag-bc-count">{curseInBag}/{BLESS_CURSE_MAX}</span>
+            <span className="chaosbag-bc-count">{curseInBag}/{curseMax}</span>
             <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0 || boardLocked}>+ Añadir</button>
             <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse'] || boardLocked}>− Quitar</button>
           </div>
@@ -579,6 +590,18 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
               ))}
             </div>
           </div>
+          {isOwnerOrAdmin && (
+            <div className="chaosbag-manage-reset">
+              <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
+                🔄 Resetear a configuración inicial
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {showSeal && (
+        <div className="chaosbag-manage-panel">
           <div className="chaosbag-manage-lock">
             <label>Sellar ficha (pulsa para sellar):</label>
             <div className="chaosbag-manage-tokens">
@@ -589,7 +612,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
               ))}
             </div>
           </div>
-          {locked.length > 0 && (
+          {locked.length > 0 ? (
             <div className="chaosbag-manage-locked">
               <label>Fichas selladas — pulsa para devolver a la bolsa:</label>
               <div className="chaosbag-manage-tokens">
@@ -600,13 +623,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                 ))}
               </div>
             </div>
-          )}
-          {isOwnerOrAdmin && (
-            <div className="chaosbag-manage-reset">
-              <button onClick={handleReset} className="btn btn-sm btn-danger" disabled={boardLocked}>
-                🔄 Resetear a configuración inicial
-              </button>
-            </div>
+          ) : (
+            <p className="text-muted">No hay fichas selladas.</p>
           )}
         </div>
       )}
