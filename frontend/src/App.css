@@ -2423,6 +2423,12 @@ select.input {
   gap: 0.3rem;
 }
 
+.chaosbag-icon-values-panel .chaosbag-icon-values {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 0.2rem 0;
+}
+
 .chaosbag-stats-summary {
   font-size: 0.75rem;
   color: var(--color-text-muted);
