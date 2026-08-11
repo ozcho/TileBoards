@@ -19,14 +19,16 @@ const TOKEN_DISPLAY = {
   'tentacle': { label: 'Tentáculo', icon: true, className: 'token-autofail' },
   'elder_star': { label: 'Estrella', icon: true, className: 'token-eldersign' },
   'frost': { label: 'Escarcha', icon: true, className: 'token-frost' },
+  'blood': { label: 'Sangre', icon: true, className: 'token-blood' },
   'bless': { label: 'Bendito', icon: true, className: 'token-bless' },
   'curse': { label: 'Maldito', icon: true, className: 'token-curse' },
 };
 
 const ALL_TOKEN_TYPES = ['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
-  'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost', 'bless', 'curse'];
+  'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost', 'blood', 'bless', 'curse'];
 
 const BLESS_CURSE_MAX = 10;
+const BLOOD_MAX = 12;
 
 function tokenLabel(token, size) {
   const display = TOKEN_DISPLAY[token];
@@ -44,6 +46,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const bag = state.bag || [];
   const drawn = state.drawn || [];
   const locked = state.locked || [];
+
+  const bloodTotal = [...bag, ...drawn, ...locked].filter(t => t === 'blood').length;
 
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
@@ -139,6 +143,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   };
 
   const handleAddToken = () => {
+    if (addToken === 'blood' && bloodTotal >= BLOOD_MAX) return;
     socket.emit('chaosbag-add-token', { tileId: tile.id, token: addToken });
   };
 
@@ -228,7 +233,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     '-5': -5, '-6': -6, '-7': -7, '-8': -8,
     'bless': 2, 'curse': -2, 'frost': -1,
   };
-  const SPECIAL_CALC_TOKENS = ['skull', 'cultist', 'tablet', 'elder_thing'];
+  const SPECIAL_CALC_TOKENS = ['skull', 'cultist', 'tablet', 'elder_thing', 'blood'];
   const calcSkill = probSkill !== '' && !isNaN(+probSkill) ? +probSkill : null;
   const calcDiff  = probDifficulty !== '' && !isNaN(+probDifficulty) ? +probDifficulty : null;
   const calcReady = calcSkill !== null && calcDiff !== null;
@@ -561,7 +566,8 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
                 <option key={t} value={t}>{TOKEN_DISPLAY[t]?.label || t} ({t})</option>
               ))}
             </select>
-            <button onClick={handleAddToken} className="btn btn-xs btn-success" disabled={boardLocked}>+ Añadir</button>
+            <button onClick={handleAddToken} className="btn btn-xs btn-success" disabled={boardLocked || (addToken === 'blood' && bloodTotal >= BLOOD_MAX)}>+ Añadir</button>
+            {addToken === 'blood' && <span className="chaosbag-manage-hint">{bloodTotal}/{BLOOD_MAX}</span>}
           </div>
           <div className="chaosbag-manage-remove">
             <label>Quitar ficha (pulsa para eliminar):</label>

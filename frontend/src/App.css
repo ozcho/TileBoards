@@ -1764,13 +1764,13 @@ select.input {
   min-width: 2rem;
   padding: 0.18rem 0.5rem;
   border-radius: 999px;
-  background: rgba(22, 24, 28, 0.9);
+  background: var(--color-surface);
   border: 1px solid var(--color-primary);
   color: var(--color-text);
   font-weight: 800;
   font-size: 0.82rem;
   line-height: 1;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow);
   pointer-events: none;
   z-index: 2;
 }
@@ -1968,6 +1968,13 @@ select.input {
   box-shadow: 0 0 6px rgba(147, 197, 253, 0.3);
 }
 
+.token-blood {
+  background: rgba(220, 38, 38, 0.25);
+  border-color: rgba(220, 38, 38, 0.6);
+  color: #fca5a5;
+  box-shadow: 0 0 6px rgba(220, 38, 38, 0.3);
+}
+
 .chaosbag-bless-curse {
   display: flex;
   flex-direction: column;
@@ -2065,6 +2072,11 @@ select.input {
 
 .chaosbag-manage-add label {
   margin-bottom: 0;
+}
+
+.chaosbag-manage-hint {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }
 
 .chaosbag-manage-tokens {

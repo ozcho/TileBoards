@@ -17,6 +17,7 @@ import imgElderStar from '../../tokens/elder_star.png';
 import imgBless from '../../tokens/bless.png';
 import imgCurse from '../../tokens/curse.png';
 import imgFrost from '../../tokens/frost.png';
+import imgBlood from '../../tokens/blood.png';
 
 const TOKEN_IMAGES = {
   '+1': imgPlus1,
@@ -38,6 +39,7 @@ const TOKEN_IMAGES = {
   bless: imgBless,
   curse: imgCurse,
   frost: imgFrost,
+  blood: imgBlood,
 };
 
 const TokenIcon = ({ token, size = 24 }) => {

@@ -1026,7 +1026,7 @@ function ArkhamBagEditor({ tile, onChange }) {
           <label>Contenido de la bolsa ({total} fichas)</label>
           <div className="chaosbag-editor-tokens">
             {['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
-              'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost'].map(token => {
+              'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost', 'blood'].map(token => {
               const count = config.tokenCounts[token] || 0;
               if (count === 0) return null;
               return (
@@ -1436,7 +1436,7 @@ export default function BoardEditor() {
                       <label style={{ marginTop: '0.75rem' }}>Fichas en la bolsa</label>
                       <div className="chaosbag-editor-tokens">
                         {['+1', '0', '-1', '-2', '-3', '-4', '-5', '-6', '-7', '-8',
-                          'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost'].map(token => {
+                          'skull', 'cultist', 'tablet', 'elder_thing', 'tentacle', 'elder_star', 'frost', 'blood'].map(token => {
                           const counts = tile.config.tokenCounts || {};
                           const count = counts[token] || 0;
                           return (
@@ -1462,6 +1462,7 @@ export default function BoardEditor() {
                               <button
                                 type="button"
                                 className="btn btn-xs"
+                                disabled={token === 'blood' && count >= 12}
                                 onClick={() => {
                                   const newCounts = { ...counts, [token]: count + 1 };
                                   const bag = [];

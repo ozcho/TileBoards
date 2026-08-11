@@ -556,6 +556,14 @@ function setupSocket(io, sessionMiddleware) {
         if (count >= 10) return;
       }
 
+      // Enforce max 12 blood tokens (sealed ones count too).
+      if (token === 'blood') {
+        const count = bag.filter(t => t === token).length
+          + drawn.filter(t => t === token).length
+          + locked.filter(t => t === token).length;
+        if (count >= 12) return;
+      }
+
       const newState = { ...state, bag: [...bag, token] };
       db.prepare('UPDATE tiles SET state = ? WHERE id = ?').run(JSON.stringify(newState), tileId);
       io.to(tile.board_id).emit('tile-updated', { tileId, state: newState });
@@ -593,7 +601,7 @@ function setupSocket(io, sessionMiddleware) {
       const tile = db.prepare(`SELECT * FROM tiles WHERE id = ? AND type IN ('chaosbag', 'arkham_bag')`).get(tileId);
       if (!tile) return;
 
-      const allowedTokens = new Set(['skull', 'cultist', 'tablet', 'elder_thing']);
+      const allowedTokens = new Set(['skull', 'cultist', 'tablet', 'elder_thing', 'blood']);
       if (!allowedTokens.has(token)) return;
 
       const state = JSON.parse(tile.state || '{}');
