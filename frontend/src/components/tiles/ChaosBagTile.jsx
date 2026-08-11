@@ -57,6 +57,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
   const [showProbability, setShowProbability] = useState(false);
   const [showIconValues, setShowIconValues] = useState(false);
   const [showBlessCurse, setShowBlessCurse] = useState(false);
+  const [showSpecials, setShowSpecials] = useState(false);
   const [showBagContents, setShowBagContents] = useState(false);
   const [addToken, setAddToken] = useState('+1');
   const [probSkill, setProbSkill] = useState('');
@@ -247,7 +248,7 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
     && latestDrawnIconValue !== null
     && latestDrawnIconValue !== ''
     && !isNaN(+latestDrawnIconValue)
-    ? `-${Math.abs(+latestDrawnIconValue)}`
+    ? (Math.abs(+latestDrawnIconValue) === 0 ? '0' : `-${Math.abs(+latestDrawnIconValue)}`)
     : null;
   let calcGroups = null;
   if (calcReady) {
@@ -313,6 +314,20 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
 
   const handleRemoveCurse = () => {
     const idx = bag.indexOf('curse');
+    if (idx === -1) return;
+    socket.emit('chaosbag-remove-token', { tileId: tile.id, tokenIndex: idx });
+  };
+
+  const frostInBag = bag.filter(t => t === 'frost').length + drawn.filter(t => t === 'frost').length;
+  const bloodInBag = bag.filter(t => t === 'blood').length + drawn.filter(t => t === 'blood').length;
+
+  const handleAddSpecial = (token) => {
+    if (token === 'blood' && bloodTotal >= BLOOD_MAX) return;
+    socket.emit('chaosbag-add-token', { tileId: tile.id, token });
+  };
+
+  const handleRemoveSpecial = (token) => {
+    const idx = bag.indexOf(token);
     if (idx === -1) return;
     socket.emit('chaosbag-remove-token', { tileId: tile.id, tokenIndex: idx });
   };
@@ -406,6 +421,9 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
         <button type="button" className={`btn btn-xs ${showBlessCurse ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowBlessCurse(v => !v)}>
           ✨ Bendi/Maldito
         </button>
+        <button type="button" className={`btn btn-xs ${showSpecials ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowSpecials(v => !v)}>
+          🩸 Especiales
+        </button>
         <button type="button" className={`btn btn-xs ${showBagContents ? 'btn-secondary' : 'btn-ghost'}`} onClick={() => setShowBagContents(v => !v)}>
           🎒 Bolsa
         </button>
@@ -454,6 +472,25 @@ export default function ChaosBagTile({ tile, socket, isOwnerOrAdmin, user, guest
             <span className="chaosbag-bc-count">{curseInBag}/{curseMax}</span>
             <button onClick={handleAddCurse} className="btn btn-xs btn-success" disabled={curseAvailable <= 0 || boardLocked}>+ Añadir</button>
             <button onClick={handleRemoveCurse} className="btn btn-xs btn-danger" disabled={!bagSummary['curse'] || boardLocked}>− Quitar</button>
+          </div>
+        </div>
+      )}
+
+      {showSpecials && (
+        <div className="chaosbag-bless-curse">
+          <div className="chaosbag-bc-row">
+            <span className="chaosbag-token chaosbag-token-sm token-blood"><TokenIcon token="blood" size={16} /></span>
+            <span className="chaosbag-bc-label">Sangre</span>
+            <span className="chaosbag-bc-count">{bloodInBag}/{BLOOD_MAX}</span>
+            <button onClick={() => handleAddSpecial('blood')} className="btn btn-xs btn-success" disabled={bloodTotal >= BLOOD_MAX || boardLocked}>+ Añadir</button>
+            <button onClick={() => handleRemoveSpecial('blood')} className="btn btn-xs btn-danger" disabled={!bagSummary['blood'] || boardLocked}>− Quitar</button>
+          </div>
+          <div className="chaosbag-bc-row">
+            <span className="chaosbag-token chaosbag-token-sm token-frost"><TokenIcon token="frost" size={16} /></span>
+            <span className="chaosbag-bc-label">Escarcha</span>
+            <span className="chaosbag-bc-count">{frostInBag}</span>
+            <button onClick={() => handleAddSpecial('frost')} className="btn btn-xs btn-success" disabled={boardLocked}>+ Añadir</button>
+            <button onClick={() => handleRemoveSpecial('frost')} className="btn btn-xs btn-danger" disabled={!bagSummary['frost'] || boardLocked}>− Quitar</button>
           </div>
         </div>
       )}
